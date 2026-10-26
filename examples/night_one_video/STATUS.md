@@ -12,10 +12,29 @@ Episode 02. **Day One / Part 1 only.** Branch `arena/d212a50b-newrepo`.
 | Animatic (`preview_full.mp4`, 204 s = 3:24) | done |
 | Thumbnail (`thumbnail.jpg`) | done |
 | Number stamps (`stamps.json` + `tools/apply_stamps.py`) | done, 4 frames |
-| Narration (edge-tts AndrewNeural) | not run for this script yet |
-| Final encode | not run (Kaggle) |
+| `beats.jsonl` (11 beats) | done |
+| Preflight (frames/thumbnail/metadata) | **passing** |
+| Narration (edge-tts AndrewNeural) | not run yet — needs Kaggle |
+| Final encode | not run — needs Kaggle |
 
-Runtime target 3:23 at 2.75 wps; animatic measures **3:24**.
+Runtime target 3:23 at 2.75 wps; animatic measures **3:24** (204.0 s, chapters 11,
+last chapter opens 3:04).
+
+`script.md` token-matches `visuals.csv` exactly (562 tokens), so the narration and
+the frames cannot drift.
+
+## Encode it
+
+```python
+!git clone --depth 1 --branch arena/d212a50b-newrepo https://github.com/AsuraXP/newrepo.git
+!bash newrepo/run_video_kaggle.sh night_one
+from IPython.display import FileLink; FileLink('/kaggle/working/night_one_DELIVERABLE.zip')
+```
+
+The runner preflights, rebuilds `beats.jsonl`, runs edge-tts with word timings,
+verifies every moment is locked to a frame, stitches, and zips VIDEO.mp4 +
+thumbnail + metadata + script + youtube. Do **not** set `SKIP_TTS=1` here — there
+is no cached narration for this episode.
 
 ## Beat map
 
