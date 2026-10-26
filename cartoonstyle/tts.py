@@ -157,6 +157,9 @@ def main() -> None:
     p.add_argument("--rate", default="+0%", help='speaking pace, e.g. "+5%"')
     p.add_argument("--visuals", default="", help="visuals.csv (moment rows) -> moments_timing.json")
     p.add_argument("--force", action="store_true", help="re-synthesize")
+    p.add_argument("--words-json", default="",
+                   help="precomputed [{w,t}] word timings for an existing narration.mp3 "
+                        "(from cartoonstyle.align) - skips synthesis entirely")
     args = p.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -167,7 +170,13 @@ def main() -> None:
     print(f"[tts] {len(items)} beats | one take | voice {args.voice} | rate {args.rate}", flush=True)
 
     words: list[dict] = []
-    if not (narr.exists() and not args.force):
+    if args.words_json:
+        if not narr.exists():
+            raise SystemExit(f"--words-json given but {narr} is missing")
+        words = json.loads(Path(args.words_json).read_text(encoding="utf-8"))
+        print(f"[tts] using {len(words)} precomputed word timings from {args.words_json} "
+              f"(no synthesis)", flush=True)
+    elif not (narr.exists() and not args.force):
         words = asyncio.run(synth_one_take(full_text, args.voice, args.rate, narr))
         print(f"[tts] narration.mp3 written ({len(words)} words tracked)", flush=True)
     else:

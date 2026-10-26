@@ -92,23 +92,37 @@ python3 -m cartoonstyle.csv_to_beats \
     --visuals "$VIDEO_DIR/visuals.csv" \
     --out "$VIDEO_DIR/beats.jsonl"
 
-echo "=== [4/6] TTS (word timings) ==="
-if [ "${SKIP_TTS:-0}" = "1" ] && [ -f "$VIDEO_DIR/narration.mp3" ]; then
-  echo "   SKIP_TTS=1 and narration.mp3 present - reusing"
-else
-  python3 -m cartoonstyle.tts \
-      --beats "$VIDEO_DIR/beats.jsonl" \
-      --out-dir "$VIDEO_DIR" \
-      --voice "$VOICE" \
-      --rate="$RATE" \
-      --visuals "$VIDEO_DIR/visuals.csv" 2>&1 | tee /tmp/tts_log_$SLUG.txt
+echo "=== [4/6] Narration (word timings) ==="
+# Two modes:
+#   prebuilt  narration.mp3 is committed (better voice, made outside Kaggle).
+#             Word timings are recovered by forced alignment, not by edge-tts.
+#   edgetts   synthesize here with edge-tts, which supplies WordBoundary timings.
+LOG=/tmp/tts_log_$SLUG.txt
+TTS_ARGS=(--beats "$VIDEO_DIR/beats.jsonl" --out-dir "$VIDEO_DIR"
+          --visuals "$VIDEO_DIR/visuals.csv")
 
-  # tts prints "[OK]" at the END of the line: "... moments_timing.json [OK]"
-  if ! grep -qE "moments locked.*\[OK\]" /tmp/tts_log_$SLUG.txt; then
-    echo "!!! TTS DID NOT LOCK ALL MOMENTS - inspect /tmp/tts_log_$SLUG.txt"
-    echo "!!! usual cause: a token in visuals.csv moment_text differs from what edge-tts emits"
-    exit 1
-  fi
+if [ -f "$VIDEO_DIR/narration.mp3" ] && [ "${NARRATION_MODE:-auto}" != "edgetts" ]; then
+  echo "   prebuilt narration.mp3 found -> forced alignment (no edge-tts)"
+  pip install -q faster-whisper 2>/dev/null || \
+    echo "   (faster-whisper unavailable - align.py will fall back to chunk timing)"
+  python3 -m cartoonstyle.align \
+      --audio "$VIDEO_DIR/narration.mp3" \
+      --chunks "$VIDEO_DIR/narration_chunks.json" \
+      --out "$VIDEO_DIR/words.json" \
+      --model "${WHISPER_MODEL:-small.en}"
+  TTS_ARGS+=(--words-json "$VIDEO_DIR/words.json")
+else
+  echo "   synthesizing with edge-tts ($VOICE $RATE)"
+  TTS_ARGS+=(--voice "$VOICE" --rate="$RATE")
+fi
+
+python3 -m cartoonstyle.tts "${TTS_ARGS[@]}" 2>&1 | tee "$LOG"
+
+# tts prints "[OK]" at the END of the line: "... moments_timing.json [OK]"
+if ! grep -qE "moments locked.*\[OK\]" "$LOG"; then
+  echo "!!! NARRATION DID NOT LOCK ALL MOMENTS - inspect $LOG"
+  echo "!!! a moment_text token is not present in the spoken word stream"
+  exit 1
 fi
 
 echo "=== [5/6] Stitch (+ mux narration) ==="
