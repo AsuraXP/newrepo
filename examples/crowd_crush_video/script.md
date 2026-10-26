@@ -1,6 +1,6 @@
 # The Crowd Doesn't Trample You
 
-*Saiki Survives — Episode 01*
+*Episode 01*
 
 The crowd does not trample you. It kills you standing up. Upright. Awake. In the middle of a crowd that has stopped being a crowd. Nobody in it is running. Nobody is even screaming.
 
@@ -46,5 +46,5 @@ The last move is the only one that scales. Choose your position before you arriv
 
 ---
 
-A crowd of calm people can kill you. A crowd of frightened people usually will not. Density is the only number that matters. So watch the gap between shoulders, and when it disappears, you leave. Not running. Just gone. Saiki survives. See you next time.
+A crowd of calm people can kill you. A crowd of frightened people usually will not. Density is the only number that matters. So watch the gap between shoulders, and when it disappears, you leave. Not running. Just gone. You survive. See you next time.
 

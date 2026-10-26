@@ -1,7 +1,41 @@
-# STATUS — `crowd_crush` (Saiki Survives, Ep. 01) — **FRAMES COMPLETE**
+# STATUS — `crowd_crush` (Ep. 01) — **FIXED, READY FOR ENCODE**
 
 **78 / 78 frames.** Silent animatic runs **3:01** at 2.75 words/sec.
 Frame production done. Next step is the Kaggle encode.
+
+## Name fix (2026-10-26)
+
+The spoken line `Saiki survives. See you next time.` was the one place the name
+appeared in the audio, and edge-tts pronounced it wrong. It is now:
+
+> **You survive. See you next time.**
+
+Same six words, so **every timing, chapter and the 3:01 runtime are unchanged** —
+no beat re-timing needed. Changed in `visuals.csv` (row 12/7), `script.md`
+(paragraph + subtitle) and `beats.jsonl`. The visible description signature in
+`metadata.json` also lost the series name.
+
+**Not changed:** the search tag `saiki survives` in `youtube.txt` / `metadata.json`
+tags and the `#saikisurvives` hashtag. Invisible in the video; keep for reach, or
+strip with a find-and-replace if it should go.
+
+### Three frames were 1365x768
+
+`beat06m02`, `beat08m05`, `beat12m03` were 11 px short of native width. The Kaggle
+runner pad-extends odd widths, which would have put a pale stripe on the right
+edge of three dark frames. Fixed here instead by replicating the last real column
+across the shortfall — seamless on all three, verified by eye. **All 78 frames are
+now exactly 1376x768.**
+
+### Re-running the build
+
+The audio has to be regenerated, so **do not set `SKIP_TTS=1`** — that flag would
+reuse the cached narration and keep the old line.
+
+```python
+!git clone --depth 1 --branch arena/d212a50b-newrepo https://github.com/AsuraXP/newrepo.git
+!bash newrepo/run_video_kaggle.sh crowd_crush
+```
 
 ## Preflight: passing
 
