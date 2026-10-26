@@ -1,0 +1,31 @@
+TITLE
+The Crowd Doesn't Trample You. It Kills You Standing Up.
+
+DESCRIPTION
+Nobody in a crowd crush is running. Nobody is even screaming. They are standing upright, awake, and suffocating — because the crowd has stopped being a crowd and become a fluid.
+
+Crowd deaths are almost never caused by trampling. They are caused by compressive asphyxia: the pressure of packed bodies prevents your chest from expanding, and you suffocate on your feet. At six people per square metre you can no longer choose where you go. Most people have no idea that this is the mechanism, which is exactly why they don't leave early enough.
+
+This is the part of survival nobody teaches: the four moves that buy you air, and the one test you can do in the dark to know if you are already in danger.
+
+CHAPTERS
+0:00  The crowd does not trample you
+0:22  Count bodies, not noise
+0:50  What actually kills people
+1:30  Why the word "stampede" is wrong
+1:52  How a crowd becomes a fluid
+2:20  Move one: build a cage around your chest
+2:48  Move two: don't fight the pressure
+3:10  Move three: leave the phone on the ground
+3:28  Move four: if you go down
+3:46  The only move that scales
+
+SOURCES
+- G. Keith Still, crowd science (compressive asphyxia, panic inversion): https://www.gkstill.com/ExpertWitness/CrowdRiskAnalysis.html
+- Crowd density thresholds (Fruin / Helbing / Still summary): https://en.wikipedia.org/wiki/Crowd_collapses_and_crushes
+- US CDC crowd-crush guidance, via NYT: https://www.nytimes.com/2022/10/29/world/asia/what-happens-during-a-crowd-crush.html
+- "8 tips to follow if you're trapped in a crushing crowd" (NPR/KQED): https://www.kqed.org/news/11930646/8-tips-to-follow-if-youre-trapped-in-a-crushing-crowd
+- Ten tips for surviving a crowd crush (The Conversation): https://theconversation.com/ten-tips-for-surviving-a-crowd-crush-112169
+
+TAGS
+crowd crush, crowd safety, stampede, compressive asphyxia, survival, how to survive, crowd dynamics, Keith Still, Itaewon, Astroworld, survival tips, stick figure animation, explainer, saiki survives, animation
