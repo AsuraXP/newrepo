@@ -28,20 +28,23 @@ from pathlib import Path
 
 def audio_duration(path: str) -> float:
     ffprobe = shutil.which("ffprobe")
-    if not ffprobe:
-        raise SystemExit("ffprobe not found - install ffmpeg (Kaggle/Colab images include it)")
-    out = subprocess.run(
-        [ffprobe, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
-        capture_output=True, text=True, check=True,
-    )
-    return float(out.stdout.strip())
-
-
-_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
-         "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-         "seventeen", "eighteen", "nineteen"]
-_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
-
+    if ffprobe:
+        out = subprocess.run(
+            [ffprobe, "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=nw=1:nk=1", path],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        return float(out)
+    # fallback: parse ffmpeg's own stderr (no ffprobe on this box)
+    ff = shutil.which("ffmpeg")
+    if ff:
+        err = subprocess.run([ff, "-i", path, "-f", "null", "-"],
+                             capture_output=True, text=True).stderr
+        for line in reversed(err.splitlines()):
+            if "time=" in line:
+                h, m, s = line.split("time=")[1].split()[0].split(":")
+                return int(h) * 3600 + int(m) * 60 + float(s)
+    raise SystemExit("neither ffprobe nor ffmpeg could measure " + path)
 
 def num2words_en(n: int) -> str:
     if n < 20:

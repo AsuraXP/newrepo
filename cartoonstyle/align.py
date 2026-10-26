@@ -50,8 +50,16 @@ def audio_duration(path: str) -> float:
             capture_output=True, text=True, check=True,
         ).stdout.strip()
         return float(out)
-    raise SystemExit("ffprobe not found - needed to time the narration track")
-
+    # fallback: parse ffmpeg's own stderr (no ffprobe on this box)
+    ff = shutil.which("ffmpeg")
+    if ff:
+        err = subprocess.run([ff, "-i", path, "-f", "null", "-"],
+                             capture_output=True, text=True).stderr
+        for line in reversed(err.splitlines()):
+            if "time=" in line:
+                h, m, s = line.split("time=")[1].split()[0].split(":")
+                return int(h) * 3600 + int(m) * 60 + float(s)
+    raise SystemExit("neither ffprobe nor ffmpeg could measure " + path)
 
 def _clean(tok: str) -> str:
     return tok.strip().strip(".,!?;:\"'")

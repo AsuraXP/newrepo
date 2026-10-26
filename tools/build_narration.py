@@ -64,6 +64,9 @@ def main() -> int:
     ap.add_argument("--print-chunks", action="store_true", help="show text per chunk")
     ap.add_argument("--group", type=int, default=4, help="beats per chunk (default 4)")
     ap.add_argument("--clips", nargs="*", default=[], help="rendered clips, in order")
+    ap.add_argument("--plan", nargs="*", default=[],
+                    help="explicit beat ranges per clip, e.g. 1-4=a.mp3 5-6=b.mp3. "
+                         "Use when a content filter forces uneven chunking.")
     args = ap.parse_args()
 
     vd = Path(args.video_dir)
@@ -76,6 +79,37 @@ def main() -> int:
         group = beats[i:i + args.group]
         text = " ".join(t for _, t in group)
         chunks.append({"index": len(chunks), "beats": [b for b, _ in group], "text": text})
+
+    # --plan: explicit beat-range -> clip mapping (uneven chunks)
+    if args.plan:
+        by_beat = dict(beats)
+        plan = []
+        for item in args.plan:
+            rng, _, clip = item.partition("=")
+            lo, _, hi = rng.partition("-")
+            lo, hi = int(lo), int(hi or lo)
+            text = " ".join(t for b, t in sorted(by_beat.items()) if lo <= b <= hi)
+            plan.append((clip, text))
+        chunks = [{"index": i, "text": t} for i, (_, t) in enumerate(plan)]
+        for c, (clip, _) in zip(chunks, plan):
+            c["sec"] = round(duration(clip), 3)
+        lst = Path(vd) / ".narration_tmp_concat.txt"
+        lst.parent.mkdir(parents=True, exist_ok=True)
+        lst.write_text("\n".join(f"file '{Path(c).resolve().as_posix()}'"
+                                 for c, _ in plan) + "\n")
+        out = Path(vd) / "narration.mp3"
+        subprocess.run([ffmpeg_exe(), "-y", "-loglevel", "error", "-f", "concat",
+                        "-safe", "0", "-i", str(lst), "-c:a", "libmp3lame",
+                        "-q:a", "3", str(out)], check=True)
+        t = 0.0
+        for c in chunks:
+            c["start"] = round(t, 3)
+            t += c["sec"]
+        (Path(vd) / "narration_chunks.json").write_text(json.dumps(chunks, indent=1),
+                                                        encoding="utf-8")
+        print(f"[narration] plan: {len(chunks)} clips -> {out} ({duration(str(out)):.1f}s)")
+        print(f"[narration] wrote {Path(vd) / 'narration_chunks.json'}")
+        return 0
 
     if args.print_chunks:
         for c in chunks:

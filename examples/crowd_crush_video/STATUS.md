@@ -57,10 +57,22 @@ every moment locked, stitches, and zips VIDEO.mp4 + thumbnail + metadata + scrip
 5. **`tools/make_animatic.py` is the QC gate that matters** — it renders the real cut rhythm
    without TTS, so pacing is judged before any Kaggle time is spent.
 
+## Voice decision (settled)
+Narration stays **edge-tts `en-US-AndrewNeural` at +0%**. A better voice was built and
+measured (external TTS + forced alignment + gapless assembly, all committed and working —
+78/78 moments locked at 3:22), but it cost a **manual re-chunk every time the content
+filter refused a passage**, and each hand-split is a chance to desync. Andrew renders the
+whole script in one pass and returns word timings with it. Not worth the throughput.
+
+The alternative path is kept but is **opt-in**, not automatic:
+- `NARRATION_MODE=prebuilt` + a committed `narration.mp3` switches to forced alignment.
+- `cartoonstyle/align.py` and `tts.py --words-json` remain for a future human read or a
+  paid voice, without forking the matching logic.
+
 ## Still outstanding (post-encode)
-- **Chapters are estimates** from word count. Once TTS writes `moments_timing.json`,
-  regenerate the chapter stamps from real timings — the current ones are within a few
-  seconds but not exact.
+- **Chapters are estimates** from word count (assume 2.75 wps). Real TTS came in at
+  3:22 vs the 3:01 estimate on a test render, so regenerate the chapter stamps from
+  `moments_timing.json` after the first Kaggle run — the drift is larger than expected.
 - **No music bed.** If single-voice narration drags, add a bed at the stitch layer; this is
   a code change, not a re-generation. Cheapest quality win available.
 - Captions are intentionally off for the first mux. If wanted later:

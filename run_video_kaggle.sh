@@ -94,14 +94,16 @@ python3 -m cartoonstyle.csv_to_beats \
 
 echo "=== [4/6] Narration (word timings) ==="
 # Two modes:
-#   prebuilt  narration.mp3 is committed (better voice, made outside Kaggle).
-#             Word timings are recovered by forced alignment, not by edge-tts.
-#   edgetts   synthesize here with edge-tts, which supplies WordBoundary timings.
+#   edgetts   DEFAULT. Synthesize here with edge-tts (AndrewNeural), which
+#             supplies WordBoundary timings for free. One pass, no manual chunking.
+#   prebuilt  Opt-in via NARRATION_MODE=prebuilt. Use a committed narration.mp3
+#             made elsewhere; word timings are recovered by forced alignment.
+#             Costs a hand-split whenever a content filter refuses a chunk.
 LOG=/tmp/tts_log_$SLUG.txt
 TTS_ARGS=(--beats "$VIDEO_DIR/beats.jsonl" --out-dir "$VIDEO_DIR"
           --visuals "$VIDEO_DIR/visuals.csv")
 
-if [ -f "$VIDEO_DIR/narration.mp3" ] && [ "${NARRATION_MODE:-auto}" != "edgetts" ]; then
+if [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration.mp3" ]; then
   echo "   prebuilt narration.mp3 found -> forced alignment (no edge-tts)"
   pip install -q faster-whisper 2>/dev/null || \
     echo "   (faster-whisper unavailable - align.py will fall back to chunk timing)"
