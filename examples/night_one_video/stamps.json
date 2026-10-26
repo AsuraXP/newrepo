@@ -1,0 +1,27 @@
+{
+  "beat03m02": {
+    "value": "4",
+    "unit": "HOURS",
+    "label": "FRIDGE, DOOR SHUT",
+    "pos": "bl"
+  },
+  "beat03m06": {
+    "value": "48",
+    "unit": "HOURS",
+    "label": "FULL FREEZER",
+    "pos": "bl"
+  },
+  "beat08m09": {
+    "value": "20",
+    "unit": "FEET",
+    "label": "FROM EVERY DOOR",
+    "pos": "bl"
+  },
+  "beat04m08": {
+    "value": "1",
+    "unit": "GALLON",
+    "label": "PER PERSON, PER DAY",
+    "pos": "bl",
+    "scale": 0.85
+  }
+}
