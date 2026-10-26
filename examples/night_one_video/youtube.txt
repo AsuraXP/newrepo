@@ -1,0 +1,35 @@
+TITLE
+Night One: The Grid Doesn't Fail All At Once (Day 1)
+
+DESCRIPTION
+The lights go out at 9:14 on a Tuesday. Nothing else happens. The water still runs, your phone still works, the house is still warm, and nobody is coming to fix anything tonight.
+
+That is what a real grid failure looks like. Not a collapse. A sequence. Almost everything that hurts people in a blackout is a decision made in the boring hours before anything feels urgent.
+
+Your fridge holds cold for four hours if you keep the door shut. A full freezer holds for forty-eight if you leave it alone. Water pressure outlives the lights, but only by hours or a day, and that window is when you fill everything. Card readers die before cash does. Text gets through when calls do not. And the thing that actually kills on the first night is not the dark - it is the candle by the curtain, the grill brought inside, the generator in the garage with the door open.
+
+Day 1 of the grid going down. Night two is the one that gets people.
+
+Sources: Ready.gov and FEMA power-outage guidance, USDA/FSIS food safety during outages, CDC emergency water supply guidance and generator carbon monoxide warnings.
+
+0:00  9:14pm, the lights go out
+0:16  This is not your fuse box
+0:32  The fridge rule: four hours
+0:53  The water window
+1:16  Text, do not call
+1:35  Dead traffic lights
+1:51  Cash beats cards
+2:07  What actually kills on night one
+2:33  The house gets cold slowly
+2:47  Morning: the fridge lost, the freezer held
+3:04  It fails in order
+
+SOURCES
+- FEMA / Ready.gov, Power Outages: https://www.ready.gov/power-outages
+- CDC, Emergency Water Supply: https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html
+- FEMA, Food and Water in an Emergency: https://www.fema.gov/pdf/library/f&web.pdf
+- FEMA, Generator Safety: https://www.fema.gov/node/generator-safety-stay-safe
+- CPSC generator CO deaths estimate: https://generatorsadvice.com/power-outage-checklist/
+
+TAGS
+blackout, power outage, grid down, survival, day 1, preparedness, blackout survival, power grid, first night, emergency preparedness, carbon monoxide, water storage, blackout tips, stick figure animation, explainer
