@@ -14,11 +14,21 @@
 # Optional env overrides:
 #   VIDEO_DIR=examples/apoc_day1_video   OUT_DIR=/kaggle/working
 #   VOICE=en-US-AndrewNeural             RATE=+0%
-#   SKIP_TTS=1 (reuse cached narration.mp3)   ZIP_NAME=custom_name
+#   SKIP_TTS=1 (reuse cached narration.mp3 + beats_with_timing.json; no pip)
+#   ZIP_NAME=custom_name
 #
 # Output: $OUT_DIR/<slug>_DELIVERABLE.zip
 # =============================================================================
 set -euo pipefail
+
+# --- Failure reporting ------------------------------------------------------
+# set -e exits silently otherwise, and "the zip isn't there" is not a diagnosis.
+STAGE="init"
+trap 'rc=$?; echo "" >&2; echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" >&2; \
+      echo "!!! BUILD FAILED in stage: $STAGE  (line $LINENO, exit $rc)" >&2; \
+      echo "!!! nothing was packaged, so the FileLink will not resolve." >&2; \
+      echo "!!! re-run with  bash -x run_video_kaggle.sh $SLUG  for the full trace" >&2; \
+      echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" >&2' ERR
 
 SLUG="${1:-}"
 if [ -z "$SLUG" ]; then
@@ -42,6 +52,7 @@ echo "   video dir : $VIDEO_DIR"
 echo "   voice     : $VOICE $RATE"
 
 # --- Preflight: fail in 5 seconds, not 5 minutes -----------------------------
+STAGE="preflight"
 echo "=== [1/6] Preflight ==="
 missing=0
 for f in visuals.csv script.md metadata.json youtube.txt; do
@@ -80,18 +91,27 @@ if lost:
     sys.exit(1)
 PY
 
+STAGE="deps"
 echo "=== [2/6] Deps ==="
 if ! command -v ffmpeg >/dev/null 2>&1; then
   (apt-get -qq update && apt-get -qq install -y ffmpeg) || apt-get -qq install -y ffmpeg
 fi
-pip install -q edge-tts pillow requests
+if [ "${SKIP_TTS:-0}" = "1" ]; then
+  echo "   SKIP_TTS=1 -> not installing edge-tts, reusing cached audio"
+  [ -f "$VIDEO_DIR/narration.mp3" ] || { echo "!!! SKIP_TTS=1 but $VIDEO_DIR/narration.mp3 is missing"; exit 1; }
+  [ -f "$VIDEO_DIR/beats_with_timing.json" ] || { echo "!!! SKIP_TTS=1 but beats_with_timing.json is missing (no word timings to reuse)"; exit 1; }
+else
+  pip install -q edge-tts pillow requests
+fi
 
+STAGE="beats"
 echo "=== [3/6] visuals.csv -> beats.jsonl ==="
 cd "$REPO"
 python3 -m cartoonstyle.csv_to_beats \
     --visuals "$VIDEO_DIR/visuals.csv" \
     --out "$VIDEO_DIR/beats.jsonl"
 
+STAGE="narration"
 echo "=== [4/6] Narration (word timings) ==="
 # Two modes:
 #   edgetts   DEFAULT. Synthesize here with edge-tts (AndrewNeural), which
@@ -127,6 +147,7 @@ if ! grep -qE "moments locked.*\[OK\]" "$LOG"; then
   exit 1
 fi
 
+STAGE="stitch"
 echo "=== [5/6] Stitch (+ mux narration) ==="
 # stitch.py globs {key}_v{pick:02d}_s*.png. Accept either frame naming scheme by
 # building one alias dir, instead of assuming frames were saved as bare beatNNmMM.png.
@@ -149,6 +170,7 @@ python3 -m cartoonstyle.stitch \
     --out "$VIDEO_DIR/VIDEO.mp4" \
     --pick 0
 
+STAGE="package"
 echo "=== [6/6] Package ==="
 rm -f "$ZIP"
 PKG=("$VIDEO_DIR/VIDEO.mp4" "$VIDEO_DIR/thumbnail.jpg" "$VIDEO_DIR/metadata.json"
@@ -164,5 +186,9 @@ echo "==========================================="
 ls -lh "$ZIP"
 python3 -c "import sys,zipfile; [print('  ', i.filename, f'{i.file_size/1048576:.1f} MB') for i in zipfile.ZipFile(sys.argv[1]).infolist()]" "$ZIP"
 echo "==========================================="
+if [ ! -s "$ZIP" ]; then
+  echo "!!! $ZIP was not created"; exit 1
+fi
 echo "DONE. In the notebook, download with:"
 echo "   from IPython.display import FileLink; FileLink('$ZIP')"
+echo "   (verify first:  !ls -lh $ZIP)"
