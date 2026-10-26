@@ -48,6 +48,24 @@ RED: <exactly what is red — one item only>
 `frames/beat{slide:02d}m{moment:02d}.png` — e.g. `beat07m03.png`.
 `run_video_kaggle.sh` also accepts `_v00_s00000000` suffixes, so either scheme works.
 
+## Prompt text fixes discovered during the pilot (apply to ALL remaining frames)
+- **"EXACTLY TWO black dot eyes"** — beat01m02 came back with one eye missing. Always
+  state the count explicitly; the model drops an eye on small/simple faces.
+- **"a FLAT RED SHORT-SLEEVED T-SHIRT with a visible hem at the hip"** — without the hem
+  clause the shirt renders as a long dress/robe. Always include it.
+- Pass `beat01m01.png` as a third `images` reference for any crowd-scale frame; it is the
+  promoted anchor for "sea of stick figures".
+
+## Turn-budget lesson (cost us a stall on episode 01)
+The 10-image cap includes **style tests and re-rolls**, not just story frames. Budget:
+`4 style tests + up to 2 re-rolls (= 6)` then `4 story frames` on the pilot turn. Never
+plan "6 tests + 8 frames" — it silently truncates.
+
+## Preview without Kaggle
+`python tools/make_animatic.py examples/<slug>_video --limit 10` renders a silent MP4 at
+real word-locked durations (needs `pip install imageio-ffmpeg pillow`). Use it to check cut
+rhythm and register consistency before spending a TTS + encode run.
+
 ## Moderation-safe phrasing (this topic is unusually risky)
 Crowd-crush material sits close to "mass death" content, so:
 - Never say or prompt **"corpses", "bodies piling", "massacre", "decapitated", "gore"**.

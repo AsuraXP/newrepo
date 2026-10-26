@@ -1,0 +1,4 @@
+
+# animatic previews
+*.mp4
+!examples/**/VIDEO.mp4
