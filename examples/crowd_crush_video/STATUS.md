@@ -1,62 +1,67 @@
-# STATUS — `crowd_crush` (Saiki Survives, Ep. 01)
+# STATUS — `crowd_crush` (Saiki Survives, Ep. 01) — **FRAMES COMPLETE**
 
-**Progress: 57 / 78 frames.** Silent animatic renders at **2:11** of the final 3:01.
-Last updated: batch 6.
+**78 / 78 frames.** Silent animatic runs **3:01** at 2.75 words/sec.
+Frame production done. Next step is the Kaggle encode.
 
-## Remaining frames (21) — exact queue for the next turns
+## Preflight: passing
 
-| Batch | Frames | Beat purpose |
-|---|---|---|
-| 7 (cut short) | `beat09m03`, `09m04`, `09m05`, `10m01`–`10m06`, `11m01` | falling, don't scream, chin up · ground level · curl left · get up · crawl to the edge · the move that scales |
-| 8 | `beat11m02`–`11m05`, `12m01`–`12m06` | floor-plan exits · stand at the rim · know two exits · never the funnel · density vs panic · watch the shoulder gap |
-| 9 (partial) | `beat12m07` | end card — Saiki from behind, empty horizon |
-
-Each batch is capped at **10 images per turn**. A turn that hits the cap cannot generate
-more until the next user message resets it — including failed calls, so never over-request.
-
-## Prompt rules that were earned in this video (see PROMPT_RULES.md)
-- Say **"EXACTLY TWO black dot eyes"** — otherwise an eye goes missing on small faces.
-- Say **"visible hem at the hip"** — otherwise the red shirt renders as a long dress.
-- For leg-only frames say **"single thin black pen line, same weight as the arms, no double
-  outlines"** — otherwise legs render as trousers (`beat07m04` failed twice on this).
-- For any crowd-scale frame pass a crowd anchor as the third `images` reference.
-
-## QC ledger
-- Re-rolls used: **2** (`beat01m02` eye fix at pilot, `beat07m04` trousers fix). ~4% of frames,
-  well under the 10–40% the workflow budgeted.
-- Accepted nitpicks (not re-rolled, per the story-break rule): `beat02m03`, `beat02m04`
-  (small subject in big white frame), `beat04m07` (faint grey rings), `beat04m03` (lean reads
-  ambiguous over the ribs), `beat06m03` (black mass reads as a cylinder), `beat06m05`
-  (curvy legs), `beat07m01` (faint arrows), `beat07m02`+`07m03` (near-duplicate poses).
-- Zero moderation trips on the entire anatomy block (beat 4). The white-sheet frame passed.
-
-## When all 78 frames are in
-
-```bash
-# 1. final animatic, for a last look at pacing
-python tools/make_animatic.py examples/crowd_crush_video
-
-# 2. commit + push
-git add examples/crowd_crush_video/frames/
-git commit -m "crowd_crush: COMPLETE 78/78 frames"
-git push origin <branch>
+```
+missing packable files: none
+frames: 78/78 moments have an image
+missing moments: none
 ```
 
-Then on Kaggle (one cell):
+Verified with the same logic `run_video_kaggle.sh` uses, so the Kaggle run will not
+fail at the packaging step.
+
+## Deliverable inputs, all present
+| File | State |
+|---|---|
+| `frames/*.png` (78) | complete, all 1376×768, matched 1:1 to `visuals.csv` |
+| `thumbnail.jpg` | 1280×720, 192 KB (YouTube limit 2 MB) |
+| `metadata.json` | chapters regenerated from frame count/durations |
+| `youtube.txt` | title, description, chapters, sources, tags |
+| `script.md` | derived mechanically from `visuals.csv` — token match guaranteed |
+| `PROMPT_RULES.md` | locked style + the 3 fixes this video earned |
+| `CONTINUITY.md` | density states + stance progression |
+
+## Run it on Kaggle
 
 ```python
-!git clone --depth 1 --branch <branch> https://github.com/<owner>/<repo>.git
-!bash <repo>/run_video_kaggle.sh crowd_crush
+!git clone --depth 1 --branch arena/d212a50b-newrepo https://github.com/AsuraXP/newrepo.git
+!bash newrepo/run_video_kaggle.sh crowd_crush
 from IPython.display import FileLink; FileLink('/kaggle/working/crowd_crush_DELIVERABLE.zip')
 ```
 
-`run_video_kaggle.sh` preflights every `visuals.csv` row against `frames/` **before** spending
-TTS or encode time, and accepts both frame naming schemes.
+The runner preflights, rebuilds `beats.jsonl`, runs edge-tts with word timings, verifies
+every moment locked, stitches, and zips VIDEO.mp4 + thumbnail + metadata + script + youtube.
 
-## Still outstanding
-- **thumbnail.jpg** — not yet generated. Needed before the zip will build (preflight will
-  block without it). Generate in the sandbox, not on Kaggle.
-- Chapter timestamps in `youtube.txt` and `metadata.json` are **estimates from word counts**.
-  Once TTS produces `moments_timing.json`, regenerate them from real timings.
-- No music bed. If the single-voice narration feels flat, that is the cheapest fix, and it
-  is a stitch-layer change, not a re-generation.
+## QC ledger
+- **Re-rolls: 2 / 78 (~2.6%)** — `beat01m02` (one eye missing), `beat07m04` (legs read as
+  trousers; failed twice, fixed with explicit "single thin pen line, no double outlines").
+- **Accepted nitpicks (story reads, not re-rolled):** `02m03`, `02m04` (small subject in
+  big white frame), `04m07` (faint grey rings), `04m03` (lean reads ambiguous over ribs),
+  `06m03` (black mass reads cylindrical), `06m05` (curvy legs), `07m01` (faint arrows),
+  `07m02`+`07m03` (near-duplicate guard poses), `10m01` (fallen figure very small),
+  `12m05` (torsos read as heads touching).
+- **Zero moderation trips** on the entire anatomy block (beat 4), including the
+  white-sheet frame.
+
+## Lessons worth carrying to episode 02
+1. **The 10-image cap counts failures too.** Over-requesting a batch costs a whole turn.
+2. **Budget the pilot turn separately:** 4 style tests + up to 2 re-rolls + 4 story frames.
+3. **Two registers work well together** — inkwash for story frames, flat thin-line diagrams
+   for expository frames. Do not mix them inside one frame.
+4. **Prompt phrases that must always be present:** "EXACTLY TWO black dot eyes",
+   "visible hem at the hip", "single thin black pen line, no double outlines".
+5. **`tools/make_animatic.py` is the QC gate that matters** — it renders the real cut rhythm
+   without TTS, so pacing is judged before any Kaggle time is spent.
+
+## Still outstanding (post-encode)
+- **Chapters are estimates** from word count. Once TTS writes `moments_timing.json`,
+  regenerate the chapter stamps from real timings — the current ones are within a few
+  seconds but not exact.
+- **No music bed.** If single-voice narration drags, add a bed at the stitch layer; this is
+  a code change, not a re-generation. Cheapest quality win available.
+- Captions are intentionally off for the first mux. If wanted later:
+  `--captions --caption-method pil`.
