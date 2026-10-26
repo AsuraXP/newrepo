@@ -1,5 +1,5 @@
 TITLE
-Night One: The Grid Doesn't Fail All At Once (Day 1)
+Night One: The Grid Fails In Order
 
 DESCRIPTION
 The lights go out at 9:14 on a Tuesday. Nothing else happens. The water still runs, your phone still works, the house is still warm, and nobody is coming to fix anything tonight.
