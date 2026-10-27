@@ -361,9 +361,9 @@ it as a tool with a known failure mode, not a shortcut.
     the hair, the figure count and the pose.
   - Run the leak test once per project: generate the same frame twice, once
     with the reference and once without, and compare. It costs two generations;
-    count it in the first batch's budget rather than discovering it mid-batch. If the reference adds
-    attributes that are not in my invariant list, drop the reference for that
-    subject and describe it in words instead.
+    count it in the first batch's budget rather than discovering it mid-batch.
+    If the reference adds attributes that are not in my invariant list, drop
+    the reference for that subject and describe it in words instead.
   - Where no reference works, the written block is the source of truth. Written
     blocks are less glamorous and they drift less.
 
