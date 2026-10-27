@@ -188,34 +188,69 @@ No preview requests, no asking me to watch mid-run. Batch → sheet → commit �
 short report.
 
 ====================================================================
-STEP 9 — ASSEMBLY AND VERIFY
+STEP 9 — WHERE THE VIDEO ACTUALLY GETS BUILT
 ====================================================================
-Stitch: frames → timed cuts → narration → effects → one MP4.
-Verify, do not assume: duration matches the script, every moment has a frame,
-audio is not clipping, no black or dropped frames, text is legible on a phone.
+Do not stitch on your own machine, and do not try to synthesize narration
+there. Audio generation needs a working TTS service and an encoder; your job
+is the FRAMES and the FILES, not the encode.
+
+The split is fixed:
+  YOU (here):      script, visuals.csv, style lock, all the frames,
+                   thumbnail(s), title, description, tags, chapters.
+  KAGGLE (there):  real narration, sound effects, word-locked cuts, encode,
+                   package, download link.
+
+Once every frame is generated and checked, STOP and hand me ONE script.
 
 ====================================================================
-STEP 10 — PACKAGE
+STEP 10 — THE HANDOFF SCRIPT (this is the deliverable that ends the job)
 ====================================================================
-One zip:
-  VIDEO.mp4
+Produce a single self-bootstrapping script I can paste as ONE cell in a fresh
+Kaggle notebook. Requirements:
+
+  - One command, no cell chaining, no manual steps, no editing before I run it.
+  - It clones (or updates) the repo at the right branch and PRINTS the commit
+    hash it built, so we both know what code ran.
+  - It runs a preflight that fails in seconds, not minutes: every moment in
+    visuals.csv has a frame on disk, and every required metadata file exists.
+  - It generates the narration, derives word-locked timings, builds the sound
+    cues, stitches frames + audio into one MP4, normalises loudness, and
+    packages the zip.
+  - It VERIFIES the zip afterwards and prints its contents with sizes.
+  - It ends by printing the exact download snippet for that zip:
+
+        from IPython.display import FileLink
+        FileLink('<path>/<slug>_DELIVERABLE.zip')
+
+  - Every stage prints a name, and a failure names the stage it died in, so I
+    can paste four lines back to you instead of a whole traceback.
+
+Give me the script, tell me what to expect at each stage, and tell me what to
+send back if it fails. Do not ask me to watch or preview anything mid-run.
+
+If I cannot run it in the cloud for some reason, say so plainly and tell me
+what the alternative is — do not silently stitch something broken.
+
+====================================================================
+STEP 11 — WHAT ARRIVES IN THE ZIP
+====================================================================
+  VIDEO.mp4            the finished video
   thumbnail.jpg        16:9 — hooky and attractive, built from what the video
-                       actually is: the strongest face, object or moment in it.
+                       actually is: the strongest face, object or moment in it
   thumb_portrait.png   9:16 (if the platform needs it)
   metadata.json        title, description, category, tags
   youtube.txt          copy-paste title / description / tags / chapters
-  script.md
+  script.md            the narration
 
 The thumbnail has to earn the click on a phone, at small size, next to
-everything else in a feed.
-
-Chapters: derive from the final audio, never from estimates.
+everything else in a feed. Chapters are derived from the final audio, never
+from estimates.
 
 ====================================================================
-STEP 11 — DELIVERY AND HONESTY
+STEP 12 — DELIVERY AND HONESTY
 ====================================================================
-Give me: runtime, frame count, voice(s), file list, and three lines on what
-the video actually says.
+When the zip lands, give me: runtime, frame count, voice(s), the file list,
+and three lines on what the video actually says.
 
 Never claim a step succeeded that you did not verify. If a frame is mediocre,
 call it mediocre. If you cut a corner, name the corner and the reason.
@@ -238,5 +273,8 @@ and nothing else.
   calls for a number or a label, render it and verify it in the frame.
 - **Correction happens inside the batch loop**, not at delivery: every frame is
   checked against its moment_text and re-rolled before the batch counts.
+- **Build location is explicit.** Frames and metadata are made here; narration,
+  sound, encode and packaging happen in the cloud, driven by one script the
+  agent hands over at the end — which prints its own download link.
 - **The thumbnail is judged on one thing** — whether it earns the click for
   this particular video.
