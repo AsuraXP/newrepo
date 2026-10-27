@@ -2,3 +2,5 @@
 # animatic previews
 *.mp4
 !examples/**/VIDEO.mp4
+__pycache__/
+*.pyc
