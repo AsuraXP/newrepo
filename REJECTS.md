@@ -18,3 +18,7 @@ Rejected v1 frames kept in `rejects/` for comparison.
 | 06 | `b04m10` | brain/coin/2012 frame has a stray question-mark doodle; coin is grey instead of the electric-yellow accent. Moment fidelity is intact. |
 | 07 | `b04m13`, `b04m16`, `b04m17`, `b04m18`, `b05m01`, `b05m02` | No electric-yellow accent applied, or it landed on an ochre/terracotta fill instead of the named object. Line work, counts, actions and all four text strings remain correct. Style accent drift only — not a fidelity failure. |
 | 07 | `b04m18` | Almost monochrome brown; flattest frame in the batch. Kept because the two technologies (stone axe + fire) and the invention spark are all present and nothing extra was added. |
+| 08 | `b05m05` | Narration says "twenty-six" (percent implied from the previous clause); frame shows `26%`. Scientifically correct and matches the locked SCENE, but it is a digit-plus-symbol rendering of a word the sentence does not spell out. Kept for consistency with our established `30%` / `5%` convention. |
+| 08 | `b05m10` | The three trait icons sit slightly spread along the timeline rather than stacked on the one dot. "Arriving all at once" still reads, but it is the weakest fidelity frame in this batch. |
+| 08 | `b05m12` | `2009` label is on the book cover, not beneath the book as the SCENE asked. Both strings are spelled correctly. |
+| 08 | `b05m06`, `b05m07`, `b05m08`, `b05m11`, `b05m12`, `b05m13` | Electric-yellow accent missing again or rendered as ochre. Counts, actions, gaze and all text are correct — style accent drift only. |
