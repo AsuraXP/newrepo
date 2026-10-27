@@ -28,8 +28,7 @@ YOU_OUT = ("CHARACTER: THE SAME adult, average build, short dark hair, plain cal
            "face, wearing a dark-green field jacket and dark trousers; exactly one "
            "person in this frame unless the sentence names more. ")
 STAND = ("THE STANDING: tall dim grey-black human silhouettes, featureless vague "
-         "faces, slack wrong posture; no wounds, no blood, no gore - threat from "
-         "posture only. ")
+         "faces, slack wrong posture; threat reads from stillness and posture alone. ")
 WOMAN = ("the woman: ONE adult in a light grey coat with a canvas shoulder bag over "
          "one shoulder. ")
 NEIGH = "the neighbour: ONE adult man in a brown coat, hand on a wheeled suitcase. "
