@@ -1,0 +1,11 @@
+
+# animatic previews
+*.mp4
+!examples/**/VIDEO.mp4
+__pycache__/
+*.pyc
+
+# generated audio - always regenerated on Kaggle, never commit
+*.wav
+examples/**/narration.mp3
+examples/**/audio/

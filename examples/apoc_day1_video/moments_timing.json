@@ -1,0 +1,618 @@
+[
+ {
+  "key": "beat01m01",
+  "beat": 1,
+  "start": 0.0,
+  "sec": 4.509,
+  "text": "You wake to a sound you don't recognize."
+ },
+ {
+  "key": "beat01m02",
+  "beat": 1,
+  "start": 4.509,
+  "sec": 7.273,
+  "text": "Car alarms. All of them at once, up and down the street, like the whole block decided to scream together."
+ },
+ {
+  "key": "beat01m03",
+  "beat": 1,
+  "start": 11.782,
+  "sec": 7.273,
+  "text": "You sit up in the gray light and you count \u2014 one, two, three \u2014 more than you can track."
+ },
+ {
+  "key": "beat01m04",
+  "beat": 1,
+  "start": 19.055,
+  "sec": 1.875,
+  "text": "Nobody turns them off."
+ },
+ {
+  "key": "beat02m01",
+  "beat": 2,
+  "start": 20.93,
+  "sec": 3.273,
+  "text": "You reach for your phone. Full bars. No signal."
+ },
+ {
+  "key": "beat02m02",
+  "beat": 2,
+  "start": 24.203,
+  "sec": 2.545,
+  "text": "You scroll, you wait, you scroll again."
+ },
+ {
+  "key": "beat02m03",
+  "beat": 2,
+  "start": 26.748,
+  "sec": 6.182,
+  "text": "Then a video opens: for half a second you see people running down a street you know,"
+ },
+ {
+  "key": "beat02m04",
+  "beat": 2,
+  "start": 32.93,
+  "sec": 2.182,
+  "text": "and it freezes there, mid-stride, stuck."
+ },
+ {
+  "key": "beat02m05",
+  "beat": 2,
+  "start": 35.112,
+  "sec": 1.818,
+  "text": "You try one more time."
+ },
+ {
+  "key": "beat02m06",
+  "beat": 2,
+  "start": 36.93,
+  "sec": 1.455,
+  "text": "The screen doesn't move."
+ },
+ {
+  "key": "beat02m07",
+  "beat": 2,
+  "start": 38.385,
+  "sec": 4.485,
+  "text": "Somewhere under you, something heavy goes over in the lobby."
+ },
+ {
+  "key": "beat03m01",
+  "beat": 3,
+  "start": 42.87,
+  "sec": 1.091,
+  "text": "You get dressed."
+ },
+ {
+  "key": "beat03m02",
+  "beat": 3,
+  "start": 43.961,
+  "sec": 1.454,
+  "text": "The alarms keep going."
+ },
+ {
+  "key": "beat03m03",
+  "beat": 3,
+  "start": 45.415,
+  "sec": 8.065,
+  "text": "You go to the window the way you go to a window when you already know what you're going to see."
+ },
+ {
+  "key": "beat04m01",
+  "beat": 4,
+  "start": 53.48,
+  "sec": 4.727,
+  "text": "Down in the street, a man walks down the middle of the road."
+ },
+ {
+  "key": "beat04m02",
+  "beat": 4,
+  "start": 58.207,
+  "sec": 4.728,
+  "text": "Not running. Walking, the way you walk when you have nowhere to be."
+ },
+ {
+  "key": "beat04m03",
+  "beat": 4,
+  "start": 62.935,
+  "sec": 5.454,
+  "text": "He stops. He stands in the middle of the road, and he doesn't start again."
+ },
+ {
+  "key": "beat04m04",
+  "beat": 4,
+  "start": 68.389,
+  "sec": 5.941,
+  "text": "Across from him, a door opens, and another figure comes out and stops too."
+ },
+ {
+  "key": "beat05m01",
+  "beat": 5,
+  "start": 74.33,
+  "sec": 3.273,
+  "text": "You count six of them before you stop counting."
+ },
+ {
+  "key": "beat05m02",
+  "beat": 5,
+  "start": 77.603,
+  "sec": 1.454,
+  "text": "They don't chase anything."
+ },
+ {
+  "key": "beat05m03",
+  "beat": 5,
+  "start": 79.057,
+  "sec": 4.0,
+  "text": "They drift \u2014 doorway to doorway, slow, patient, sure of you."
+ },
+ {
+  "key": "beat05m04",
+  "beat": 5,
+  "start": 83.057,
+  "sec": 4.728,
+  "text": "Then a woman runs past your building with a bag over her shoulder,"
+ },
+ {
+  "key": "beat05m05",
+  "beat": 5,
+  "start": 87.785,
+  "sec": 3.272,
+  "text": "and six heads turn to follow her at once."
+ },
+ {
+  "key": "beat05m06",
+  "beat": 5,
+  "start": 91.057,
+  "sec": 2.182,
+  "text": "She makes it to the corner."
+ },
+ {
+  "key": "beat05m07",
+  "beat": 5,
+  "start": 93.239,
+  "sec": 3.273,
+  "text": "One of them is already standing at the corner."
+ },
+ {
+  "key": "beat05m08",
+  "beat": 5,
+  "start": 96.512,
+  "sec": 1.454,
+  "text": "The woman turns back."
+ },
+ {
+  "key": "beat05m09",
+  "beat": 5,
+  "start": 97.966,
+  "sec": 7.394,
+  "text": "She goes the other way, and the six behind her keep drifting, like it never mattered either way."
+ },
+ {
+  "key": "beat06m01",
+  "beat": 6,
+  "start": 105.36,
+  "sec": 2.182,
+  "text": "You step back from the glass."
+ },
+ {
+  "key": "beat06m02",
+  "beat": 6,
+  "start": 107.542,
+  "sec": 2.909,
+  "text": "You check your door. The lock. The deadbolt."
+ },
+ {
+  "key": "beat06m03",
+  "beat": 6,
+  "start": 110.451,
+  "sec": 6.239,
+  "text": "You've lived here two years, and this is the first time you've turned it and hoped."
+ },
+ {
+  "key": "beat07m01",
+  "beat": 7,
+  "start": 116.69,
+  "sec": 2.909,
+  "text": "The hallway is quiet. The stairs are quiet."
+ },
+ {
+  "key": "beat07m02",
+  "beat": 7,
+  "start": 119.599,
+  "sec": 2.971,
+  "text": "The whole building is holding its breath."
+ },
+ {
+  "key": "beat08m01",
+  "beat": 8,
+  "start": 122.57,
+  "sec": 1.455,
+  "text": "You fill the sink."
+ },
+ {
+  "key": "beat08m02",
+  "beat": 8,
+  "start": 124.025,
+  "sec": 3.272,
+  "text": "Then every pot, every jar, every glass you own."
+ },
+ {
+  "key": "beat08m03",
+  "beat": 8,
+  "start": 127.297,
+  "sec": 4.063,
+  "text": "Water is the one thing you can fix right now."
+ },
+ {
+  "key": "beat09m01",
+  "beat": 9,
+  "start": 131.36,
+  "sec": 2.909,
+  "text": "In the kitchen you count what you have:"
+ },
+ {
+  "key": "beat09m02",
+  "beat": 9,
+  "start": 134.269,
+  "sec": 5.818,
+  "text": "bread, rice, a jar of peanut butter, and a pot of coffee you will never finish."
+ },
+ {
+  "key": "beat09m03",
+  "beat": 9,
+  "start": 140.087,
+  "sec": 2.546,
+  "text": "Two days, maybe three, if you're careful."
+ },
+ {
+  "key": "beat09m04",
+  "beat": 9,
+  "start": 142.633,
+  "sec": 1.454,
+  "text": "You write nothing down."
+ },
+ {
+  "key": "beat09m05",
+  "beat": 9,
+  "start": 144.087,
+  "sec": 5.513,
+  "text": "You keep the number in your head, where it can't be taken from you."
+ },
+ {
+  "key": "beat10m01",
+  "beat": 10,
+  "start": 149.6,
+  "sec": 1.818,
+  "text": "You pack one bag. One."
+ },
+ {
+  "key": "beat10m02",
+  "beat": 10,
+  "start": 151.418,
+  "sec": 5.091,
+  "text": "The way you pack when you know you might have to leave it behind."
+ },
+ {
+  "key": "beat10m03",
+  "beat": 10,
+  "start": 156.509,
+  "sec": 4.364,
+  "text": "Papers. A charger that won't charge. The knife from the kitchen drawer."
+ },
+ {
+  "key": "beat10m04",
+  "beat": 10,
+  "start": 160.873,
+  "sec": 6.237,
+  "text": "You sit on the floor with the bag at your feet and you listen."
+ },
+ {
+  "key": "beat11m01",
+  "beat": 11,
+  "start": 167.11,
+  "sec": 2.909,
+  "text": "Somewhere below you, a door opens and closes."
+ },
+ {
+  "key": "beat11m02",
+  "beat": 11,
+  "start": 170.019,
+  "sec": 5.091,
+  "text": "A neighbor you have never spoken to steps into the hall with a suitcase."
+ },
+ {
+  "key": "beat11m03",
+  "beat": 11,
+  "start": 175.11,
+  "sec": 1.818,
+  "text": "He looks at your door."
+ },
+ {
+  "key": "beat11m04",
+  "beat": 11,
+  "start": 176.928,
+  "sec": 1.455,
+  "text": "You look at his."
+ },
+ {
+  "key": "beat11m05",
+  "beat": 11,
+  "start": 178.383,
+  "sec": 1.454,
+  "text": "Neither of you knocks."
+ },
+ {
+  "key": "beat11m06",
+  "beat": 11,
+  "start": 179.837,
+  "sec": 4.683,
+  "text": "You both stand there, listening to the same building breathe."
+ },
+ {
+  "key": "beat12m01",
+  "beat": 12,
+  "start": 184.52,
+  "sec": 3.636,
+  "text": "Then \u2014 the stairs. Footsteps coming up, but not climbing."
+ },
+ {
+  "key": "beat12m02",
+  "beat": 12,
+  "start": 188.156,
+  "sec": 3.637,
+  "text": "Slower than footsteps should be. One tread at a time."
+ },
+ {
+  "key": "beat12m03",
+  "beat": 12,
+  "start": 191.793,
+  "sec": 2.182,
+  "text": "The neighbor looks at the stairwell."
+ },
+ {
+  "key": "beat12m04",
+  "beat": 12,
+  "start": 193.975,
+  "sec": 1.09,
+  "text": "So do you."
+ },
+ {
+  "key": "beat12m05",
+  "beat": 12,
+  "start": 195.065,
+  "sec": 2.182,
+  "text": "Neither of you moves toward it."
+ },
+ {
+  "key": "beat12m06",
+  "beat": 12,
+  "start": 197.247,
+  "sec": 7.423,
+  "text": "He takes his suitcase and goes back inside, and you hear two locks turn in a row."
+ },
+ {
+  "key": "beat13m01",
+  "beat": 13,
+  "start": 204.67,
+  "sec": 5.455,
+  "text": "You do the math, because that's what you do when you can't do anything else."
+ },
+ {
+  "key": "beat13m02",
+  "beat": 13,
+  "start": 210.125,
+  "sec": 5.818,
+  "text": "Stay: four walls, a locked door, water for two days, and a stairwell that isn't yours."
+ },
+ {
+  "key": "beat13m03",
+  "beat": 13,
+  "start": 215.943,
+  "sec": 6.182,
+  "text": "Run: one bag, two blocks to your car, and a street full of people who don't blink."
+ },
+ {
+  "key": "beat13m04",
+  "beat": 13,
+  "start": 222.125,
+  "sec": 1.454,
+  "text": "Both options are bad."
+ },
+ {
+  "key": "beat13m05",
+  "beat": 13,
+  "start": 223.579,
+  "sec": 3.431,
+  "text": "That's the choice you actually have."
+ },
+ {
+  "key": "beat14m01",
+  "beat": 14,
+  "start": 227.01,
+  "sec": 4.0,
+  "text": "Downstairs, the lobby door bangs. Once. Again. Not hard \u2014 patient."
+ },
+ {
+  "key": "beat14m02",
+  "beat": 14,
+  "start": 231.01,
+  "sec": 5.818,
+  "text": "You picture the lobby: glass, a push bar, a street on the other side of it."
+ },
+ {
+  "key": "beat14m03",
+  "beat": 14,
+  "start": 236.828,
+  "sec": 1.455,
+  "text": "The banging keeps time."
+ },
+ {
+  "key": "beat14m04",
+  "beat": 14,
+  "start": 238.283,
+  "sec": 4.057,
+  "text": "It isn't in a hurry. It doesn't have to be."
+ },
+ {
+  "key": "beat15m01",
+  "beat": 15,
+  "start": 242.34,
+  "sec": 1.818,
+  "text": "You pick up the bag."
+ },
+ {
+  "key": "beat15m02",
+  "beat": 15,
+  "start": 244.158,
+  "sec": 2.909,
+  "text": "You leave the water. You leave the coffee."
+ },
+ {
+  "key": "beat15m03",
+  "beat": 15,
+  "start": 247.067,
+  "sec": 4.364,
+  "text": "You take the bag, the knife, and the phone with no signal."
+ },
+ {
+  "key": "beat15m04",
+  "beat": 15,
+  "start": 251.431,
+  "sec": 1.879,
+  "text": "You open your door."
+ },
+ {
+  "key": "beat16m01",
+  "beat": 16,
+  "start": 253.31,
+  "sec": 1.455,
+  "text": "The hall is empty."
+ },
+ {
+  "key": "beat16m02",
+  "beat": 16,
+  "start": 254.765,
+  "sec": 6.865,
+  "text": "The neighbor's door stands open at the far end, the suitcase left behind on the floor."
+ },
+ {
+  "key": "beat17m01",
+  "beat": 17,
+  "start": 261.63,
+  "sec": 1.455,
+  "text": "The stairs go down."
+ },
+ {
+  "key": "beat17m02",
+  "beat": 17,
+  "start": 263.085,
+  "sec": 1.09,
+  "text": "You go down."
+ },
+ {
+  "key": "beat17m03",
+  "beat": 17,
+  "start": 264.175,
+  "sec": 5.819,
+  "text": "At the lobby, the glass trembles in its frame every time the door takes a hit,"
+ },
+ {
+  "key": "beat17m04",
+  "beat": 17,
+  "start": 269.994,
+  "sec": 6.545,
+  "text": "and beyond it the street is moving \u2014 not much, not yet, more than you can walk through."
+ },
+ {
+  "key": "beat17m05",
+  "beat": 17,
+  "start": 276.539,
+  "sec": 6.341,
+  "text": "You have one hand on the bag strap and one on the push bar."
+ },
+ {
+  "key": "beat18m01",
+  "beat": 18,
+  "start": 282.88,
+  "sec": 4.0,
+  "text": "You could stay. The thought comes late, and it comes anyway:"
+ },
+ {
+  "key": "beat18m02",
+  "beat": 18,
+  "start": 286.88,
+  "sec": 6.61,
+  "text": "you could go back up, lock the door, and wait for a better idea that isn't coming."
+ },
+ {
+  "key": "beat19m01",
+  "beat": 19,
+  "start": 293.49,
+  "sec": 1.091,
+  "text": "Instead you push."
+ },
+ {
+  "key": "beat19m02",
+  "beat": 19,
+  "start": 294.581,
+  "sec": 4.364,
+  "text": "The door opens onto noise \u2014 alarms, wind, a hundred windows watching."
+ },
+ {
+  "key": "beat19m03",
+  "beat": 19,
+  "start": 298.945,
+  "sec": 7.395,
+  "text": "Your car sits across the road, two blocks away, solid in a street that has stopped being solid."
+ },
+ {
+  "key": "beat20m01",
+  "beat": 20,
+  "start": 306.34,
+  "sec": 3.273,
+  "text": "You don't run. Running is what they turn toward."
+ },
+ {
+  "key": "beat20m02",
+  "beat": 20,
+  "start": 309.613,
+  "sec": 4.727,
+  "text": "You walk \u2014 fast, eyes forward, one foot ahead of the other \u2014"
+ },
+ {
+  "key": "beat20m03",
+  "beat": 20,
+  "start": 314.34,
+  "sec": 5.818,
+  "text": "while behind you, the building gives up a sound you don't turn around to look at."
+ },
+ {
+  "key": "beat20m04",
+  "beat": 20,
+  "start": 320.158,
+  "sec": 4.727,
+  "text": "Halfway down the first block you hear a car alarm die, then another,"
+ },
+ {
+  "key": "beat20m05",
+  "beat": 20,
+  "start": 324.885,
+  "sec": 5.805,
+  "text": "then the whole street goes quiet enough to hear your own breathing."
+ },
+ {
+  "key": "beat21m01",
+  "beat": 21,
+  "start": 330.69,
+  "sec": 2.545,
+  "text": "Two blocks. One bag. One decision, made."
+ },
+ {
+  "key": "beat21m02",
+  "beat": 21,
+  "start": 333.235,
+  "sec": 1.785,
+  "text": "Day one has started."
+ }
+]

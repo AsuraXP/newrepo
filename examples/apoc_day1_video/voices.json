@@ -1,0 +1,17 @@
+{
+ "default": {"voice": "en-US-AndrewNeural", "rate": "+0%"},
+ "beats": {
+  "1":  {"gap_before": 1.6},
+  "3":  {"gap_before": 0.6},
+  "5":  {"gap_before": 0.6},
+  "6":  {"gap_before": 0.6, "sfx": "click"},
+  "11": {"gap_before": 0.9},
+  "12": {"gap_before": 0.8, "sfx": "thud"},
+  "13": {"gap_before": 1.0},
+  "14": {"gap_before": 1.0, "sfx": "knock x3"},
+  "17": {"gap_before": 0.8},
+  "18": {"gap_before": 1.0},
+  "20": {"gap_before": 0.6},
+  "21": {"gap_before": 1.2}
+ }
+}
