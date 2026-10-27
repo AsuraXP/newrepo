@@ -318,9 +318,10 @@ Consistency comes from four things being byte-identical, not similar.
                         description; you are editing a known-good one.
 
   LOCK 4 — ONE VARIABLE. Between frames of the same subject only slots 3, 5 and
-                        6 change — action, stage, camera. Location, light and time of day may change
-                        when the story moves — and when they do, change the
-                        fewest words that carry it, not the whole block.
+                        6 change — action, stage, camera. Location, light and
+                        time of day may change when the story moves, and when
+                        they do, change the fewest words that carry it, not the
+                        whole block.
 
 5.3 — THE PROMPT TEMPLATE
 
