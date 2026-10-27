@@ -1,5 +1,11 @@
 # CONTINUITY — `day_one_v3` (Day One, rebuilt to be grounded)
 
+## Art direction — LOCKED
+**Halftone comic ink.** Bold black ink panels, halftone dot texture, deep solid
+blacks with mid-grey shading, white paper, flat bright red as the only colour.
+Chosen from four tests (`style_options.png`): woodcut, ink wash and risograph were
+rejected. Never blend the four.
+
 ## Thesis
 **No fantasy. No rule. No explanation.** The world behaves exactly like the world.
 The viewer should believe they are standing in that flat with the lights off.

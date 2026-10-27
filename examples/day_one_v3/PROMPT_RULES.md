@@ -10,9 +10,18 @@ v2 broke it by drawing two pursuers when the line says "she", and a man
 *looking back* on the line "you do not look back".
 v3 obeys the sentence.
 
-## Style block (prepend to every prompt)
-Bold black INK COMIC panel, halftone dots, heavy solid blacks, white paper, high
-contrast. Not a photograph, not 3D. 16:9. **No text of any kind.**
+## Style block (LOCKED — prepend to every prompt, verbatim)
+Bold black INK COMIC panel, halftone dot texture, heavy solid blacks, white paper,
+high contrast, graphic and cinematic. Deep blacks with mid-grey halftone shading.
+Not a photograph, not 3D. 16:9 landscape. **No text, no letters, no numbers, no
+signage, no logos, no watermark, nothing printed on any surface.**
+
+Reference frames: `style_tests/s1_halftone_A.png`, `style_tests/s1_halftone_B.png`.
+
+### Detail level
+Keep the room readable — lamp, bed, window frame, door furniture, the things he
+touches. No clutter. One object of focus per frame, the figure large enough to
+read in under a second, and the infected as flat black shapes.
 
 ## Character block
 Minimalist stick figure — round white head, EXACTLY TWO solid black dot eyes,
