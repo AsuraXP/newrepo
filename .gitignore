@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# build outputs: regenerable, never commit
+*.mp4
+*.zip
+*.wav
+examples/*/pool/
+examples/*/audio/
+examples/*/qc/stitch_*
+stitch_*/

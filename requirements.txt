@@ -1,0 +1,4 @@
+edge-tts          # real narration (Kaggle/Colab only; the sandbox has no network)
+Pillow            # frame normalisation, contact sheets, burn-in captions
+imageio-ffmpeg    # ffmpeg binary when the host has no system ffmpeg
+requests          # align.py fallbacks

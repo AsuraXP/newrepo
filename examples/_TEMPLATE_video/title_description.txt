@@ -1,0 +1,9 @@
+TITLE:
+(short title, 3-6 words, no channel name, no character names)
+
+DESCRIPTION:
+(2-3 sentences in the same second-person voice as the narration.
+No channel name, no links, no "in this video".)
+
+TAGS:
+(8-12 lowercase search terms, comma separated)
