@@ -3,6 +3,11 @@
 This repo is shared by many conversations. Most of what is in it is finished or
 abandoned. Only one project is current at a time.
 
+**New work goes in `projects/`.** The agent creates the directory itself on its
+first turn (see Step 0.5 of the pipeline prompt) and adds a row to the table
+below in the same turn. `examples/` is the older layout: finished and abandoned
+work, kept for reference, nothing added to it.
+
 | Directory | Project | State | Frames | Rule |
 |---|---|---|---|---|
 | `examples/day_zero_video/` | **Day One** — Ep 1, *Your Room* (zombie-apocalypse series) | **BUILT**, awaiting end-to-end build verification | 104 | **CURRENT. Work here.** |
@@ -18,8 +23,8 @@ abandoned. Only one project is current at a time.
 ## The rules for a fresh conversation
 
 1. **One current project.** Work only in the directory marked CURRENT, or in a
-   new directory you create for the new project. Nothing else in `examples/` is
-   a place to continue.
+   new directory under `projects/` that you create yourself for the new video.
+   Nothing in `examples/` is a place to continue.
 2. **Finished work is not a template.** Previous projects are reference for
    mechanics only — how a frame is named, how files are laid out, how a build
    script is written. Never for taste, never for style, never for continuity.
@@ -32,8 +37,9 @@ abandoned. Only one project is current at a time.
    and `run_video_kaggle.sh` were written for Day One. Read them before running
    them; do not reuse them blind. New project scripts belong inside the
    project's own directory.
-6. **New work gets a new directory**, named for the project. Never add frames to
-   an existing project folder.
+6. **New work gets a new directory under `projects/`**, named and created by
+   the agent, never by asking me. Never add frames to an existing folder, never
+   overwrite a directory, and increment the version if the slug is taken.
 7. **Every project directory carries its own README**: what it is, its state,
    its brief. A conversation starting cold must be able to open the folder and
    know what it is looking at without reading any chat log.

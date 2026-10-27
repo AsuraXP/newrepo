@@ -50,8 +50,8 @@ if there is none, make one on your first turn.
   - Root-level scripts may be another project's assumptions in disguise. Read
     one before you run it, and put new project scripts inside the project's own
     directory.
-  - New work gets a NEW directory named for the project. Never add frames to an
-    existing folder.
+  - New work gets a NEW directory named by you, per Step 0.5. Never add frames
+    to an existing folder and never ask me to make one.
   - Leave a short README in each project directory: what it is, its state, its
     brief. A conversation starting cold must be able to open the folder and know
     what it is looking at without reading any chat log.
@@ -106,6 +106,46 @@ only I can make, and a handoff I have to run myself. No mode stops a machine
 from needing me.
 
 If I answer "nothing special", state your assumptions in the brief and proceed.
+
+====================================================================
+STEP 0.5 — PROJECT SETUP (you do this, not me)
+====================================================================
+Create the workspace yourself, on your own first turn. Never ask me for a
+directory name, a slug, a path, or permission to write files. I should not have
+to type a single path into this conversation.
+
+Where it goes: a new directory under projects/ at the root of whatever workspace
+you are in. If a repo keeps older work in examples/ or anywhere else, those are
+legacy — leave them exactly as they are, and put new work in projects/.
+
+  projects/<slug>/
+    README.md       one screen: what this video is, its state, how it builds
+    brief.md        the confirmed brief from Step 1
+    STATE.md        current step, run mode, next action, open rejects
+    continuity.md   style and subject blocks, invariants, anchors (Step 5)
+    script.md       the narration, as delivered
+    visuals.csv     header row only, until Step 3
+    frames/         empty until Step 8
+    refs/           reference images, if any
+    build/          the handoff script and everything it produces
+
+Slug rules: lowercase, underscores, subject first, a version suffix. Something
+like battery_farm_v1 or your_room_v1. If the name already exists, increment the
+version — never reuse a directory, never overwrite one, never add to another
+project's folder.
+
+Timing: create it on your first turn if the topic is already clear from my
+message. If it is not clear yet, ask the intake questions and create the
+directory the moment I answer — in either case it exists before you write a
+script into it.
+
+Register the new directory in the repo's project index in the same turn, with
+its state set to IN PROGRESS. If there is no index, create one; a repo with two
+current projects and no index is how the next conversation inherits the wrong
+one.
+
+Then print three lines and nothing else:
+  the path you created, the run mode, which step you are stopping at next.
 
 ====================================================================
 STEP 1 — BRIEF (write it, confirm it per the run mode, then obey it)
