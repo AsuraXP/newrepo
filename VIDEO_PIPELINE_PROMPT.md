@@ -188,6 +188,68 @@ Consistency is not a talent, it is bookkeeping. Frames drift because prompts
 are re-written from memory each time, not because the model forgets. This step
 removes the rewriting.
 
+5.0 — THE FRAME GRAMMAR (the only genuinely universal thing here)
+
+There is no universal frame PROMPT. There is a universal frame SHAPE, and it is
+the most useful object in this document. Every frame prompt, for any style, in
+any video, has nine slots in this order. The words in the slots change. The
+slots do not.
+
+  1. FORMAT     aspect, "one image", and what kind of picture this is —
+                illustration, photograph, render, diagram. Sets the medium
+                before anything else argues with it.
+  2. SUBJECT    who or what, full description, and the count written as a
+                sentence.
+  3. ACTION     what the subject is doing at this instant. A verb you could
+                photograph, not a mood.
+  4. PLACE      where, specifically, with one or two objects that date it.
+  5. STAGE      where everything sits: foreground / middle / background, left
+                or right, what occludes what, and how much empty space.
+  6. CAMERA     distance, height, angle. Wide / medium / close; eye level, low
+                or high; straight on or three-quarter.
+  7. LIGHT      source, direction, hardness, time of day.
+  8. STYLE      the project's style block, verbatim. THIS IS THE ONLY SLOT THAT
+                DIFFERS BETWEEN PROJECTS, and it is the reason one skeleton
+                serves a cartoon, a photograph, a woodcut and a diagram.
+  9. NEGATIVES  what must not appear.
+
+Rules for filling it:
+  - Fill every slot, every frame. An empty slot is not neutral; the model fills
+    it with its own average, and its average is drift.
+  - One focal point per frame. If you cannot name it in one word, the frame
+    does not have one yet.
+  - Order carries weight. Subject before place, place before camera, light after
+    camera, style last but for negatives. Put the subject inside the first
+    fifteen words or it competes with the scenery.
+  - Verbs for action, nouns for objects, measurable words for light, and style
+    adjectives confined to slot 8. Never let style words leak into slots 2-7:
+    "gritty street" in slot 4 changes the story, not the look.
+
+How the tiers map onto it, which is the part that keeps a long video coherent:
+  TIER 1 constants   ->  slots 1, 8, 9
+  TIER 2 world block ->  slots 2, 4, 7
+  TIER 3 scene       ->  slots 3, 5, 6
+
+WHY NOT ONE PROMPT THAT WORKS ON EVERYTHING. A single string carrying every
+style at once regresses to the mean: it draws the average of a photograph, a
+cartoon and a diagram, and the average of those is nothing. Universal has to
+mean the scaffold is empty, not that the words are shared. Slot 8 is empty until
+your brief fills it. That is what makes it portable.
+
+QUALITY LEVERS. Independent of style, these decide whether a frame reads:
+  - DISTANCE. Pick one and commit. Close for feeling, wide for isolation or
+    for facts. Hedging at medium distance is why frames feel flat.
+  - SILHOUETTE. Shrink the subject to a black shape. If it is not identifiable,
+    change the angle, not the level of detail.
+  - CONTRAST. Put the brightest or darkest thing in the frame where the eye
+    should land. Do not rely on the subject being central.
+  - NEGATIVE SPACE. Decide where it goes. A full frame reads and an empty frame
+    reads; a half-full one does not.
+  - ONE IDEA. One frame shows one thing. Two competing subjects means neither
+    lands.
+  - THUMBNAIL TEST. Shrink it to 15% and look. If you cannot tell what is
+    happening, the fault is in STAGE (slot 5), not in the detail.
+
 5.1 — THE INVARIANT LIST, BEFORE ANY FRAME
 Ask, and write down, the 5-8 attributes that must look the same in every frame
 that contains them: silhouette, colour, garment, proportions, props, light
@@ -232,23 +294,32 @@ Consistency comes from four things being byte-identical, not similar.
                         fewest words that carry it, not the whole block.
 
 5.3 — THE PROMPT TEMPLATE
-Fill this mechanically. Do not freestyle it mid-batch.
 
-  [STYLE BLOCK — verbatim]
-  [SUBJECT BLOCK — verbatim, full description every single time]
-  SCENE: <what happens in this frame: subject, action, place, gaze, count>
-  FRAME: <aspect>, one image, <text policy from the brief>
-  [NEGATIVE BLOCK — verbatim]
+5.0 in practice. Fill this mechanically, slots in order, every frame. Do not
+freestyle it mid-batch.
+
+  [1 FORMAT]  <aspect>. <kind of picture>. One image.
+  [2 SUBJECT] <subject block, verbatim>. <count sentence>.
+  [3 ACTION]  <one photographable verb phrase, this instant>.
+  [4 PLACE]   <specific place>. <one or two objects that date it>.
+  [5 STAGE]   <foreground / middle / background; left or right; what occludes
+              what; where the empty space is>.
+  [6 CAMERA]  <distance>, <height>, <angle>.
+  [7 LIGHT]   <source>, <direction>, <hard or soft>, <time of day>.
+  [8 STYLE]   <style block, verbatim>.
+  [9 NEG]     <negative block, verbatim>.
 
 Rules that stop the common failures:
-  - Write the count as a sentence in the subject block ("exactly one figure in
-    the frame") — models add bystanders unless told there are none.
+  - Write the count as a sentence in slot 2 ("exactly one figure in the frame").
+    Models add bystanders unless told there are none.
   - Give every recurring subject its full description every time, even in the
     fortieth frame. Shortening it is how characters develop new haircuts.
-  - Describe what should be VISIBLE, not what should be absent, except in the
-    negative block. "No ears, no nose" is weaker than naming what the face is.
-  - If a frame is meant to read as the same room, repeat the same room
-    description and change only the action.
+  - Describe what should be VISIBLE, not what should be absent, except in slot
+    9. "No ears, no nose" is weaker than naming what the face is.
+  - If a frame is meant to read as the same room, repeat the same place and
+    stage wording and change only slot 3.
+  - Slot 5 is the one everybody skips, and it is the one that decides whether
+    the frame reads. Write it even when it feels obvious.
 
 5.4 — REFERENCE IMAGES: USE, THEN PROVE
 A reference image is strong for style and contaminating for characters. Treat
