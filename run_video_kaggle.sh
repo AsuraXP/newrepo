@@ -151,13 +151,18 @@ if [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration.m
       --chunks "$VIDEO_DIR/narration_chunks.json" \
       --out "$VIDEO_DIR/words.json" \
       --model "${WHISPER_MODEL:-small.en}"
-  TTS_ARGS+=(--words-json "$VIDEO_DIR/words.json")
+  if [ "$TTS_MODULE" = "cartoonstyle.tts" ]; then
+    TTS_ARGS+=(--words-json "$VIDEO_DIR/words.json")
+  else
+    echo "   NOTE: forced alignment is single-voice only; tts_multi will"
+    echo "         synthesize per beat instead (set NARRATION_MODE=edgetts)."
+  fi
 else
   echo "   synthesizing with edge-tts ($VOICE $RATE)"
   TTS_ARGS+=(--voice "$VOICE" --rate="$RATE")
 fi
 
-python3 -m cartoonstyle.tts "${TTS_ARGS[@]}" 2>&1 | tee "$LOG"
+python3 -m "$TTS_MODULE" "${TTS_ARGS[@]}" 2>&1 | tee "$LOG"
 
 # tts prints "[OK]" at the END of the line: "... moments_timing.json [OK]"
 if ! grep -qE "moments locked.*\[OK\]" "$LOG"; then
