@@ -74,6 +74,7 @@ Output this and wait:
   NUMBERS/LABELS:      allowed | required | forbidden
   LOGOS/BRANDING:      allowed | required | forbidden
   LOOKS IDENTICAL:     the 5-8 attributes that must not drift across frames
+  WORLDS/ERAS:         one, or a list — each era or place the video enters
   VOICE:               narrator, or cast of N
   MUSIC:               none | underscore | featured
   CAPTIONS:            burned in | sidecar SRT | none
@@ -322,6 +323,61 @@ carrying whatever the brief says about text. Show them with the invariable
 blocks written above so I can see what will be reused. Then lock.
 
 In SEAMLESS RUN mode, do this internally and present the results with batch one.
+
+5.10 — MULTIPLE ERAS, MULTIPLE WORLDS
+
+The locks hold a SUBJECT steady. They hold a WORLD steady the same way, and
+that needs one more layer: the ERA BLOCK. The moment the video moves through
+time or place — 1970s to now, present day into a flashback, three cities in one
+piece — you are writing in three tiers, not two.
+
+  TIER 1 — CONSTANTS, whole video, never change
+    The finish: line weight, shadow count, texture level, realism level,
+    palette structure, aspect, and the camera's habits (eye height, distance,
+    lens feel). This is what makes 1994 look like the same film as 2024.
+    Break Tier 1 and you no longer have one video, you have two.
+
+  TIER 2 — WORLD BLOCK, locked per era or per place
+    Materials, technology level, light sources and their count, signage era and
+    script, vehicles, furniture, clothing silhouettes, wear and dirt level,
+    palette family, and what is conspicuously absent. One block per world,
+    written once, pasted byte-identical into every frame of that world, exactly
+    like a subject block.
+
+  TIER 3 — SCENE, changes every frame.
+
+NAME OBJECTS, NOT DECADES. "1970s", "vintage" and "futuristic" are the weakest
+tokens in the block; models render them as costume drama. Replace each with
+physical nouns: one tungsten bulb and no fluorescent strip, a wall-mounted
+rotary phone, painted iron shutters, no plastic bottles, no printed shirts, a
+manual typewriter. The era is the sum of its objects. Give the count — how many
+light sources, how many visible machines, how much litter.
+
+ANACHRONISM AS A NEGATIVE. The best use of the era block's negative field is
+the must-not-appear list: LEDs, screens, plastic signage, modern footwear,
+current logos, the wrong alphabet on a sign. One wrong object dates the whole
+frame, and it is cheaper to forbid ten than to spot twelve.
+
+RE-ANCHOR PER WORLD. An anchor belongs to its era. When the world changes, the
+first accepted frame of the new world becomes that world's anchor and is
+archived separately. Do not edit a period prompt into a present-day one — the
+residue of the first block survives the edit. Write the new world's block, then
+anchor it.
+
+CROSSING WORLDS. If two worlds must feel like one video, keep one constant
+physical thing in both — the same wall, the same lamp type, the same silhouette
+of a street — so the eye has a bridge. If the point is rupture, cut hard and let
+the constants break on purpose, and say so at the brief.
+
+CHECK WITHIN A WORLD, NOT ACROSS. On the contact sheet, group by era. A period
+frame is judged against its own anchor. Judged against a present-day frame it
+will always "fail", and the correction you would make from that comparison is
+the wrong correction. Cross-era comparison is for Tier 1 only: is the finish
+still the same?
+
+LIMIT, STATED PLAINLY. Locks buy sameness, not accuracy. If the video depends on
+a period or place you cannot verify, say so at the brief, and say what the video
+is therefore claiming.
 
 ====================================================================
 STEP 6 — AUDIO
