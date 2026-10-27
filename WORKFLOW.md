@@ -126,8 +126,14 @@ I'll tell you the new video's premise. Then:
 | `cartoonstyle/sfx.py` | procedural knock/thud/click/rumble, stdlib only |
 | `cartoonstyle/stitch.py` | word-locked cuts, optional burned captions, loudness normalisation, `--sfx` mix |
 | `cartoonstyle/align.py` | faster-whisper forced alignment of an existing narration track |
+| `cartoonstyle/plan.py` | pacing + script-coverage gate before any image is generated |
+| `cartoonstyle/prep_frames.py` | `frames/` → `pool/` at exactly 1376×768; `--check` gate |
+| `cartoonstyle/contact_sheet.py` | QC sheet, `--visuals` prints each `moment_text` under its tile |
 | `run_video_kaggle.sh` | one-shot Kaggle build → `<slug>_DELIVERABLE.zip` |
-| `tools/` | `build_narration.py`, `make_animatic.py`, `apply_stamps.py`, `make_thumbnail.py` (PIL type — superseded by AI thumbnails) |
+
+The old `tools/` scripts (`make_thumbnail.py` and friends) are deliberately not carried
+over: the thumbnail is AI-generated with type baked in, and the rest were one-off
+episode helpers.
 
 ## Worked numbers from a real 5:04 build
 

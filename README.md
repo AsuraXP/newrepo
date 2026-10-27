@@ -3,9 +3,10 @@
 One episode = one folder in `examples/<slug>_video/`. The tooling is in `cartoonstyle/`.
 Narration is word-locked to images, so a cut happens on the exact syllable you wrote.
 
-**Branch rule:** `main` carries the tooling only. Every episode lives on the arena
-session branch it was produced on, because `run_video_kaggle.sh` clones one branch.
-The agent prints the branch name at the end of every report — clone *that*, not `main`.
+**Branch rule:** every episode lives on the arena session branch it was produced on,
+together with the tooling version that built it, because `run_video_kaggle.sh` clones
+exactly one branch. The agent prints the branch name at the end of every report —
+clone *that*, not `main` (which is still just the original stub).
 
 ## Modules
 
