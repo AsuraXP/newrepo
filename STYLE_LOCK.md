@@ -17,6 +17,7 @@ and is generated with the text-free style reference attached:
 ## Technical findings (recorded, not assumed)
 
 - **Resolution:** model returns 1376x768 (ratio 1.79, not exactly 16:9). Normalise to 1920x1080 by resize + pad with warm cream (247,240,221). Never crop, never stretch. Padding is a few pixels.
+- **Storage:** after normalising, quantise to a 32-colour palette PNG. Visually identical on flat cartoon art (checked side by side), 2.4 MB -> 0.57 MB per frame. Applied by `tools/frames.py`.
 - **Style reference:** attaching the crop materially improves character consistency (closed eyes, spiky hair, cream ground). Reuse it on EVERY frame. The crop is the left 92x160 px of the 240x180 thumbnail upscaled 5x, chosen because the original carries a giant "NO JOBS" caption that would otherwise bleed text into every frame.
 - **Dense text / numerals / signage:** one short hand-lettered string works. Two or more strings on one frame were not tested; avoid.
 - **Stacking negatives:** one compact NEG block only. No evidence a second helps.
