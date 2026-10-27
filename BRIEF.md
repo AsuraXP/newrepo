@@ -79,3 +79,27 @@ retrieval of video frames, so the channel read is based on its public
 page, descriptions, transcripts, auto-described thumbnails, and the one
 frame the user supplied. Not a frame-by-frame study. The style block is
 therefore an interpretation, to be proven by test frames at STEP 5.
+
+
+## FRAME DENSITY DECISION (locked 2026-10-27)
+
+Question asked three times: is 100+ frames enough for a ~9 minute video?
+**Yes.** Verdict and the math that settles it:
+
+| narration rate | runtime | mean cut | shortest | longest | cuts > 6 s |
+|---|---|---|---|---|---|
+| 2.50 w/s | 10:09 | 5.2 s | 1.2 s | 6.8 s | 22 |
+| 2.75 w/s (target) | 9:13 | 4.7 s | 1.1 s | 6.2 s | 7 |
+| 3.00 w/s | 8:28 | 4.3 s | 1.0 s | 5.7 s | 0 |
+
+- `visuals.csv`: 117 frames / 1,522 words = 13.0 words per frame.
+- At target rate: 12.8 frames/min = one cut every 4.7 s. Even 100 frames
+  over 9:13 would be 5.5 s per cut. Both sit inside the normal 3-6 s
+  explainer range. More frames would mean sub-4 s cuts for their own sake,
+  which breaks the moment-driven TIMING AMENDMENT above.
+- The actual risk is NOT frame count, it is the 7 long static holds at
+  2.75 w/s (max 6.2 s). Fix in the Kaggle build: slow Ken Burns push-in
+  (scale 1.00 -> 1.045) on every frame, stronger on 15-17 word moments.
+  Do NOT add filler frames or pad durations.
+- Final frame count stays 117. Chapters come from the final audio, never
+  from these estimates.
