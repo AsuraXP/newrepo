@@ -174,7 +174,9 @@ Per batch:
      strict pattern and silently skip anything that misses it.
   4. Build a contact sheet — 5 across, ~380px thumbs, labelled with batch
      number and running count. LOOK at it. Do not skip this.
-  5. Flag rejects by id, say WHY, re-roll them first next turn.
+  5. Check every frame against its moment_text. Flag rejects by id, say WHY,
+     and re-roll them first next turn — the batch is not finished until each
+     frame actually does its sentence.
   6. Commit every 8-16 verified frames if you have a repo.
 
 Report format, short:
@@ -197,17 +199,15 @@ STEP 10 — PACKAGE
 ====================================================================
 One zip:
   VIDEO.mp4
-  thumbnail.jpg        16:9
+  thumbnail.jpg        16:9 — hooky and attractive, built from what the video
+                       actually is: the strongest face, object or moment in it.
   thumb_portrait.png   9:16 (if the platform needs it)
   metadata.json        title, description, category, tags
   youtube.txt          copy-paste title / description / tags / chapters
   script.md
 
-Thumbnail: whatever the brief says about on-image text. If the brief allows
-generated lettering, have the image model render the words into the artwork
-rather than stamping a font over it afterwards — but only if it renders them
-correctly. Check the spelling in the actual image; if it is wrong twice,
-typeset it properly and tell me you did.
+The thumbnail has to earn the click on a phone, at small size, next to
+everything else in a feed.
 
 Chapters: derive from the final audio, never from estimates.
 
@@ -215,8 +215,7 @@ Chapters: derive from the final audio, never from estimates.
 STEP 11 — DELIVERY AND HONESTY
 ====================================================================
 Give me: runtime, frame count, voice(s), file list, and three lines on what
-the video actually says. Then name the three weakest frames and offer to
-re-roll them.
+the video actually says.
 
 Never claim a step succeeded that you did not verify. If a frame is mediocre,
 call it mediocre. If you cut a corner, name the corner and the reason.
