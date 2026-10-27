@@ -133,13 +133,45 @@ LOG=/tmp/tts_log_$SLUG.txt
 TTS_ARGS=(--beats "$VIDEO_DIR/beats.jsonl" --out-dir "$VIDEO_DIR"
           --visuals "$VIDEO_DIR/visuals.csv")
 
-# Multi-voice if the episode ships a cast file, single take otherwise.
+# TAKE=single  the whole script in ONE edge-tts call: seamless prosody, no
+#              seams, no per-beat gaps. SFX cues are derived from the beat
+#              spans afterwards (tools/sfx_cues_from_beats.py).
+# TAKE=multi   one edge-tts segment per beat: per-beat voices, real silence
+#              gaps, sfx_cues.csv written by tts_multi.
+# TAKE=auto    single if every beat uses the same voice, multi if the cast
+#              file actually changes voice partway through.
+TAKE="${TAKE:-auto}"
+DISTINCT_VOICES=1
 if [ -f "$VIDEO_DIR/voices.json" ]; then
-  echo "   cast file found -> multi-voice (one segment per beat)"
+  DISTINCT_VOICES=$(python3 - "$VIDEO_DIR/voices.json" <<'PYJSON'
+import json, sys
+c = json.load(open(sys.argv[1]))
+d = c.get("default", {}).get("voice", "")
+voices = {d} | {v.get("voice") for v in c.get("beats", {}).values() if v.get("voice")}
+voices.discard(None); voices.discard("")
+print(len(voices) or 1)
+PYJSON
+)
+fi
+
+if [ "$TAKE" = "auto" ]; then
+  if [ "$DISTINCT_VOICES" -le 1 ]; then TAKE=single; else TAKE=multi; fi
+fi
+
+if [ "$TAKE" = "single" ] && [ "$DISTINCT_VOICES" -gt 1 ]; then
+  echo "!!! TAKE=single requested, but voices.json uses $DISTINCT_VOICES voices."
+  echo "!!! one continuous take can only read one voice. Use TAKE=multi, or"
+  echo "!!! set every beat to the same voice in voices.json."
+  exit 1
+fi
+
+if [ "$TAKE" = "single" ]; then
+  echo "   take mode: SINGLE (one continuous edge-tts call, no seams)"
+  TTS_MODULE=cartoonstyle.tts
+else
+  echo "   take mode: MULTI ($DISTINCT_VOICES voices, one segment per beat)"
   TTS_MODULE=cartoonstyle.tts_multi
   TTS_ARGS+=(--voices "$VIDEO_DIR/voices.json")
-else
-  TTS_MODULE=cartoonstyle.tts
 fi
 
 if [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration.mp3" ]; then
@@ -169,6 +201,19 @@ if ! grep -qE "moments locked.*\[OK\]" "$LOG"; then
   echo "!!! NARRATION DID NOT LOCK ALL MOMENTS - inspect $LOG"
   echo "!!! a moment_text token is not present in the spoken word stream"
   exit 1
+fi
+
+# Single take has no per-beat synthesis, so sfx times must be derived from the
+# beat spans rather than emitted by tts_multi.
+if [ "$TAKE" = "single" ] && [ -f "$VIDEO_DIR/voices.json" ]; then
+  STAGE="sfx-cues"
+  echo "   deriving sfx_cues.csv from beat spans"
+  python3 -m tools.sfx_cues_from_beats \
+      --beats "$VIDEO_DIR/beats_with_timing.json" \
+      --voices "$VIDEO_DIR/voices.json" \
+      --out "$VIDEO_DIR/sfx_cues.csv" \
+      --offset "${SFX_OFFSET:-0.25}" || echo "   (no sfx cues produced)"
+  cd "$REPO"
 fi
 
 STAGE="stitch"
