@@ -4,17 +4,20 @@ No downloads, no licences, no missing asset files: every cue here is synthesized
 from scratch with the standard library, then written as a 48 kHz mono WAV track
 that `stitch.py` mixes under the narration.
 
-Cue times come from `sfx_cues.csv`, which `tts_multi.py` writes whenever a beat
-in `voices.json` carries an `"sfx"` field. Because those times are absolute
+Cue times come from `sfx_cues.csv`, which `tts.py` writes from the episode's
+`sfx.csv` (key,sfx[,offset] - a sound anchored to an image moment). Because those times are absolute
 seconds inside the rendered narration, the knock lands in the gap that was
 reserved for it — the picture never drifts.
 
 Supported cues (add to SOUNDS to extend):
     knock       one closed-fist knock on a wooden door
+    knock x2    two knocks
     knock x3    three evenly spaced knocks
     thud        a single heavy body-against-door bump
     click       a small latch/switch sound
     rumble      a low distant swell (grid going down, something far away)
+    ring        a phone ringing on a hard surface, one burst
+    steps       six uneven footfalls, patient, approaching
 
 Usage:
     python3 -m cartoonstyle.sfx --cues <dir>/sfx_cues.csv --out <dir>/sfx.wav
@@ -102,6 +105,35 @@ def rumble(seed: int = 3, strength: float = 1.0) -> list[float]:
     return out
 
 
+def ring(seed: int = 4, strength: float = 1.0) -> list[float]:
+    """A phone ringing flat on a table: 440+480 Hz, warble, no reverb."""
+    rnd = random.Random(seed)
+    dur = 1.30
+    n = int(SR * dur)
+    out = [0.0] * n
+    for i in range(n):
+        t = i / SR
+        # ring cadence: 0.9s of tone, then the handset runs out of breath
+        if t > 0.95:
+            continue
+        warble = 0.55 + 0.45 * math.sin(2 * math.pi * 20.0 * t)
+        tone = (math.sin(2 * math.pi * 440.0 * t) * 0.6
+                + math.sin(2 * math.pi * 480.0 * t) * 0.4)
+        env = _env(t, 0.008, dur) * (1.0 if t < 0.88 else max(0.0, (0.95 - t) / 0.07))
+        out[i] = tone * warble * env * 0.95 * strength
+    return out
+
+
+def steps(seed: int = 5, strength: float = 1.0) -> list[float]:
+    """Six slow footfalls on a hard floor - the weight wrong, the spacing off."""
+    rnd = random.Random(seed)
+    buf: list[float] = []
+    for k in range(6):
+        buf += thud(seed + k, 0.55 * strength)
+        buf += gap(rnd.uniform(0.42, 0.72))
+    return buf
+
+
 def gap(seconds: float) -> list[float]:
     return [0.0] * int(SR * seconds)
 
@@ -129,6 +161,8 @@ RENDER = {
     "thud": lambda: thud(),
     "click": lambda: click(),
     "rumble": lambda: rumble(),
+    "ring": lambda: ring(),
+    "steps": lambda: steps(),
 }
 
 
@@ -206,9 +240,9 @@ def main() -> None:
     if not Path(args.cues).exists():
         raise SystemExit(
             f"no cues file at {args.cues}.\n"
-            "  This is normal when no beat in voices.json has an \"sfx\" field -\n"
-            "  there is nothing to score. Add one, e.g. \"9\": {\"sfx\": \"knock x3\"},\n"
-            "  then re-run tts_multi to regenerate sfx_cues.csv.")
+            "  This is normal when the episode has no sfx.csv - there is nothing to score.\n"
+            "  Add one (key,sfx,offset with key like beat05m03), re-run cartoonstyle.tts,\n"
+            "  and sfx_cues.csv will be regenerated from the moment timeline.")
 
     cues: list[tuple[float, str]] = []
     with open(args.cues, newline="", encoding="utf-8") as fh:

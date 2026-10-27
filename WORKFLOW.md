@@ -31,21 +31,21 @@ Stage 3. beats.jsonl
   python3 -m cartoonstyle.csv_to_beats --visuals visuals.csv --out beats.jsonl
 Groups consecutive rows into one beat per slide_id.
 
-Stage 4. voices.json  (only if multi-voice)
-{
- "default": {"voice": "en-US-AndrewNeural", "rate": "+0%"},
- "beats": {
-   "4":  {"voice": "en-GB-SoniaNeural", "rate": "-6%", "gap_before": 1.2},
-   "9":  {"voice": "en-GB-RyanNeural",  "rate": "-4%", "gap_before": 1.0, "sfx": "knock x3"}
- }
-}
-Any beat with an "sfx" field makes tts_multi write sfx_cues.csv automatically. Supported cues: knock, knock x3, thud, click, rumble. Times are absolute seconds inside the narration, so the sound always lands on the cut.
+Stage 4. sfx.csv  (optional, single voice only)
+key,sfx,offset
+beat02m01,knock x3,0
+beat07m01,ring,0
+There is no voices.json and no multi-voice any more: one narrator, one continuous take.
+sfx.csv anchors a sound to an IMAGE MOMENT, not a hand-counted second. tts resolves it
+against moments_timing.json and writes sfx_cues.csv in absolute seconds, so the sound
+lands on the cut at any speaking rate. Cues: knock, knock x2, knock x3, thud, click,
+rumble, ring, steps (add more to RENDER in cartoonstyle/sfx.py).
 
 Stage 5. TIMING (two modes)
   # sandbox: no internet, no real voices. Estimates timing from word count.
-  python3 -m cartoonstyle.tts_multi --beats beats.jsonl --out-dir . --visuals visuals.csv --voices voices.json --simulate
+  python3 -m cartoonstyle.tts --beats beats.jsonl --out-dir . --visuals visuals.csv --simulate
   # Kaggle: real edge-tts audio
-  python3 -m cartoonstyle.tts_multi --beats beats.jsonl --out-dir . --visuals visuals.csv --voices voices.json
+  python3 -m cartoonstyle.tts --beats beats.jsonl --out-dir . --visuals visuals.csv --voice en-US-AndrewNeural
 Outputs beats_with_timing.json (one audio file per beat) and moments_timing.json (exact seconds per image, word-locked) and sfx_cues.csv.
 
 Stage 6. SFX
@@ -65,7 +65,7 @@ Useful flags: --captions (word-locked subtitles, --caption-method ass|pil), --qc
 
 Stage 9. DELIVERABLE
 On Kaggle: !bash newrepo/run_video_kaggle.sh <slug>
-It picks up examples/<slug>_video/ automatically, switches to multi-voice if voices.json exists, synthesizes sfx, stitches, and writes $OUT_DIR/<slug>_DELIVERABLE.zip. Env overrides: VIDEO_DIR, OUT_DIR, VOICE, RATE, SKIP_TTS=1, ZIP_NAME.
+It picks up examples/<slug>_video/ automatically, synthesizes one continuous take, mixes sfx if sfx.csv exists, stitches, and writes $OUT_DIR/<slug>_DELIVERABLE.zip. Env overrides: VIDEO_DIR, OUT_DIR, VOICE, RATE, SKIP_TTS=1, ZIP_NAME, CAPTIONS=1, BRAND_WORDS.
 IMPORTANT: that script's header documents cloning https://github.com/AsuraXP/CartoonStyle.git — check the clone URL and branch actually match the repo you pushed to, and fix it if not.
 
 === SANDBOX GOTCHAS (learned the hard way) ===
@@ -110,7 +110,7 @@ AI-generated, with all type baked in by the image model itself. Never stamp text
 === MY FIRST ASK ===
 I'll tell you the new video's premise. Then:
 1. Write the narration and show it to me. Wait for my go.
-2. Build visuals.csv + voices.json, run stages 3-6 with --simulate, and tell me the exact runtime.
+2. Build visuals.csv (+ sfx.csv), run stages 3-6 with --simulate, and tell me the exact runtime.
 3. Then start images, 10 per turn, QC sheet after each batch.
 ```
 
@@ -121,8 +121,7 @@ I'll tell you the new video's premise. Then:
 | Path | What it is |
 |---|---|
 | `cartoonstyle/csv_to_beats.py` | `visuals.csv` → `beats.jsonl`, one beat per `slide_id` |
-| `cartoonstyle/tts_multi.py` | per-beat voices, real silence gaps, writes `beats_with_timing.json`, `moments_timing.json`, `sfx_cues.csv` |
-| `cartoonstyle/tts.py` | single-voice path; keep the forward-moving `pos` cursor, it fixes a beat-matching bug |
+| `cartoonstyle/tts.py` | the only voice path: one continuous take, word-locks moments, resolves sfx.csv, `--simulate` for sandbox runs. Keep the forward-moving `pos` cursor, it fixes a beat-matching bug |
 | `cartoonstyle/sfx.py` | procedural knock/thud/click/rumble, stdlib only |
 | `cartoonstyle/stitch.py` | word-locked cuts, optional burned captions, loudness normalisation, `--sfx` mix |
 | `cartoonstyle/align.py` | faster-whisper forced alignment of an existing narration track |
@@ -168,12 +167,11 @@ Decide per episode before writing `visuals.csv`, because it sets the image budge
 ## 2. Stage 6 is conditional
 
 `sfx` exits with a clear message when `sfx_cues.csv` does not exist, and that file is
-only written when at least one beat in `voices.json` has an `"sfx"` field. Run it only
-if the file is there.
+only written when the episode has a non-empty `sfx.csv`. Run it only if the file is there.
 
 ## 3. `--simulate` is not offline
 
-`tts_multi` builds its silences by shelling out to ffmpeg. Without a binary it dies
+`tts --simulate` builds its silent take by shelling out to ffmpeg. Without a binary it dies
 with `FileNotFoundError: 'ffmpeg'`. `pip install imageio-ffmpeg` is mandatory even for
 a simulated dry run; the modules fall back to `imageio_ffmpeg.get_ffmpeg_exe()`.
 
@@ -191,15 +189,16 @@ put an 11 px black stripe on its right edge. Now:
 
 ## 5. `SKIP_TTS=1` used to re-run TTS
 
-Neither `tts` nor `tts_multi` probes for cached audio, so the flag installed nothing
-and then crashed on `import edge_tts`. The runner now skips the stage and verifies that
+The flag used to skip the pip install and then still run the TTS module, which crashed
+on `import edge_tts`. The runner now skips the stage entirely and verifies that
 `moments_timing.json` covers every row of `visuals.csv` instead.
 
 ## 6. Multi-voice was silently single-voice on Kaggle
 
 `run_video_kaggle.sh` computed `TTS_MODULE=cartoonstyle.tts_multi` and then called
-`python3 -m cartoonstyle.tts` on the next line. A `voices.json` would have been passed
-to a module with no `--voices` flag. Fixed; the runner now calls `"$TTS_MODULE"`.
+`python3 -m cartoonstyle.tts` on the next line, so a `voices.json` would have been passed
+to a module with no `--voices` flag. Moot now that multi-voice is removed, but it is why
+the earlier episodes are all single-voice in practice.
 
 ## 7. Clone URL
 
@@ -229,3 +228,23 @@ then re-measure `narration.mp3`.
 
 `момент_text` in stage 2 is `moment_text` (Cyrillic м и е sneak in from a keyboard
 layout). The CSV header must be ASCII or `csv_to_beats` will not find the column.
+
+---
+
+# SINGLE VOICE — 2026-10-27
+
+Multi-voice is gone. `cartoonstyle/tts_multi.py` is deleted, `voices.json` is no longer
+read by anything, and the runner calls `cartoonstyle.tts` unconditionally: one voice,
+one continuous take, clean prosody, no per-beat gluing.
+
+What replaced the one thing tts_multi was genuinely better at (sfx timing): **word-anchored
+cues**. `sfx.csv` in the episode folder is `key,sfx[,offset]`, where `key` is an image
+moment key like `beat05m03`. `tts` resolves each row against `moments_timing.json` and
+writes `sfx_cues.csv` in absolute seconds. The knock lands on its cut at any speaking
+rate, and there is no frame where the cue and the cut disagree.
+
+Cues available: `knock`, `knock x2`, `knock x3`, `thud`, `click`, `rumble`, `ring`, `steps`
+(add more in `RENDER` in `cartoonstyle/sfx.py`).
+
+`tts --simulate` now exists, so the sandbox can produce a timing-accurate silent take:
+`python3 -m cartoonstyle.tts --beats beats.jsonl --out-dir . --visuals visuals.csv --simulate`

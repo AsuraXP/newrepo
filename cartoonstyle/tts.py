@@ -14,6 +14,11 @@ Outputs (in --out-dir):
   audio/beatNN.mp3         per-beat slices (easy review)
   beats_with_timing.json   beat spans (gapless cover of [0, total])
   moments_timing.json      every image moment, gapless tiling of the audio
+  sfx_cues.csv             absolute times for cartoonstyle.sfx (from sfx.csv)
+
+Sound cues are word-anchored, not hand-timed: sfx.csv says WHICH MOMENT a sound
+belongs to, and the time comes out of the word stream. Re-record slower, the
+knock still lands on the cut.
 """
 from __future__ import annotations
 
@@ -172,6 +177,12 @@ def main() -> None:
     p.add_argument("--rate", default="+0%", help='speaking pace, e.g. "+5%"')
     p.add_argument("--visuals", default="", help="visuals.csv (moment rows) -> moments_timing.json")
     p.add_argument("--force", action="store_true", help="re-synthesize")
+    p.add_argument("--simulate", action="store_true",
+                   help="no network, no edge-tts: silent audio of the right length at "
+                        "--wps, evenly spaced word times. Timing-accurate, mute.")
+    p.add_argument("--wps", type=float, default=2.75, help="--simulate words per second")
+    p.add_argument("--sfx-cues", default="",
+                   help="sfx.csv (key,sfx[,offset]); default <out-dir>/sfx.csv if present")
     p.add_argument("--words-json", default="",
                    help="precomputed [{w,t}] word timings for an existing narration.mp3 "
                         "(from cartoonstyle.align) - skips synthesis entirely")
@@ -185,7 +196,12 @@ def main() -> None:
     print(f"[tts] {len(items)} beats | one take | voice {args.voice} | rate {args.rate}", flush=True)
 
     words: list[dict] = []
-    if args.words_json:
+    if args.simulate:
+        words, total = simulate_take(full_text, narr, args.wps, args.force)
+        print(f"[tts] SIMULATED take: {len(words)} words @ {args.wps} wps "
+              f"= {int(total // 60)}:{int(total % 60):02d} (silent stereo of that length)",
+              flush=True)
+    elif args.words_json:
         if not narr.exists():
             raise SystemExit(f"--words-json given but {narr} is missing")
         words = json.loads(Path(args.words_json).read_text(encoding="utf-8"))
@@ -201,17 +217,18 @@ def main() -> None:
             words = [{"w": w["w"], "t": w["t"]} for b in old for w in b.get("words", [])]
         print("[tts] narration.mp3 cached - reusing saved word timings", flush=True)
 
-    total = audio_duration(str(narr))
+    if not args.simulate:
+        total = audio_duration(str(narr))
 
     # ---- map every beat onto the spoken word stream ------------------------
     finalize(items, spoken, words, total, out_dir, args.visuals, args.force, narr)
+    write_sfx_cues(Path(getattr(args, "sfx_cues", "") or out_dir / "sfx.csv"), out_dir)
 
 
 def finalize(items, spoken, words, total, out_dir, visuals_path, force, narr):
     """Turn raw word timings into beats_with_timing.json + moments_timing.json.
 
-    Shared by tts.py (one continuous take) and tts_multi.py (one segment per
-    voice, concatenated). `words` is the global word stream in order, `total`
+    `words` is the global word stream in order, `total`
     the narration length in seconds, `narr` the audio those words describe.
     """
     out_dir = Path(out_dir)
@@ -317,6 +334,69 @@ def finalize(items, spoken, words, total, out_dir, visuals_path, force, narr):
     print(f"[tts] {len(moments)} image moments locked to spoken words -> moments_timing.json [{status}]",
           flush=True)
     return timed
+
+
+def simulate_take(text: str, dest: Path, wps: float, force: bool) -> tuple[list[dict], float]:
+    """Offline stand-in for edge-tts: silent mp3 + evenly spaced word times.
+
+    The point is the timeline, not the sound: every duration, cut and sfx cue
+    downstream is the real one, so the runtime you quote is the runtime you get
+    (within the few percent the real voice differs by).
+    """
+    toks = text.split()
+    words = [{"w": t, "t": round(i / wps, 3)} for i, t in enumerate(toks)]
+    total = round(len(toks) / wps + 0.35, 3)
+    if force or not dest.exists():
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run([ffmpeg_bin(), "-y", "-loglevel", "error", "-f", "lavfi",
+                        "-i", "anullsrc=r=24000:cl=mono", "-t", f"{total:.3f}",
+                        "-c:a", "libmp3lame", "-b:a", "48k", str(dest)], check=True)
+    return words, total
+
+
+def write_sfx_cues(csv_path: Path, out_dir: Path) -> None:
+    """sfx.csv (key,sfx[,offset]) -> sfx_cues.csv (time,beat,sfx) in absolute seconds.
+
+    `key` is an image-moment key such as beat05m03, so the cue is a by-product of
+    the cut rather than a number somebody guessed. `offset` shifts it later in
+    seconds. Missing keys are reported, never silently dropped.
+    """
+    csv_path = Path(csv_path)
+    if not csv_path.exists():
+        return
+    import csv as _csv
+    rows = list(_csv.DictReader(open(csv_path, newline="", encoding="utf-8")))
+    if not rows:
+        return
+    mom_path = Path(out_dir) / "moments_timing.json"
+    if not mom_path.exists():
+        print(f"[tts] WARNING: {csv_path.name} exists but there are no moments to anchor to")
+        return
+    starts = {m["key"]: (float(m["start"]), int(m["beat"]))
+              for m in json.loads(mom_path.read_text(encoding="utf-8"))}
+    cues, lost = [], []
+    for r in rows:
+        key = (r.get("key") or "").strip()
+        cue = (r.get("sfx") or "").strip()
+        if not cue:
+            continue
+        if key not in starts:
+            lost.append(key or "(blank)")
+            continue
+        at, beat = starts[key]
+        try:
+            at += float(r.get("offset") or 0.0)
+        except ValueError:
+            print(f"[tts] bad offset for {key}: {r.get('offset')!r} - using 0")
+        cues.append({"time": round(at, 3), "beat": beat, "sfx": cue})
+    cues.sort(key=lambda c: c["time"])
+    with open(Path(out_dir) / "sfx_cues.csv", "w", newline="", encoding="utf-8") as fh:
+        w = _csv.DictWriter(fh, fieldnames=["time", "beat", "sfx"])
+        w.writeheader()
+        w.writerows(cues)
+    print(f"[tts] {len(cues)} sfx cues anchored to moments -> sfx_cues.csv", flush=True)
+    if lost:
+        print(f"[tts] WARNING: sfx.csv keys not found in the timeline: {', '.join(lost)}", flush=True)
 
 
 if __name__ == "__main__":

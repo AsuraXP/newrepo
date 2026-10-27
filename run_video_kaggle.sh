@@ -21,13 +21,15 @@
 #   VOICE=en-US-AndrewNeural             RATE=+0%
 #   SKIP_TTS=1        reuse cached narration.mp3 + beats_with_timing.json (no pip, no edge-tts)
 #   NARRATION_MODE=prebuilt   use a committed narration.mp3 + forced alignment
+#   SFX=0             skip sfx mixing even if sfx_cues.csv exists
 #   ZIP_NAME=custom_name      BRAND_WORDS="word1,word2"  branding guard
 #   CAPTIONS=1        burn word-locked subtitles
 #
-# Multi-voice: drop a voices.json in the episode dir. The runner then switches
-# to cartoonstyle.tts_multi (one segment per beat, per-beat voices, real silence
-# gaps). Any beat with an "sfx" field emits sfx_cues.csv; sfx.wav is synthesized
-# and mixed at stitch time automatically.
+# One voice, one continuous take (cartoonstyle.tts). Sound effects come from an
+# optional sfx.csv in the episode dir: rows of key,sfx[,offset] where key is an
+# image-moment key such as beat05m03. tts turns that into sfx_cues.csv in
+# absolute seconds, so every knock lands on its cut no matter the speaking pace.
+# sfx.wav is synthesized and mixed at stitch time automatically.
 #
 # Output: $OUT_DIR/<slug>_DELIVERABLE.zip  =  <slug>.mp4 + thumbnail + title_description.txt
 #         (+ script.md / metadata.json when the episode ships them)
@@ -95,10 +97,8 @@ if [ -z "$YT" ]; then
   missing=1
 fi
 [ -d "$FRAMES" ] || { echo "   MISSING: $FRAMES/"; missing=1; }
-if [ -f "$VIDEO_DIR/voices.json" ]; then
-  python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$VIDEO_DIR/voices.json" \
-    || { echo "   BROKEN: voices.json is not valid JSON"; missing=1; }
-  echo "   cast      : voices.json (multi-voice -> tts_multi)"
+if [ -f "$VIDEO_DIR/sfx.csv" ]; then
+  echo "   sound cues: sfx.csv ($(( $(wc -l < "$VIDEO_DIR/sfx.csv") - 1 )) rows)"
 fi
 [ "$missing" -eq 0 ] || { echo "!!! preflight failed - fix the above and re-run"; exit 1; }
 
@@ -144,7 +144,6 @@ python3 -m cartoonstyle.csv_to_beats \
 
 PLAN_ARGS=(--visuals "$VIDEO_DIR/visuals.csv")
 [ -f "$VIDEO_DIR/narration.txt" ] && PLAN_ARGS+=(--narration "$VIDEO_DIR/narration.txt")
-[ -f "$VIDEO_DIR/voices.json" ] && PLAN_ARGS+=(--voices "$VIDEO_DIR/voices.json")
 python3 -m cartoonstyle.plan "${PLAN_ARGS[@]}" || {
   echo "!!! plan gate failed: a moment_text is unspeakable or out of sequence."
   echo "!!! fix visuals.csv and re-run - do not spend Kaggle time on a broken spine."
@@ -158,13 +157,7 @@ LOG=/tmp/tts_log_$SLUG.txt
 TTS_ARGS=(--beats "$VIDEO_DIR/beats.jsonl" --out-dir "$VIDEO_DIR"
           --visuals "$VIDEO_DIR/visuals.csv" --voice "$VOICE" --rate="$RATE")
 
-if [ -f "$VIDEO_DIR/voices.json" ]; then
-  TTS_MODULE=cartoonstyle.tts_multi
-  TTS_ARGS+=(--voices "$VIDEO_DIR/voices.json")
-  [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && \
-    echo "   (prebuilt narration is single-voice only - ignoring NARRATION_MODE)"
-elif [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration.mp3" ]; then
-  TTS_MODULE=cartoonstyle.tts
+if [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration.mp3" ]; then
   echo "   prebuilt narration.mp3 -> forced alignment (no edge-tts)"
   pip install -q faster-whisper 2>/dev/null || \
     echo "   (faster-whisper unavailable - align.py will fall back to chunk timing)"
@@ -175,13 +168,11 @@ elif [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration
       --model "${WHISPER_MODEL:-small.en}"
   TTS_ARGS+=(--words-json "$VIDEO_DIR/words.json")
 else
-  TTS_MODULE=cartoonstyle.tts
-  echo "   synthesizing with edge-tts ($VOICE $RATE)"
+  echo "   synthesizing one continuous take with edge-tts ($VOICE $RATE)"
 fi
 
 if [ "${SKIP_TTS:-0}" = "1" ]; then
-  # tts_multi always re-synthesizes (no cache probe), so SKIP_TTS means: do not
-  # touch the TTS stage at all, just prove the cached timings match the spine.
+  # never touch the TTS stage; just prove the cached timings still match the spine
   echo "   SKIP_TTS=1 -> reusing cached narration, TTS stage skipped"
   python3 - "$VIDEO_DIR" <<'PYVERIFY'
 import csv, json, os, sys
@@ -197,7 +188,7 @@ if missing:
     sys.exit(1)
 PYVERIFY
 else
-  python3 -m "$TTS_MODULE" "${TTS_ARGS[@]}" 2>&1 | tee "$LOG"
+  python3 -m cartoonstyle.tts "${TTS_ARGS[@]}" 2>&1 | tee "$LOG"
   if ! grep -qE "moments locked.*\[OK\]" "$LOG"; then
     echo "!!! NARRATION DID NOT LOCK ALL MOMENTS - inspect $LOG"
     echo "!!! a moment_text token is not present in the spoken word stream"

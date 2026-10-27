@@ -14,7 +14,7 @@ are done.
 Usage:
     python3 -m cartoonstyle.plan --visuals visuals.csv
     python3 -m cartoonstyle.plan --visuals visuals.csv --narration narration.txt
-    python3 -m cartoonstyle.plan --visuals visuals.csv --voices voices.json --wps 2.75
+    python3 -m cartoonstyle.plan --visuals visuals.csv --wps 2.75
 Exit code 1 when a hard problem is found (unspeakable moment, missing key),
 0 when only soft warnings (pacing outside 2.5-6.5s) are raised.
 """
@@ -54,7 +54,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description="pacing / coverage report for visuals.csv")
     p.add_argument("--visuals", required=True)
     p.add_argument("--narration", default="", help="narration.txt to check coverage against")
-    p.add_argument("--voices", default="", help="voices.json (for real gap_before values)")
+    p.add_argument("--voices", default="", help="accepted for old scripts; ignored (single voice)")
     p.add_argument("--wps", type=float, default=2.75, help="words per second (simulate pace)")
     p.add_argument("--min-sec", type=float, default=2.5)
     p.add_argument("--max-sec", type=float, default=6.5)

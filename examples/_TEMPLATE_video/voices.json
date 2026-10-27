@@ -1,7 +1,0 @@
-{
-  "default": {"voice": "en-US-AndrewNeural", "rate": "+0%"},
-  "beats": {
-    "1": {"gap_before": 0.4},
-    "2": {"voice": "en-GB-SoniaNeural", "rate": "-6%", "gap_before": 1.2, "sfx": "knock x3"}
-  }
-}

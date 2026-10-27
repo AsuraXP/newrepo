@@ -14,8 +14,7 @@ clone *that*, not `main` (which is still just the original stub).
 |---|---|
 | `csv_to_beats` | `visuals.csv` → `beats.jsonl`, one beat per `slide_id` |
 | `plan` | **gate**: runtime estimate, per-moment pacing, and whether every `moment_text` still appears word-for-word in `narration.txt` |
-| `tts_multi` | one audio segment per beat, per-beat voices, real silence gaps; writes `beats_with_timing.json`, `moments_timing.json`, `sfx_cues.csv` |
-| `tts` | single-voice path (also handles `NARRATION_MODE=prebuilt` with `align`) |
+| `tts` | one continuous take, one voice; word-locks every moment; turns `sfx.csv` into absolute-time `sfx_cues.csv`; `--simulate` for the sandbox |
 | `sfx` | procedural knock / thud / click / rumble, stdlib only, no asset licences |
 | `prep_frames` | `frames/` → `pool/` at exactly `1376x768`, LANCZOS, no crop, edge-coloured letterbox only when the aspect is genuinely off |
 | `contact_sheet` | QC sheet, optionally printing each `moment_text` under its tile |
@@ -29,9 +28,9 @@ export PYTHONPATH=$PWD
 cd examples/<slug>_video
 
 python3 -m cartoonstyle.csv_to_beats --visuals visuals.csv --out beats.jsonl
-python3 -m cartoonstyle.plan      --visuals visuals.csv --narration narration.txt --voices voices.json
-python3 -m cartoonstyle.tts_multi --beats beats.jsonl --out-dir . --visuals visuals.csv \
-        --voices voices.json --simulate
+python3 -m cartoonstyle.plan      --visuals visuals.csv --narration narration.txt
+python3 -m cartoonstyle.tts --beats beats.jsonl --out-dir . --visuals visuals.csv \
+        --simulate --wps 2.75
 python3 -m cartoonstyle.sfx       --cues sfx_cues.csv --out sfx.wav --gain 0.9   # only if cues exist
 python3 -m cartoonstyle.prep_frames --frames frames --out pool
 python3 -m cartoonstyle.stitch    --timing beats_with_timing.json --images-dir pool \
