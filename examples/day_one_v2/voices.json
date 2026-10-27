@@ -1,0 +1,40 @@
+{
+ "default": {
+  "voice": "en-US-AndrewNeural",
+  "rate": "+0%"
+ },
+ "beats": {
+  "1": {
+   "voice": "en-US-AndrewNeural",
+   "gap_before": 0.4,
+   "sfx": "rumble"
+  },
+  "8": {
+   "voice": "en-GB-RyanNeural",
+   "rate": "-4%",
+   "gap_before": 1.4,
+   "sfx": "knock x3"
+  },
+  "9": {
+   "voice": "en-GB-RyanNeural",
+   "rate": "-4%",
+   "gap_before": 1.2,
+   "sfx": "thud"
+  },
+  "7": {
+   "voice": "en-GB-SoniaNeural",
+   "rate": "-6%",
+   "gap_before": 0.4
+  },
+  "15": {
+   "voice": "en-US-AndrewNeural",
+   "gap_before": 0.2,
+   "sfx": "rumble"
+  },
+  "17": {
+   "voice": "en-US-AndrewNeural",
+   "gap_before": 0.2,
+   "sfx": "thud"
+  }
+ }
+}
