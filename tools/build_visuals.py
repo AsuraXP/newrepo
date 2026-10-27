@@ -11,8 +11,8 @@ STYLE_BLOCK = (
     "Hand-drawn 2D cartoon explainer illustration for a 16:9 landscape video frame, "
     "based on a chunky black-ink cartoon look: thick wobbly black outlines about 4 px "
     "at 1920 px width, flat saturated gouache colour fills, fine visible paper grain on "
-    "warm cream paper, simple shapes, comic proportions, expressive dot eyes and curved "
-    "closed eyes, flat even lighting, generous empty space around the subject, one or two "
+    "warm cream paper, simple shapes, comic proportions, expressive eyes matching the "
+    "supplied reference drawing, flat even lighting, generous empty space around the subject, one or two "
     "small hand-drawn margin doodles or arrows, restrained palette of ink black, ochre, "
     "terracotta, teal and sky blue, with exactly ONE electric yellow accent used only on "
     "the single most important object named in the scene; no gradients, no soft shading, "
@@ -24,8 +24,9 @@ STYLE_BLOCK = (
 
 SUBJECT_BLOCK = (
     "Recurring subject design, identical in every frame: any human is one stocky cartoon "
-    "early-human figure with a large round head, spiky dark-brown hair, two small dot eyes "
-    "or two curved closed eyes, a tiny nose, a wide simple mouth, flat ochre-brown skin, "
+    "early-human figure with a large round head, spiky dark-brown hair, two curved closed "
+    "eyes by default exactly like the supplied reference drawing (or two small black dot "
+    "eyes aimed in the stated direction when the SCENE requires a gaze), a tiny nose, a wide simple mouth, flat ochre-brown skin, "
     "and a plain grey animal-hide tunic with one shoulder strap, drawn with thick black "
     "outlines and no realistic facial detail; any fire is ONE small orange-and-yellow "
     "flame with a thick black outline; any tuber is ONE knobbly oval root; modern humans "
