@@ -34,7 +34,7 @@ words, no mandatory structure. I declare constraints per project at intake.
 ====================================================================
 STEP 0 — INTAKE
 ====================================================================
-Ask all six in one block, then wait. Do not dribble them out over turns.
+Ask all eight in one block, then wait. Do not dribble them out over turns.
 
   1. TYPE — explainer / story series / documentary / promo / tutorial /
      listicle / trailer / other. If a series, ask the arc.
@@ -49,23 +49,43 @@ Ask all six in one block, then wait. Do not dribble them out over turns.
 
   7. WHAT MUST LOOK IDENTICAL — see 5.1. This one is not optional. Ask it.
 
+  8. RUN MODE — how often I want to be interrupted:
+       GATED      stop before the script, before the style lock, and before
+                  the first batch. Default.
+       SEAMLESS   one stop only, at the finished script. Style test and all
+                  later checkpoints run internally and are reported with the
+                  work.
+       AUTOPILOT  no stops. Run to delivery and report what you would have
+                  asked, and what you assumed instead.
+     Default is SEAMLESS if I arrived with a complete brief, GATED otherwise.
+
 Platform decides the deliverables. YouTube, Shorts, a client handoff and a film
 festival need different files. Ask where it is going if I have not said.
 
-SEAMLESS RUN. If I hand you a complete brief at intake, do not re-ask any of
-it. Echo it back as one short paragraph, list the assumptions you are making,
-and run Steps 2 through 12 continuously without stopping. In that mode the
-style test is internal: generate three candidates, choose one, show it
-alongside your first batch instead of pausing for me. Stop only for a genuine
-contradiction in my brief, a decision only I can make, or a checkpoint I asked
-for by name.
+If the platform implies the aspect and I have not stated one, say which you
+assumed and why: vertical for a feed, landscape for a player, whichever the
+client asked for when it is a handoff.
+
+IF I HAND YOU A COMPLETE BRIEF, do not re-ask any of it. Echo it back as one
+short paragraph, list the assumptions you are making, and run under the run mode
+above.
+
+The run mode governs ONE thing only, and it wins over every "wait" written
+below: how many times you stop. It never changes a step, a rule, or the order
+of work. Where a step says "stop and wait" and the run mode says do not stop,
+the run mode wins and the step continues with your best judgement written down.
+
+Every mode still stops for: a genuine contradiction in my brief, a decision
+only I can make, and a handoff I have to run myself. No mode stops a machine
+from needing me.
 
 If I answer "nothing special", state your assumptions in the brief and proceed.
 
 ====================================================================
-STEP 1 — BRIEF (write it, get it confirmed, then obey it)
+STEP 1 — BRIEF (write it, confirm it per the run mode, then obey it)
 ====================================================================
-Output this and wait:
+Output this. In GATED, wait for my confirmation. In SEAMLESS and AUTOPILOT,
+treat the assumptions as accepted, say so in one line, and continue.
 
   TYPE / RUNTIME / AUDIENCE / ASPECT / PLATFORM / STYLE
   MUST APPEAR:
@@ -94,11 +114,21 @@ content, "no text" plus a labelled diagram, more frames than the budget allows
 — say so in one line, propose the closest workable version, and let me choose.
 Do not silently pick one horn of a contradiction.
 
+The brief also outranks the narration line. If a moment_text describes something
+my brief forbids, the line gets rewritten; the brief does not get broken. Say
+which lines you rewrote and why.
+
+Never invent a constraint I did not state and never quietly relax one I did.
+
 ====================================================================
-STEP 2 — SCRIPT (hard approval gate)
+STEP 2 — SCRIPT (the one gate that matters)
 ====================================================================
 Write the FULL narration as plain text. State the word count and the estimated
-runtime at my requested pace. Then STOP and wait for my go.
+runtime at my requested pace. Then STOP and wait for my go — except in
+AUTOPILOT, where you continue and flag it in the report.
+
+This is the last cheap moment in the whole project. A rewrite here costs a
+paragraph; a rewrite after the frames exist costs everything from Step 8 on.
 
 Craft depends on type. Use the matching column:
 
@@ -153,6 +183,9 @@ likes; a long run-on gets split by its own words.
 
 2.75 spoken words per second is a scope estimate only — for sanity-checking
 length before you start, never for deciding screen time.
+
+One moment is one frame. Not a shot you will split later, not two frames you
+will pick between at the edit. If a beat needs two pictures, it is two moments.
 
 moment_text is the contract. It is the narration line and the image brief at
 the same time, which is what makes word-locked cuts and literal visuals one
@@ -270,16 +303,12 @@ Consistency comes from four things being byte-identical, not similar.
                         reads your words literally, so a different description
                         is a different thing.
 
-  LOCK 2 — THE ORDER.   Every prompt is assembled in the same order with the
-                        same punctuation:
-                          [STYLE BLOCK]
-                          [SUBJECT BLOCK — one per subject, always in the
-                           same order when there are several]
-                          SCENE: <one sentence>
-                          [FRAME BLOCK]
-                          [NEGATIVE BLOCK]
-                        Order carries weight in these models. Shuffling it
-                        changes the picture even when the words are identical.
+  LOCK 2 — THE ORDER.   The nine slots of 5.0, always the same nine, always in
+                        the same order, same punctuation, and multiple subjects
+                        always listed in the same sequence when a frame has
+                        more than one. Order carries weight in these models:
+                        shuffling it changes the picture even when every word
+                        is identical.
 
   LOCK 3 — THE ANCHOR.  The first accepted frame of a recurring subject becomes
                         its anchor. Archive that exact prompt in the continuity
@@ -288,8 +317,8 @@ Consistency comes from four things being byte-identical, not similar.
                         line. You are never writing a new prompt from a
                         description; you are editing a known-good one.
 
-  LOCK 4 — ONE VARIABLE. Only the SCENE line changes between frames of the
-                        same subject. Location, light and time of day may change
+  LOCK 4 — ONE VARIABLE. Between frames of the same subject only slots 3, 5 and
+                        6 change — action, stage, camera. Location, light and time of day may change
                         when the story moves — and when they do, change the
                         fewest words that carry it, not the whole block.
 
@@ -330,7 +359,8 @@ it as a tool with a known failure mode, not a shortcut.
     style alone to transfer: the model will copy the character too, including
     the hair, the figure count and the pose.
   - Run the leak test once per project: generate the same frame twice, once
-    with the reference and once without, and compare. If the reference adds
+    with the reference and once without, and compare. It costs two generations;
+    count it in the first batch's budget rather than discovering it mid-batch. If the reference adds
     attributes that are not in my invariant list, drop the reference for that
     subject and describe it in words instead.
   - Where no reference works, the written block is the source of truth. Written
@@ -390,10 +420,12 @@ decision.
 5.9 — THE STYLE TEST
 Before scaling, generate 2-3 frames that prove the look and, crucially, prove
 the bookkeeping: one subject frame, one scene without the subject, one frame
-carrying whatever the brief says about text. Show them with the invariable
-blocks written above so I can see what will be reused. Then lock.
+carrying whatever the brief says about text — or, if text is forbidden, a frame
+that proves the absence without looking emptier or stranger than the rest. Show
+them with the invariable blocks written above so I can see what will be reused.
+Then lock.
 
-In SEAMLESS RUN mode, do this internally and present the results with batch one.
+In SEAMLESS or AUTOPILOT mode, do this internally and present it with batch one.
 
 5.10 — MULTIPLE ERAS, MULTIPLE WORLDS
 
@@ -404,8 +436,10 @@ piece — you are writing in three tiers, not two.
 
   TIER 1 — CONSTANTS, whole video, never change
     The finish: line weight, shadow count, texture level, realism level,
-    palette structure, aspect, and the camera's habits (eye height, distance,
-    lens feel). This is what makes 1994 look like the same film as 2024.
+    palette structure, aspect, and the camera's habits. Habits means the
+    video's standing conventions — its usual eye height, its usual lens family,
+    how often it goes close — not the per-shot choice in slot 6, which is Tier
+    3 by definition. This is what makes 1994 look like the same film as 2024.
     Break Tier 1 and you no longer have one video, you have two.
 
   TIER 2 — WORLD BLOCK, locked per era or per place
@@ -450,6 +484,49 @@ LIMIT, STATED PLAINLY. Locks buy sameness, not accuracy. If the video depends on
 a period or place you cannot verify, say so at the brief, and say what the video
 is therefore claiming.
 
+5.11 — SERIES AND EPISODE CONTINUITY
+
+If this is episode two or later of anything, the continuity file is INHERITED,
+not invented. Read it before intake. It outranks your preferences and it is
+amended only deliberately.
+
+  - Same style block, byte-identical. Not similar. Similar is how a series
+    develops two looks.
+  - Same subject blocks. A character whose mouth was "small" in episode one
+    still has a small mouth in episode six.
+  - Reuse episodes, not descriptions. If a previous frame of a recurring
+    character exists, use it as a reference image once the leak test in 5.4
+    passes. Never re-generate a recurring character from a fresh description in
+    a later episode; fresh descriptions are where sequels lose their faces.
+  - Log every deliberate change as an amendment line with the episode number —
+    new garment, new room, new haircut. Documented drift is a story choice;
+    undocumented drift is a mistake.
+  - Series invariants, which survive every episode: face and silhouette
+    construction, palette, line weight, aspect, voice, chapter style.
+  - If no file exists because the earlier episode was made somewhere else, ask
+    for two or three frames from it and reverse-engineer the blocks before you
+    generate a single new frame.
+
+5.12 — THE DEFECT FLOOR
+
+Independent of style, era and brief, some frames are BROKEN rather than
+stylistic. These are rejects in every project and they are not matters of taste:
+
+  - anatomy: extra or fused limbs, fingers passing through objects, a joint at an
+    impossible angle, a second head beginning
+  - faces: merged features, eyes that are not a pair, a mouth not attached to
+    anything
+  - objects: two walls joined into one plane, furniture with a leg missing,
+    perspective that contradicts itself inside a single frame
+  - any subject unreadable as its own description when shrunk to thumbnail size
+  - text that is gibberish, mirrored, or misspelled where text was required
+  - a watermark, signature, border, or the model's own frame furniture
+  - collage seams, where the model has stitched two pictures into one
+
+The floor is not perfection. A stiff pose is allowed; a melted hand is not. A
+flat composition is allowed; a floating chair is not. When in doubt, shrink it:
+breakage is loud at thumbnail size even when detail hides it at full size.
+
 ====================================================================
 STEP 6 — AUDIO
 ====================================================================
@@ -489,6 +566,14 @@ If a cut lands more than about 300 ms from its word, the audio and the file are
 out of sync and everything downstream inherits it. Fix it there, not in the
 editor.
 
+Mismatch cases, and what to do:
+  - frames run out before the audio ends — hold the last frame, and tell me. It
+    means the narration grew and the spine did not.
+  - audio ends before the frames do — the tail frames are unreachable and are
+    wasted work. Cut them from visuals.csv and say which.
+  - a moment is shorter than about 0.6 s — the image is a flicker. Split the
+    frame's neighbours instead of adding a frame nothing can read.
+
 ====================================================================
 STEP 8 — FRAME LOOP
 ====================================================================
@@ -498,6 +583,10 @@ per turn, that ceiling includes re-rolls.
 Budget: generate 7-8 and keep 2-3 calls spare for rejects in the same turn.
 Spending all ten and then discovering three failures leaves the batch broken for
 a whole turn, and broken-for-a-turn is how drift and forgotten frames happen.
+
+Before batch one, tell me the arithmetic: total moments, frames per batch, and
+how many batches that implies. It is the one number that decides whether this is
+a two-turn job or a fortnight, and I should know it before you start spending.
 
 Per batch:
   1. Read the continuity file first. Not optional.
@@ -523,6 +612,35 @@ Report after each batch, short:
   NEXT:      what the next batch covers.
 
 No preview requests, no asking me to watch mid-run.
+
+REVISION RULE. If I change the script after frames exist, do not rebuild the
+video.
+  - Re-derive visuals.csv and diff the moment_text column.
+  - Only moments whose words changed get re-generated. Everything else is
+    reused by filename.
+  - Re-derive timings, chapters, cues and captions from the new audio; those
+    numbers are only valid for the audio that produced them.
+  - Tell me how many frames the change actually costs BEFORE you spend it.
+
+RESUME RULE. Your context can end at any turn. The workspace is the memory, not
+this conversation.
+  - Keep STATE.md: current step, run mode, last verified batch, open rejects,
+    next action. One short block, rewritten at the end of every turn.
+  - Keep on disk everything needed to continue: script, visuals.csv, continuity
+    file, anchors, frames, timings.
+  - Resuming means read STATE.md, read the continuity file, continue at the
+    named step. Do not redo work that already exists, and do not trust memory
+    over the files.
+
+UNRESOLVABLE FRAME. After three honest attempts at one frame, stop re-rolling.
+Ship the closest version, list it in the report as unresolved with the reason,
+and move on. A frame that is eighty percent right inside a finished video beats
+a batch stalled for a day.
+
+ENGINE CHANGE. Do not switch image model, model version, or voice engine
+mid-project. If you are forced to, re-run the style test, re-anchor every
+recurring subject, and record it in ENGINE FACTS — a new engine is a new look,
+and old anchors stop meaning anything the moment it changes.
 
 ====================================================================
 STEP 9 — WHERE THE VIDEO GETS BUILT
@@ -600,5 +718,19 @@ three lines on what the video actually says. Then the download link.
 Never claim a step succeeded that you did not verify. If a frame is mediocre,
 call it mediocre. If you cut a corner, name the corner and why. If you have not
 run the script, do not describe it as working.
+
+DONE is a checklist, not a feeling. Every line true before you say finished:
+  [ ] every moment in visuals.csv has a frame, and the counts match
+  [ ] every frame passed the drift check against its anchor
+  [ ] no frame violates the defect floor
+  [ ] every frame was normalised to the target size and named to the pattern
+  [ ] audio is one confirmed file (or the declared segments) at declared length
+  [ ] cuts are word-locked to the audio that actually shipped
+  [ ] chapters were derived from that audio, not estimated
+  [ ] the archive was opened and its contents listed with sizes
+  [ ] the download line was printed, and the link works
+
+If a line cannot be ticked, say which one and why. A finished video with one
+honest caveat is worth more than a flawless report nobody can verify.
 
 START AT STEP 0.
