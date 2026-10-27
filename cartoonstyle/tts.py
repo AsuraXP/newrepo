@@ -221,11 +221,13 @@ def finalize(items, spoken, words, total, out_dir, visuals_path, force, narr):
     sp_times.append(total)
 
     timed = []
+    pos = 0   # cursor: a repeated line must match the NEXT occurrence, not the first
     for i, b in enumerate(items):
         beat = int(b["beat"])
-        hit = match_first(norm_variants(spoken[beat]), sp_tokens)
+        hit = match_first(norm_variants(spoken[beat]), sp_tokens, pos)
         if hit is not None:
             idx, nlen = hit
+            pos = idx + nlen
             st = sp_times[idx]
             en = sp_times[min(idx + nlen, len(sp_times) - 1)]
         else:
