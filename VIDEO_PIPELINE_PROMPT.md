@@ -98,8 +98,21 @@ One row per image moment. Everything downstream is built from this file.
   moment_text   the EXACT words spoken under that image
   visual_prompt what the image model is told to draw
 
-Target 4-6 seconds of speech per image; ~2.75 words per second, so 900 words
-is about 5:30 and about 100 images.
+HOW LONG A FRAME LASTS IS AN OUTPUT, NOT AN INPUT.
+A frame lasts exactly as long as its moment_text takes to speak — one second,
+two seconds, nine, whatever those words need. Never pad a moment to hit a
+duration, never split a sentence to hit a duration, never set a target.
+
+Where you DO divide moments is where the narration divides: a new sentence, a
+new image, a new beat, a change of subject or place. One image per thought.
+If a moment reads as a run-on that needs two pictures, split it by the words.
+If a short line deserves a long hold, let it hold.
+
+Runtime sizing is only a rough planning estimate, never a rule: at roughly
+2.75 spoken words per second, a 5:30 script is around 900 words, and if each
+thought gets a picture that typically lands somewhere near 80-120 frames.
+Those numbers exist to sanity-check scope before you start, not to dictate
+how long anything stays on screen.
 
 moment_text is the contract: it is both the narration line and the image
 brief, which is what keeps word-locked cuts and literal visuals the same job.
@@ -274,6 +287,9 @@ and nothing else.
   content rules are whatever the brief says.
 - **Fidelity covers on-image text as a requirement, not a ban.** If a moment
   calls for a number or a label, render it and verify it in the frame.
+- **Frame duration is derived, never targeted.** Each frame lasts as long as
+  its moment_text takes to say; moments are divided where the narration
+  divides, not to hit a number.
 - **Correction happens inside the batch loop**, not at delivery: every frame is
   checked against its moment_text and re-rolled before the batch counts.
 - **Build location is explicit.** Frames and metadata are made here; narration,
