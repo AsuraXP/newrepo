@@ -10,3 +10,6 @@ examples/*/pool/
 examples/*/audio/
 examples/*/qc/stitch_*
 stitch_*/
+examples/*/narration.mp3
+examples/*/audio/
+examples/*/sfx.wav

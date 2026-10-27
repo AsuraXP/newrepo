@@ -1,0 +1,730 @@
+[
+ {
+  "key": "beat01m01",
+  "beat": 1,
+  "start": 0.0,
+  "sec": 1.818,
+  "text": "You are on a wall."
+ },
+ {
+  "key": "beat01m02",
+  "beat": 1,
+  "start": 1.818,
+  "sec": 6.182,
+  "text": "Both hands on cold metal, three floors up, the street below you full of people standing still."
+ },
+ {
+  "key": "beat01m03",
+  "beat": 1,
+  "start": 8.0,
+  "sec": 1.091,
+  "text": "That is tonight."
+ },
+ {
+  "key": "beat01m04",
+  "beat": 1,
+  "start": 9.091,
+  "sec": 8.364,
+  "text": "Right now it is four in the morning, your mouth is dry, and the city has stopped making the sound a city makes."
+ },
+ {
+  "key": "beat02m01",
+  "beat": 2,
+  "start": 17.455,
+  "sec": 3.636,
+  "text": "You notice it the way you notice a missing tooth."
+ },
+ {
+  "key": "beat02m02",
+  "beat": 2,
+  "start": 21.091,
+  "sec": 5.454,
+  "text": "No traffic under the window, no lift in the shaft, no water in the pipes."
+ },
+ {
+  "key": "beat02m03",
+  "beat": 2,
+  "start": 26.545,
+  "sec": 1.819,
+  "text": "The building is not empty."
+ },
+ {
+  "key": "beat02m04",
+  "beat": 2,
+  "start": 28.364,
+  "sec": 1.454,
+  "text": "That is the thing."
+ },
+ {
+  "key": "beat02m05",
+  "beat": 2,
+  "start": 29.818,
+  "sec": 4.0,
+  "text": "The building is full, and all of it is standing still."
+ },
+ {
+  "key": "beat03m01",
+  "beat": 3,
+  "start": 33.818,
+  "sec": 4.0,
+  "text": "The room is exactly the way you left it last night."
+ },
+ {
+  "key": "beat03m02",
+  "beat": 3,
+  "start": 37.818,
+  "sec": 6.182,
+  "text": "The door is shut, and the bolt is across it, and you did not put it there."
+ },
+ {
+  "key": "beat03m03",
+  "beat": 3,
+  "start": 44.0,
+  "sec": 4.364,
+  "text": "You cross the floor and put one hand flat on the wood."
+ },
+ {
+  "key": "beat03m04",
+  "beat": 3,
+  "start": 48.364,
+  "sec": 5.091,
+  "text": "The door is cold and solid, and it is the best thing you own."
+ },
+ {
+  "key": "beat03m05",
+  "beat": 3,
+  "start": 53.455,
+  "sec": 6.181,
+  "text": "There is a gap under it, and the corridor light lies in that gap, thin and steady."
+ },
+ {
+  "key": "beat03m06",
+  "beat": 3,
+  "start": 59.636,
+  "sec": 1.455,
+  "text": "It does not flicker."
+ },
+ {
+  "key": "beat04m01",
+  "beat": 4,
+  "start": 61.091,
+  "sec": 2.909,
+  "text": "You get down and look through the gap."
+ },
+ {
+  "key": "beat04m02",
+  "beat": 4,
+  "start": 64.0,
+  "sec": 0.364,
+  "text": "Shoes."
+ },
+ {
+  "key": "beat04m03",
+  "beat": 4,
+  "start": 64.364,
+  "sec": 1.091,
+  "text": "Then more shoes."
+ },
+ {
+  "key": "beat04m04",
+  "beat": 4,
+  "start": 65.455,
+  "sec": 4.363,
+  "text": "Then, across the hall, the door of the apartment opposite, standing open."
+ },
+ {
+  "key": "beat04m05",
+  "beat": 4,
+  "start": 69.818,
+  "sec": 2.909,
+  "text": "So is every other door on this corridor."
+ },
+ {
+  "key": "beat04m06",
+  "beat": 4,
+  "start": 72.727,
+  "sec": 5.091,
+  "text": "Everything that used to live in them is out in the hall now, standing."
+ },
+ {
+  "key": "beat05m01",
+  "beat": 5,
+  "start": 77.818,
+  "sec": 0.727,
+  "text": "Arms down."
+ },
+ {
+  "key": "beat05m02",
+  "beat": 5,
+  "start": 78.545,
+  "sec": 3.273,
+  "text": "Heads tilted, like they are trying to remember something."
+ },
+ {
+  "key": "beat05m03",
+  "beat": 5,
+  "start": 81.818,
+  "sec": 3.273,
+  "text": "You watch one of them for a long time."
+ },
+ {
+  "key": "beat05m04",
+  "beat": 5,
+  "start": 85.091,
+  "sec": 2.182,
+  "text": "It does not shift its weight."
+ },
+ {
+  "key": "beat05m05",
+  "beat": 5,
+  "start": 87.273,
+  "sec": 3.636,
+  "text": "It does not breathe in any way you can see."
+ },
+ {
+  "key": "beat05m06",
+  "beat": 5,
+  "start": 90.909,
+  "sec": 4.727,
+  "text": "That is the first thing you learn, and it will keep you alive."
+ },
+ {
+  "key": "beat05m07",
+  "beat": 5,
+  "start": 95.636,
+  "sec": 1.819,
+  "text": "They do not get bored."
+ },
+ {
+  "key": "beat06m01",
+  "beat": 6,
+  "start": 97.455,
+  "sec": 5.09,
+  "text": "You need to know how this works, so you do something small and stupid."
+ },
+ {
+  "key": "beat06m02",
+  "beat": 6,
+  "start": 102.545,
+  "sec": 4.364,
+  "text": "You knock once, with one knuckle, on the floorboard beside your knee."
+ },
+ {
+  "key": "beat06m03",
+  "beat": 6,
+  "start": 106.909,
+  "sec": 3.273,
+  "text": "Out in the corridor, forty heads turn at once."
+ },
+ {
+  "key": "beat06m04",
+  "beat": 6,
+  "start": 110.182,
+  "sec": 1.818,
+  "text": "Nothing comes through the door."
+ },
+ {
+  "key": "beat06m05",
+  "beat": 6,
+  "start": 112.0,
+  "sec": 0.727,
+  "text": "Nothing scratches."
+ },
+ {
+  "key": "beat06m06",
+  "beat": 6,
+  "start": 112.727,
+  "sec": 1.455,
+  "text": "Nobody tries the handle."
+ },
+ {
+  "key": "beat06m07",
+  "beat": 6,
+  "start": 114.182,
+  "sec": 5.454,
+  "text": "They turn, and they listen, and then, one by one, they go back to standing."
+ },
+ {
+  "key": "beat07m01",
+  "beat": 7,
+  "start": 119.636,
+  "sec": 1.455,
+  "text": "Then your phone rings."
+ },
+ {
+  "key": "beat07m02",
+  "beat": 7,
+  "start": 121.091,
+  "sec": 1.818,
+  "text": "It is at nineteen percent."
+ },
+ {
+  "key": "beat07m03",
+  "beat": 7,
+  "start": 122.909,
+  "sec": 4.364,
+  "text": "It is the loudest thing that has ever happened in this building."
+ },
+ {
+  "key": "beat07m04",
+  "beat": 7,
+  "start": 127.273,
+  "sec": 3.272,
+  "text": "The name on the screen is one you know."
+ },
+ {
+  "key": "beat07m05",
+  "beat": 7,
+  "start": 130.545,
+  "sec": 1.819,
+  "text": "Somebody you would answer for."
+ },
+ {
+  "key": "beat07m06",
+  "beat": 7,
+  "start": 132.364,
+  "sec": 2.181,
+  "text": "Somebody you have answered for before."
+ },
+ {
+  "key": "beat07m07",
+  "beat": 7,
+  "start": 134.545,
+  "sec": 4.0,
+  "text": "Somebody alive, calling you, right now, from somewhere in this city."
+ },
+ {
+  "key": "beat07m08",
+  "beat": 7,
+  "start": 138.545,
+  "sec": 1.455,
+  "text": "You do not answer."
+ },
+ {
+  "key": "beat07m09",
+  "beat": 7,
+  "start": 140.0,
+  "sec": 3.273,
+  "text": "You hold it against your chest until it stops."
+ },
+ {
+  "key": "beat07m10",
+  "beat": 7,
+  "start": 143.273,
+  "sec": 1.818,
+  "text": "It rings for eleven seconds."
+ },
+ {
+  "key": "beat07m11",
+  "beat": 7,
+  "start": 145.091,
+  "sec": 5.454,
+  "text": "In the hallway, the one in the doorway opposite turns its head toward your door."
+ },
+ {
+  "key": "beat07m12",
+  "beat": 7,
+  "start": 150.545,
+  "sec": 4.0,
+  "text": "You slide the phone under the mattress and sit on it."
+ },
+ {
+  "key": "beat08m01",
+  "beat": 8,
+  "start": 154.545,
+  "sec": 3.637,
+  "text": "By the afternoon the building is louder than the street."
+ },
+ {
+  "key": "beat08m02",
+  "beat": 8,
+  "start": 158.182,
+  "sec": 1.454,
+  "text": "Feet in the stairwell."
+ },
+ {
+  "key": "beat08m03",
+  "beat": 8,
+  "start": 159.636,
+  "sec": 2.182,
+  "text": "Slow, careful, one at a time."
+ },
+ {
+  "key": "beat08m04",
+  "beat": 8,
+  "start": 161.818,
+  "sec": 2.546,
+  "text": "You get to eleven and stop counting."
+ },
+ {
+  "key": "beat09m01",
+  "beat": 9,
+  "start": 164.364,
+  "sec": 5.091,
+  "text": "Then the sun crosses the floor, and for twenty minutes you sit in it."
+ },
+ {
+  "key": "beat09m02",
+  "beat": 9,
+  "start": 169.455,
+  "sec": 5.818,
+  "text": "You are warm, nobody is at the door, and you are a person in a room."
+ },
+ {
+  "key": "beat09m03",
+  "beat": 9,
+  "start": 175.273,
+  "sec": 5.454,
+  "text": "Then the light moves off your hands, and it is just a dark room again."
+ },
+ {
+  "key": "beat10m01",
+  "beat": 10,
+  "start": 180.727,
+  "sec": 2.909,
+  "text": "Just before dark, somebody knocks on your door."
+ },
+ {
+  "key": "beat10m02",
+  "beat": 10,
+  "start": 183.636,
+  "sec": 1.091,
+  "text": "Three slow knocks."
+ },
+ {
+  "key": "beat10m03",
+  "beat": 10,
+  "start": 184.727,
+  "sec": 0.728,
+  "text": "A pause."
+ },
+ {
+  "key": "beat10m04",
+  "beat": 10,
+  "start": 185.455,
+  "sec": 0.727,
+  "text": "Three more."
+ },
+ {
+  "key": "beat10m05",
+  "beat": 10,
+  "start": 186.182,
+  "sec": 1.454,
+  "text": "That is a rhythm."
+ },
+ {
+  "key": "beat10m06",
+  "beat": 10,
+  "start": 187.636,
+  "sec": 4.0,
+  "text": "A thing with nothing to say does not have a rhythm."
+ },
+ {
+  "key": "beat10m07",
+  "beat": 10,
+  "start": 191.636,
+  "sec": 2.182,
+  "text": "Then a voice says your name."
+ },
+ {
+  "key": "beat10m08",
+  "beat": 10,
+  "start": 193.818,
+  "sec": 5.455,
+  "text": "It says it quietly, and carefully, the way you would say it to somebody asleep."
+ },
+ {
+  "key": "beat10m09",
+  "beat": 10,
+  "start": 199.273,
+  "sec": 2.909,
+  "text": "It says it knows you are in there."
+ },
+ {
+  "key": "beat10m10",
+  "beat": 10,
+  "start": 202.182,
+  "sec": 1.091,
+  "text": "It says please."
+ },
+ {
+  "key": "beat11m01",
+  "beat": 11,
+  "start": 203.273,
+  "sec": 5.818,
+  "text": "You are on your feet before you decide to be, with your hand on the bolt."
+ },
+ {
+  "key": "beat11m02",
+  "beat": 11,
+  "start": 209.091,
+  "sec": 5.091,
+  "text": "Everything left in you that is still a person wants to open that door."
+ },
+ {
+  "key": "beat11m03",
+  "beat": 11,
+  "start": 214.182,
+  "sec": 3.273,
+  "text": "And your body does the arithmetic before you do."
+ },
+ {
+  "key": "beat11m04",
+  "beat": 11,
+  "start": 217.455,
+  "sec": 1.454,
+  "text": "You did not knock."
+ },
+ {
+  "key": "beat11m05",
+  "beat": 11,
+  "start": 218.909,
+  "sec": 1.455,
+  "text": "You did not speak."
+ },
+ {
+  "key": "beat11m06",
+  "beat": 11,
+  "start": 220.364,
+  "sec": 2.181,
+  "text": "You did not answer the phone."
+ },
+ {
+  "key": "beat11m07",
+  "beat": 11,
+  "start": 222.545,
+  "sec": 2.546,
+  "text": "So how does it know your name."
+ },
+ {
+  "key": "beat11m08",
+  "beat": 11,
+  "start": 225.091,
+  "sec": 2.545,
+  "text": "You take your hand off the bolt."
+ },
+ {
+  "key": "beat11m09",
+  "beat": 11,
+  "start": 227.636,
+  "sec": 1.455,
+  "text": "The knocking comes again."
+ },
+ {
+  "key": "beat11m10",
+  "beat": 11,
+  "start": 229.091,
+  "sec": 1.091,
+  "text": "Then it stops."
+ },
+ {
+  "key": "beat11m11",
+  "beat": 11,
+  "start": 230.182,
+  "sec": 4.0,
+  "text": "Then it comes again, further down the corridor, on another door."
+ },
+ {
+  "key": "beat11m12",
+  "beat": 11,
+  "start": 234.182,
+  "sec": 3.636,
+  "text": "You sit with your back against the door and listen."
+ },
+ {
+  "key": "beat12m01",
+  "beat": 12,
+  "start": 237.818,
+  "sec": 1.818,
+  "text": "The dark comes in completely."
+ },
+ {
+  "key": "beat12m02",
+  "beat": 12,
+  "start": 239.636,
+  "sec": 6.182,
+  "text": "Three floors down, the street is full of people standing under the lamps with their heads up."
+ },
+ {
+  "key": "beat12m03",
+  "beat": 12,
+  "start": 245.818,
+  "sec": 2.182,
+  "text": "They are not looking at anything."
+ },
+ {
+  "key": "beat12m04",
+  "beat": 12,
+  "start": 248.0,
+  "sec": 6.545,
+  "text": "Across the street, one window in the block opposite is lit, the only one on the whole street."
+ },
+ {
+  "key": "beat12m05",
+  "beat": 12,
+  "start": 254.545,
+  "sec": 6.182,
+  "text": "You look at it for a while, and then you stop, because you cannot afford that either."
+ },
+ {
+  "key": "beat13m01",
+  "beat": 13,
+  "start": 260.727,
+  "sec": 4.364,
+  "text": "This room has exactly one exit, and the exit is the corridor."
+ },
+ {
+  "key": "beat13m02",
+  "beat": 13,
+  "start": 265.091,
+  "sec": 4.727,
+  "text": "But there is a drainpipe four feet to the left of your window."
+ },
+ {
+  "key": "beat13m03",
+  "beat": 13,
+  "start": 269.818,
+  "sec": 4.364,
+  "text": "Then a gutter, the roof of the shop below, and the street."
+ },
+ {
+  "key": "beat13m04",
+  "beat": 13,
+  "start": 274.182,
+  "sec": 1.818,
+  "text": "The room buys you days."
+ },
+ {
+  "key": "beat13m05",
+  "beat": 13,
+  "start": 276.0,
+  "sec": 2.182,
+  "text": "The pipe buys you a morning."
+ },
+ {
+  "key": "beat13m06",
+  "beat": 13,
+  "start": 278.182,
+  "sec": 3.273,
+  "text": "Nobody is going to make this decision for you."
+ },
+ {
+  "key": "beat14m01",
+  "beat": 14,
+  "start": 281.455,
+  "sec": 3.272,
+  "text": "You spend the last of the light getting ready."
+ },
+ {
+  "key": "beat14m02",
+  "beat": 14,
+  "start": 284.727,
+  "sec": 1.455,
+  "text": "Water in your pockets."
+ },
+ {
+  "key": "beat14m03",
+  "beat": 14,
+  "start": 286.182,
+  "sec": 2.909,
+  "text": "A second pair of socks over your hands."
+ },
+ {
+  "key": "beat14m04",
+  "beat": 14,
+  "start": 289.091,
+  "sec": 5.818,
+  "text": "You open the window an inch at a time and stop at every inch and listen."
+ },
+ {
+  "key": "beat14m05",
+  "beat": 14,
+  "start": 294.909,
+  "sec": 7.273,
+  "text": "Then you sit in the dark and do nothing, because the worst thing you can do now is be early."
+ },
+ {
+  "key": "beat14m06",
+  "beat": 14,
+  "start": 302.182,
+  "sec": 4.0,
+  "text": "You wait until the feet in the stairwell have thinned out."
+ },
+ {
+  "key": "beat14m07",
+  "beat": 14,
+  "start": 306.182,
+  "sec": 5.091,
+  "text": "You wait until the building is quiet the way a held breath is quiet."
+ },
+ {
+  "key": "beat15m01",
+  "beat": 15,
+  "start": 311.273,
+  "sec": 3.272,
+  "text": "Then you put one leg out of the window."
+ },
+ {
+  "key": "beat15m02",
+  "beat": 15,
+  "start": 314.545,
+  "sec": 3.637,
+  "text": "The metal is so cold it comes through the sock."
+ },
+ {
+  "key": "beat15m03",
+  "beat": 15,
+  "start": 318.182,
+  "sec": 5.454,
+  "text": "Behind you the room is warm, and locked, and holds everything you have ever owned."
+ },
+ {
+  "key": "beat15m04",
+  "beat": 15,
+  "start": 323.636,
+  "sec": 8.0,
+  "text": "In front of you there are three floors of wet pipe, and a street full of people who do not get bored."
+ },
+ {
+  "key": "beat15m05",
+  "beat": 15,
+  "start": 331.636,
+  "sec": 2.546,
+  "text": "And then you are on the wall."
+ },
+ {
+  "key": "beat15m06",
+  "beat": 15,
+  "start": 334.182,
+  "sec": 4.363,
+  "text": "Three floors up, in the dark, deciding what your first move is."
+ },
+ {
+  "key": "beat16m01",
+  "beat": 16,
+  "start": 338.545,
+  "sec": 1.455,
+  "text": "That is day one."
+ },
+ {
+  "key": "beat16m02",
+  "beat": 16,
+  "start": 340.0,
+  "sec": 3.636,
+  "text": "Behind you, under the mattress, the phone is still on."
+ },
+ {
+  "key": "beat16m03",
+  "beat": 16,
+  "start": 343.636,
+  "sec": 3.273,
+  "text": "Somebody dialled your number twice today and got nothing."
+ },
+ {
+  "key": "beat16m04",
+  "beat": 16,
+  "start": 346.909,
+  "sec": 3.986,
+  "text": "Tomorrow you will have to decide what that was worth."
+ }
+]

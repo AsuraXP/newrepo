@@ -1,0 +1,4354 @@
+[
+ {
+  "beat": 1,
+  "start": 0.0,
+  "sec": 17.455,
+  "text": "You are on a wall. Both hands on cold metal, three floors up, the street below you full of people standing still. That is tonight. Right now it is four in the morning, your mouth is dry, and the city has stopped making the sound a city makes.",
+  "words_to_cover": [
+   "you",
+   "are",
+   "wall",
+   "both",
+   "hands",
+   "cold",
+   "metal",
+   "three",
+   "floors",
+   "the",
+   "street",
+   "below",
+   "you",
+   "full",
+   "people",
+   "standing",
+   "still",
+   "that",
+   "tonight",
+   "right"
+  ],
+  "spoken": "You are on a wall. Both hands on cold metal, three floors up, the street below you full of people standing still. That is tonight. Right now it is four in the morning, your mouth is dry, and the city has stopped making the sound a city makes.",
+  "words": [
+   {
+    "w": "You",
+    "t": 0.0
+   },
+   {
+    "w": "are",
+    "t": 0.364
+   },
+   {
+    "w": "on",
+    "t": 0.727
+   },
+   {
+    "w": "a",
+    "t": 1.091
+   },
+   {
+    "w": "wall.",
+    "t": 1.455
+   },
+   {
+    "w": "Both",
+    "t": 1.818
+   },
+   {
+    "w": "hands",
+    "t": 2.182
+   },
+   {
+    "w": "on",
+    "t": 2.545
+   },
+   {
+    "w": "cold",
+    "t": 2.909
+   },
+   {
+    "w": "metal,",
+    "t": 3.273
+   },
+   {
+    "w": "three",
+    "t": 3.636
+   },
+   {
+    "w": "floors",
+    "t": 4.0
+   },
+   {
+    "w": "up,",
+    "t": 4.364
+   },
+   {
+    "w": "the",
+    "t": 4.727
+   },
+   {
+    "w": "street",
+    "t": 5.091
+   },
+   {
+    "w": "below",
+    "t": 5.455
+   },
+   {
+    "w": "you",
+    "t": 5.818
+   },
+   {
+    "w": "full",
+    "t": 6.182
+   },
+   {
+    "w": "of",
+    "t": 6.545
+   },
+   {
+    "w": "people",
+    "t": 6.909
+   },
+   {
+    "w": "standing",
+    "t": 7.273
+   },
+   {
+    "w": "still.",
+    "t": 7.636
+   },
+   {
+    "w": "That",
+    "t": 8.0
+   },
+   {
+    "w": "is",
+    "t": 8.364
+   },
+   {
+    "w": "tonight.",
+    "t": 8.727
+   },
+   {
+    "w": "Right",
+    "t": 9.091
+   },
+   {
+    "w": "now",
+    "t": 9.455
+   },
+   {
+    "w": "it",
+    "t": 9.818
+   },
+   {
+    "w": "is",
+    "t": 10.182
+   },
+   {
+    "w": "four",
+    "t": 10.545
+   },
+   {
+    "w": "in",
+    "t": 10.909
+   },
+   {
+    "w": "the",
+    "t": 11.273
+   },
+   {
+    "w": "morning,",
+    "t": 11.636
+   },
+   {
+    "w": "your",
+    "t": 12.0
+   },
+   {
+    "w": "mouth",
+    "t": 12.364
+   },
+   {
+    "w": "is",
+    "t": 12.727
+   },
+   {
+    "w": "dry,",
+    "t": 13.091
+   },
+   {
+    "w": "and",
+    "t": 13.455
+   },
+   {
+    "w": "the",
+    "t": 13.818
+   },
+   {
+    "w": "city",
+    "t": 14.182
+   },
+   {
+    "w": "has",
+    "t": 14.545
+   },
+   {
+    "w": "stopped",
+    "t": 14.909
+   },
+   {
+    "w": "making",
+    "t": 15.273
+   },
+   {
+    "w": "the",
+    "t": 15.636
+   },
+   {
+    "w": "sound",
+    "t": 16.0
+   },
+   {
+    "w": "a",
+    "t": 16.364
+   },
+   {
+    "w": "city",
+    "t": 16.727
+   },
+   {
+    "w": "makes.",
+    "t": 17.091
+   }
+  ]
+ },
+ {
+  "beat": 2,
+  "start": 17.455,
+  "sec": 16.363,
+  "text": "You notice it the way you notice a missing tooth. No traffic under the window, no lift in the shaft, no water in the pipes. The building is not empty. That is the thing. The building is full, and all of it is standing still.",
+  "words_to_cover": [
+   "you",
+   "notice",
+   "the",
+   "way",
+   "you",
+   "notice",
+   "missing",
+   "tooth",
+   "traffic",
+   "under",
+   "the",
+   "window",
+   "lift",
+   "the",
+   "shaft",
+   "water",
+   "the",
+   "pipes",
+   "the",
+   "building"
+  ],
+  "spoken": "You notice it the way you notice a missing tooth. No traffic under the window, no lift in the shaft, no water in the pipes. The building is not empty. That is the thing. The building is full, and all of it is standing still.",
+  "words": [
+   {
+    "w": "You",
+    "t": 17.455
+   },
+   {
+    "w": "notice",
+    "t": 17.818
+   },
+   {
+    "w": "it",
+    "t": 18.182
+   },
+   {
+    "w": "the",
+    "t": 18.545
+   },
+   {
+    "w": "way",
+    "t": 18.909
+   },
+   {
+    "w": "you",
+    "t": 19.273
+   },
+   {
+    "w": "notice",
+    "t": 19.636
+   },
+   {
+    "w": "a",
+    "t": 20.0
+   },
+   {
+    "w": "missing",
+    "t": 20.364
+   },
+   {
+    "w": "tooth.",
+    "t": 20.727
+   },
+   {
+    "w": "No",
+    "t": 21.091
+   },
+   {
+    "w": "traffic",
+    "t": 21.455
+   },
+   {
+    "w": "under",
+    "t": 21.818
+   },
+   {
+    "w": "the",
+    "t": 22.182
+   },
+   {
+    "w": "window,",
+    "t": 22.545
+   },
+   {
+    "w": "no",
+    "t": 22.909
+   },
+   {
+    "w": "lift",
+    "t": 23.273
+   },
+   {
+    "w": "in",
+    "t": 23.636
+   },
+   {
+    "w": "the",
+    "t": 24.0
+   },
+   {
+    "w": "shaft,",
+    "t": 24.364
+   },
+   {
+    "w": "no",
+    "t": 24.727
+   },
+   {
+    "w": "water",
+    "t": 25.091
+   },
+   {
+    "w": "in",
+    "t": 25.455
+   },
+   {
+    "w": "the",
+    "t": 25.818
+   },
+   {
+    "w": "pipes.",
+    "t": 26.182
+   },
+   {
+    "w": "The",
+    "t": 26.545
+   },
+   {
+    "w": "building",
+    "t": 26.909
+   },
+   {
+    "w": "is",
+    "t": 27.273
+   },
+   {
+    "w": "not",
+    "t": 27.636
+   },
+   {
+    "w": "empty.",
+    "t": 28.0
+   },
+   {
+    "w": "That",
+    "t": 28.364
+   },
+   {
+    "w": "is",
+    "t": 28.727
+   },
+   {
+    "w": "the",
+    "t": 29.091
+   },
+   {
+    "w": "thing.",
+    "t": 29.455
+   },
+   {
+    "w": "The",
+    "t": 29.818
+   },
+   {
+    "w": "building",
+    "t": 30.182
+   },
+   {
+    "w": "is",
+    "t": 30.545
+   },
+   {
+    "w": "full,",
+    "t": 30.909
+   },
+   {
+    "w": "and",
+    "t": 31.273
+   },
+   {
+    "w": "all",
+    "t": 31.636
+   },
+   {
+    "w": "of",
+    "t": 32.0
+   },
+   {
+    "w": "it",
+    "t": 32.364
+   },
+   {
+    "w": "is",
+    "t": 32.727
+   },
+   {
+    "w": "standing",
+    "t": 33.091
+   },
+   {
+    "w": "still.",
+    "t": 33.455
+   }
+  ]
+ },
+ {
+  "beat": 3,
+  "start": 33.818,
+  "sec": 27.273,
+  "text": "The room is exactly the way you left it last night. The door is shut, and the bolt is across it, and you did not put it there. You cross the floor and put one hand flat on the wood. The door is cold and solid, and it is the best thing you own. There is a gap under it, and the corridor light lies in that gap, thin and steady. It does not flicker.",
+  "words_to_cover": [
+   "the",
+   "room",
+   "exactly",
+   "the",
+   "way",
+   "you",
+   "left",
+   "last",
+   "night",
+   "the",
+   "door",
+   "shut",
+   "and",
+   "the",
+   "bolt",
+   "across",
+   "and",
+   "you",
+   "did",
+   "not"
+  ],
+  "spoken": "The room is exactly the way you left it last night. The door is shut, and the bolt is across it, and you did not put it there. You cross the floor and put one hand flat on the wood. The door is cold and solid, and it is the best thing you own. There is a gap under it, and the corridor light lies in that gap, thin and steady. It does not flicker.",
+  "words": [
+   {
+    "w": "The",
+    "t": 33.818
+   },
+   {
+    "w": "room",
+    "t": 34.182
+   },
+   {
+    "w": "is",
+    "t": 34.545
+   },
+   {
+    "w": "exactly",
+    "t": 34.909
+   },
+   {
+    "w": "the",
+    "t": 35.273
+   },
+   {
+    "w": "way",
+    "t": 35.636
+   },
+   {
+    "w": "you",
+    "t": 36.0
+   },
+   {
+    "w": "left",
+    "t": 36.364
+   },
+   {
+    "w": "it",
+    "t": 36.727
+   },
+   {
+    "w": "last",
+    "t": 37.091
+   },
+   {
+    "w": "night.",
+    "t": 37.455
+   },
+   {
+    "w": "The",
+    "t": 37.818
+   },
+   {
+    "w": "door",
+    "t": 38.182
+   },
+   {
+    "w": "is",
+    "t": 38.545
+   },
+   {
+    "w": "shut,",
+    "t": 38.909
+   },
+   {
+    "w": "and",
+    "t": 39.273
+   },
+   {
+    "w": "the",
+    "t": 39.636
+   },
+   {
+    "w": "bolt",
+    "t": 40.0
+   },
+   {
+    "w": "is",
+    "t": 40.364
+   },
+   {
+    "w": "across",
+    "t": 40.727
+   },
+   {
+    "w": "it,",
+    "t": 41.091
+   },
+   {
+    "w": "and",
+    "t": 41.455
+   },
+   {
+    "w": "you",
+    "t": 41.818
+   },
+   {
+    "w": "did",
+    "t": 42.182
+   },
+   {
+    "w": "not",
+    "t": 42.545
+   },
+   {
+    "w": "put",
+    "t": 42.909
+   },
+   {
+    "w": "it",
+    "t": 43.273
+   },
+   {
+    "w": "there.",
+    "t": 43.636
+   },
+   {
+    "w": "You",
+    "t": 44.0
+   },
+   {
+    "w": "cross",
+    "t": 44.364
+   },
+   {
+    "w": "the",
+    "t": 44.727
+   },
+   {
+    "w": "floor",
+    "t": 45.091
+   },
+   {
+    "w": "and",
+    "t": 45.455
+   },
+   {
+    "w": "put",
+    "t": 45.818
+   },
+   {
+    "w": "one",
+    "t": 46.182
+   },
+   {
+    "w": "hand",
+    "t": 46.545
+   },
+   {
+    "w": "flat",
+    "t": 46.909
+   },
+   {
+    "w": "on",
+    "t": 47.273
+   },
+   {
+    "w": "the",
+    "t": 47.636
+   },
+   {
+    "w": "wood.",
+    "t": 48.0
+   },
+   {
+    "w": "The",
+    "t": 48.364
+   },
+   {
+    "w": "door",
+    "t": 48.727
+   },
+   {
+    "w": "is",
+    "t": 49.091
+   },
+   {
+    "w": "cold",
+    "t": 49.455
+   },
+   {
+    "w": "and",
+    "t": 49.818
+   },
+   {
+    "w": "solid,",
+    "t": 50.182
+   },
+   {
+    "w": "and",
+    "t": 50.545
+   },
+   {
+    "w": "it",
+    "t": 50.909
+   },
+   {
+    "w": "is",
+    "t": 51.273
+   },
+   {
+    "w": "the",
+    "t": 51.636
+   },
+   {
+    "w": "best",
+    "t": 52.0
+   },
+   {
+    "w": "thing",
+    "t": 52.364
+   },
+   {
+    "w": "you",
+    "t": 52.727
+   },
+   {
+    "w": "own.",
+    "t": 53.091
+   },
+   {
+    "w": "There",
+    "t": 53.455
+   },
+   {
+    "w": "is",
+    "t": 53.818
+   },
+   {
+    "w": "a",
+    "t": 54.182
+   },
+   {
+    "w": "gap",
+    "t": 54.545
+   },
+   {
+    "w": "under",
+    "t": 54.909
+   },
+   {
+    "w": "it,",
+    "t": 55.273
+   },
+   {
+    "w": "and",
+    "t": 55.636
+   },
+   {
+    "w": "the",
+    "t": 56.0
+   },
+   {
+    "w": "corridor",
+    "t": 56.364
+   },
+   {
+    "w": "light",
+    "t": 56.727
+   },
+   {
+    "w": "lies",
+    "t": 57.091
+   },
+   {
+    "w": "in",
+    "t": 57.455
+   },
+   {
+    "w": "that",
+    "t": 57.818
+   },
+   {
+    "w": "gap,",
+    "t": 58.182
+   },
+   {
+    "w": "thin",
+    "t": 58.545
+   },
+   {
+    "w": "and",
+    "t": 58.909
+   },
+   {
+    "w": "steady.",
+    "t": 59.273
+   },
+   {
+    "w": "It",
+    "t": 59.636
+   },
+   {
+    "w": "does",
+    "t": 60.0
+   },
+   {
+    "w": "not",
+    "t": 60.364
+   },
+   {
+    "w": "flicker.",
+    "t": 60.727
+   }
+  ]
+ },
+ {
+  "beat": 4,
+  "start": 61.091,
+  "sec": 16.727,
+  "text": "You get down and look through the gap. Shoes. Then more shoes. Then, across the hall, the door of the apartment opposite, standing open. So is every other door on this corridor. Everything that used to live in them is out in the hall now, standing.",
+  "words_to_cover": [
+   "you",
+   "get",
+   "down",
+   "and",
+   "look",
+   "through",
+   "the",
+   "gap",
+   "shoes",
+   "then",
+   "more",
+   "shoes",
+   "then",
+   "across",
+   "the",
+   "hall",
+   "the",
+   "door",
+   "the",
+   "apartment"
+  ],
+  "spoken": "You get down and look through the gap. Shoes. Then more shoes. Then, across the hall, the door of the apartment opposite, standing open. So is every other door on this corridor. Everything that used to live in them is out in the hall now, standing.",
+  "words": [
+   {
+    "w": "You",
+    "t": 61.091
+   },
+   {
+    "w": "get",
+    "t": 61.455
+   },
+   {
+    "w": "down",
+    "t": 61.818
+   },
+   {
+    "w": "and",
+    "t": 62.182
+   },
+   {
+    "w": "look",
+    "t": 62.545
+   },
+   {
+    "w": "through",
+    "t": 62.909
+   },
+   {
+    "w": "the",
+    "t": 63.273
+   },
+   {
+    "w": "gap.",
+    "t": 63.636
+   },
+   {
+    "w": "Shoes.",
+    "t": 64.0
+   },
+   {
+    "w": "Then",
+    "t": 64.364
+   },
+   {
+    "w": "more",
+    "t": 64.727
+   },
+   {
+    "w": "shoes.",
+    "t": 65.091
+   },
+   {
+    "w": "Then,",
+    "t": 65.455
+   },
+   {
+    "w": "across",
+    "t": 65.818
+   },
+   {
+    "w": "the",
+    "t": 66.182
+   },
+   {
+    "w": "hall,",
+    "t": 66.545
+   },
+   {
+    "w": "the",
+    "t": 66.909
+   },
+   {
+    "w": "door",
+    "t": 67.273
+   },
+   {
+    "w": "of",
+    "t": 67.636
+   },
+   {
+    "w": "the",
+    "t": 68.0
+   },
+   {
+    "w": "apartment",
+    "t": 68.364
+   },
+   {
+    "w": "opposite,",
+    "t": 68.727
+   },
+   {
+    "w": "standing",
+    "t": 69.091
+   },
+   {
+    "w": "open.",
+    "t": 69.455
+   },
+   {
+    "w": "So",
+    "t": 69.818
+   },
+   {
+    "w": "is",
+    "t": 70.182
+   },
+   {
+    "w": "every",
+    "t": 70.545
+   },
+   {
+    "w": "other",
+    "t": 70.909
+   },
+   {
+    "w": "door",
+    "t": 71.273
+   },
+   {
+    "w": "on",
+    "t": 71.636
+   },
+   {
+    "w": "this",
+    "t": 72.0
+   },
+   {
+    "w": "corridor.",
+    "t": 72.364
+   },
+   {
+    "w": "Everything",
+    "t": 72.727
+   },
+   {
+    "w": "that",
+    "t": 73.091
+   },
+   {
+    "w": "used",
+    "t": 73.455
+   },
+   {
+    "w": "to",
+    "t": 73.818
+   },
+   {
+    "w": "live",
+    "t": 74.182
+   },
+   {
+    "w": "in",
+    "t": 74.545
+   },
+   {
+    "w": "them",
+    "t": 74.909
+   },
+   {
+    "w": "is",
+    "t": 75.273
+   },
+   {
+    "w": "out",
+    "t": 75.636
+   },
+   {
+    "w": "in",
+    "t": 76.0
+   },
+   {
+    "w": "the",
+    "t": 76.364
+   },
+   {
+    "w": "hall",
+    "t": 76.727
+   },
+   {
+    "w": "now,",
+    "t": 77.091
+   },
+   {
+    "w": "standing.",
+    "t": 77.455
+   }
+  ]
+ },
+ {
+  "beat": 5,
+  "start": 77.818,
+  "sec": 19.637,
+  "text": "Arms down. Heads tilted, like they are trying to remember something. You watch one of them for a long time. It does not shift its weight. It does not breathe in any way you can see. That is the first thing you learn, and it will keep you alive. They do not get bored.",
+  "words_to_cover": [
+   "arms",
+   "down",
+   "heads",
+   "tilted",
+   "like",
+   "they",
+   "are",
+   "trying",
+   "remember",
+   "something",
+   "you",
+   "watch",
+   "one",
+   "them",
+   "for",
+   "long",
+   "time",
+   "does",
+   "not",
+   "shift"
+  ],
+  "spoken": "Arms down. Heads tilted, like they are trying to remember something. You watch one of them for a long time. It does not shift its weight. It does not breathe in any way you can see. That is the first thing you learn, and it will keep you alive. They do not get bored.",
+  "words": [
+   {
+    "w": "Arms",
+    "t": 77.818
+   },
+   {
+    "w": "down.",
+    "t": 78.182
+   },
+   {
+    "w": "Heads",
+    "t": 78.545
+   },
+   {
+    "w": "tilted,",
+    "t": 78.909
+   },
+   {
+    "w": "like",
+    "t": 79.273
+   },
+   {
+    "w": "they",
+    "t": 79.636
+   },
+   {
+    "w": "are",
+    "t": 80.0
+   },
+   {
+    "w": "trying",
+    "t": 80.364
+   },
+   {
+    "w": "to",
+    "t": 80.727
+   },
+   {
+    "w": "remember",
+    "t": 81.091
+   },
+   {
+    "w": "something.",
+    "t": 81.455
+   },
+   {
+    "w": "You",
+    "t": 81.818
+   },
+   {
+    "w": "watch",
+    "t": 82.182
+   },
+   {
+    "w": "one",
+    "t": 82.545
+   },
+   {
+    "w": "of",
+    "t": 82.909
+   },
+   {
+    "w": "them",
+    "t": 83.273
+   },
+   {
+    "w": "for",
+    "t": 83.636
+   },
+   {
+    "w": "a",
+    "t": 84.0
+   },
+   {
+    "w": "long",
+    "t": 84.364
+   },
+   {
+    "w": "time.",
+    "t": 84.727
+   },
+   {
+    "w": "It",
+    "t": 85.091
+   },
+   {
+    "w": "does",
+    "t": 85.455
+   },
+   {
+    "w": "not",
+    "t": 85.818
+   },
+   {
+    "w": "shift",
+    "t": 86.182
+   },
+   {
+    "w": "its",
+    "t": 86.545
+   },
+   {
+    "w": "weight.",
+    "t": 86.909
+   },
+   {
+    "w": "It",
+    "t": 87.273
+   },
+   {
+    "w": "does",
+    "t": 87.636
+   },
+   {
+    "w": "not",
+    "t": 88.0
+   },
+   {
+    "w": "breathe",
+    "t": 88.364
+   },
+   {
+    "w": "in",
+    "t": 88.727
+   },
+   {
+    "w": "any",
+    "t": 89.091
+   },
+   {
+    "w": "way",
+    "t": 89.455
+   },
+   {
+    "w": "you",
+    "t": 89.818
+   },
+   {
+    "w": "can",
+    "t": 90.182
+   },
+   {
+    "w": "see.",
+    "t": 90.545
+   },
+   {
+    "w": "That",
+    "t": 90.909
+   },
+   {
+    "w": "is",
+    "t": 91.273
+   },
+   {
+    "w": "the",
+    "t": 91.636
+   },
+   {
+    "w": "first",
+    "t": 92.0
+   },
+   {
+    "w": "thing",
+    "t": 92.364
+   },
+   {
+    "w": "you",
+    "t": 92.727
+   },
+   {
+    "w": "learn,",
+    "t": 93.091
+   },
+   {
+    "w": "and",
+    "t": 93.455
+   },
+   {
+    "w": "it",
+    "t": 93.818
+   },
+   {
+    "w": "will",
+    "t": 94.182
+   },
+   {
+    "w": "keep",
+    "t": 94.545
+   },
+   {
+    "w": "you",
+    "t": 94.909
+   },
+   {
+    "w": "alive.",
+    "t": 95.273
+   },
+   {
+    "w": "They",
+    "t": 95.636
+   },
+   {
+    "w": "do",
+    "t": 96.0
+   },
+   {
+    "w": "not",
+    "t": 96.364
+   },
+   {
+    "w": "get",
+    "t": 96.727
+   },
+   {
+    "w": "bored.",
+    "t": 97.091
+   }
+  ]
+ },
+ {
+  "beat": 6,
+  "start": 97.455,
+  "sec": 22.181,
+  "text": "You need to know how this works, so you do something small and stupid. You knock once, with one knuckle, on the floorboard beside your knee. Out in the corridor, forty heads turn at once. Nothing comes through the door. Nothing scratches. Nobody tries the handle. They turn, and they listen, and then, one by one, they go back to standing.",
+  "words_to_cover": [
+   "you",
+   "need",
+   "know",
+   "how",
+   "this",
+   "works",
+   "you",
+   "something",
+   "small",
+   "and",
+   "stupid",
+   "you",
+   "knock",
+   "once",
+   "with",
+   "one",
+   "knuckle",
+   "the",
+   "floorboard",
+   "beside"
+  ],
+  "spoken": "You need to know how this works, so you do something small and stupid. You knock once, with one knuckle, on the floorboard beside your knee. Out in the corridor, forty heads turn at once. Nothing comes through the door. Nothing scratches. Nobody tries the handle. They turn, and they listen, and then, one by one, they go back to standing.",
+  "words": [
+   {
+    "w": "You",
+    "t": 97.455
+   },
+   {
+    "w": "need",
+    "t": 97.818
+   },
+   {
+    "w": "to",
+    "t": 98.182
+   },
+   {
+    "w": "know",
+    "t": 98.545
+   },
+   {
+    "w": "how",
+    "t": 98.909
+   },
+   {
+    "w": "this",
+    "t": 99.273
+   },
+   {
+    "w": "works,",
+    "t": 99.636
+   },
+   {
+    "w": "so",
+    "t": 100.0
+   },
+   {
+    "w": "you",
+    "t": 100.364
+   },
+   {
+    "w": "do",
+    "t": 100.727
+   },
+   {
+    "w": "something",
+    "t": 101.091
+   },
+   {
+    "w": "small",
+    "t": 101.455
+   },
+   {
+    "w": "and",
+    "t": 101.818
+   },
+   {
+    "w": "stupid.",
+    "t": 102.182
+   },
+   {
+    "w": "You",
+    "t": 102.545
+   },
+   {
+    "w": "knock",
+    "t": 102.909
+   },
+   {
+    "w": "once,",
+    "t": 103.273
+   },
+   {
+    "w": "with",
+    "t": 103.636
+   },
+   {
+    "w": "one",
+    "t": 104.0
+   },
+   {
+    "w": "knuckle,",
+    "t": 104.364
+   },
+   {
+    "w": "on",
+    "t": 104.727
+   },
+   {
+    "w": "the",
+    "t": 105.091
+   },
+   {
+    "w": "floorboard",
+    "t": 105.455
+   },
+   {
+    "w": "beside",
+    "t": 105.818
+   },
+   {
+    "w": "your",
+    "t": 106.182
+   },
+   {
+    "w": "knee.",
+    "t": 106.545
+   },
+   {
+    "w": "Out",
+    "t": 106.909
+   },
+   {
+    "w": "in",
+    "t": 107.273
+   },
+   {
+    "w": "the",
+    "t": 107.636
+   },
+   {
+    "w": "corridor,",
+    "t": 108.0
+   },
+   {
+    "w": "forty",
+    "t": 108.364
+   },
+   {
+    "w": "heads",
+    "t": 108.727
+   },
+   {
+    "w": "turn",
+    "t": 109.091
+   },
+   {
+    "w": "at",
+    "t": 109.455
+   },
+   {
+    "w": "once.",
+    "t": 109.818
+   },
+   {
+    "w": "Nothing",
+    "t": 110.182
+   },
+   {
+    "w": "comes",
+    "t": 110.545
+   },
+   {
+    "w": "through",
+    "t": 110.909
+   },
+   {
+    "w": "the",
+    "t": 111.273
+   },
+   {
+    "w": "door.",
+    "t": 111.636
+   },
+   {
+    "w": "Nothing",
+    "t": 112.0
+   },
+   {
+    "w": "scratches.",
+    "t": 112.364
+   },
+   {
+    "w": "Nobody",
+    "t": 112.727
+   },
+   {
+    "w": "tries",
+    "t": 113.091
+   },
+   {
+    "w": "the",
+    "t": 113.455
+   },
+   {
+    "w": "handle.",
+    "t": 113.818
+   },
+   {
+    "w": "They",
+    "t": 114.182
+   },
+   {
+    "w": "turn,",
+    "t": 114.545
+   },
+   {
+    "w": "and",
+    "t": 114.909
+   },
+   {
+    "w": "they",
+    "t": 115.273
+   },
+   {
+    "w": "listen,",
+    "t": 115.636
+   },
+   {
+    "w": "and",
+    "t": 116.0
+   },
+   {
+    "w": "then,",
+    "t": 116.364
+   },
+   {
+    "w": "one",
+    "t": 116.727
+   },
+   {
+    "w": "by",
+    "t": 117.091
+   },
+   {
+    "w": "one,",
+    "t": 117.455
+   },
+   {
+    "w": "they",
+    "t": 117.818
+   },
+   {
+    "w": "go",
+    "t": 118.182
+   },
+   {
+    "w": "back",
+    "t": 118.545
+   },
+   {
+    "w": "to",
+    "t": 118.909
+   },
+   {
+    "w": "standing.",
+    "t": 119.273
+   }
+  ]
+ },
+ {
+  "beat": 7,
+  "start": 119.636,
+  "sec": 34.909,
+  "text": "Then your phone rings. It is at nineteen percent. It is the loudest thing that has ever happened in this building. The name on the screen is one you know. Somebody you would answer for. Somebody you have answered for before. Somebody alive, calling you, right now, from somewhere in this city. You do not answer. You hold it against your chest until it stops. It rings for eleven seconds. In the hallway, the one in the doorway opposite turns its head toward your door. You slide the phone under the mattress and sit on it.",
+  "words_to_cover": [
+   "then",
+   "your",
+   "phone",
+   "rings",
+   "nineteen",
+   "percent",
+   "the",
+   "loudest",
+   "thing",
+   "that",
+   "has",
+   "ever",
+   "happened",
+   "this",
+   "building",
+   "the",
+   "name",
+   "the",
+   "screen",
+   "one"
+  ],
+  "spoken": "Then your phone rings. It is at nineteen percent. It is the loudest thing that has ever happened in this building. The name on the screen is one you know. Somebody you would answer for. Somebody you have answered for before. Somebody alive, calling you, right now, from somewhere in this city. You do not answer. You hold it against your chest until it stops. It rings for eleven seconds. In the hallway, the one in the doorway opposite turns its head toward your door. You slide the phone under the mattress and sit on it.",
+  "words": [
+   {
+    "w": "Then",
+    "t": 119.636
+   },
+   {
+    "w": "your",
+    "t": 120.0
+   },
+   {
+    "w": "phone",
+    "t": 120.364
+   },
+   {
+    "w": "rings.",
+    "t": 120.727
+   },
+   {
+    "w": "It",
+    "t": 121.091
+   },
+   {
+    "w": "is",
+    "t": 121.455
+   },
+   {
+    "w": "at",
+    "t": 121.818
+   },
+   {
+    "w": "nineteen",
+    "t": 122.182
+   },
+   {
+    "w": "percent.",
+    "t": 122.545
+   },
+   {
+    "w": "It",
+    "t": 122.909
+   },
+   {
+    "w": "is",
+    "t": 123.273
+   },
+   {
+    "w": "the",
+    "t": 123.636
+   },
+   {
+    "w": "loudest",
+    "t": 124.0
+   },
+   {
+    "w": "thing",
+    "t": 124.364
+   },
+   {
+    "w": "that",
+    "t": 124.727
+   },
+   {
+    "w": "has",
+    "t": 125.091
+   },
+   {
+    "w": "ever",
+    "t": 125.455
+   },
+   {
+    "w": "happened",
+    "t": 125.818
+   },
+   {
+    "w": "in",
+    "t": 126.182
+   },
+   {
+    "w": "this",
+    "t": 126.545
+   },
+   {
+    "w": "building.",
+    "t": 126.909
+   },
+   {
+    "w": "The",
+    "t": 127.273
+   },
+   {
+    "w": "name",
+    "t": 127.636
+   },
+   {
+    "w": "on",
+    "t": 128.0
+   },
+   {
+    "w": "the",
+    "t": 128.364
+   },
+   {
+    "w": "screen",
+    "t": 128.727
+   },
+   {
+    "w": "is",
+    "t": 129.091
+   },
+   {
+    "w": "one",
+    "t": 129.455
+   },
+   {
+    "w": "you",
+    "t": 129.818
+   },
+   {
+    "w": "know.",
+    "t": 130.182
+   },
+   {
+    "w": "Somebody",
+    "t": 130.545
+   },
+   {
+    "w": "you",
+    "t": 130.909
+   },
+   {
+    "w": "would",
+    "t": 131.273
+   },
+   {
+    "w": "answer",
+    "t": 131.636
+   },
+   {
+    "w": "for.",
+    "t": 132.0
+   },
+   {
+    "w": "Somebody",
+    "t": 132.364
+   },
+   {
+    "w": "you",
+    "t": 132.727
+   },
+   {
+    "w": "have",
+    "t": 133.091
+   },
+   {
+    "w": "answered",
+    "t": 133.455
+   },
+   {
+    "w": "for",
+    "t": 133.818
+   },
+   {
+    "w": "before.",
+    "t": 134.182
+   },
+   {
+    "w": "Somebody",
+    "t": 134.545
+   },
+   {
+    "w": "alive,",
+    "t": 134.909
+   },
+   {
+    "w": "calling",
+    "t": 135.273
+   },
+   {
+    "w": "you,",
+    "t": 135.636
+   },
+   {
+    "w": "right",
+    "t": 136.0
+   },
+   {
+    "w": "now,",
+    "t": 136.364
+   },
+   {
+    "w": "from",
+    "t": 136.727
+   },
+   {
+    "w": "somewhere",
+    "t": 137.091
+   },
+   {
+    "w": "in",
+    "t": 137.455
+   },
+   {
+    "w": "this",
+    "t": 137.818
+   },
+   {
+    "w": "city.",
+    "t": 138.182
+   },
+   {
+    "w": "You",
+    "t": 138.545
+   },
+   {
+    "w": "do",
+    "t": 138.909
+   },
+   {
+    "w": "not",
+    "t": 139.273
+   },
+   {
+    "w": "answer.",
+    "t": 139.636
+   },
+   {
+    "w": "You",
+    "t": 140.0
+   },
+   {
+    "w": "hold",
+    "t": 140.364
+   },
+   {
+    "w": "it",
+    "t": 140.727
+   },
+   {
+    "w": "against",
+    "t": 141.091
+   },
+   {
+    "w": "your",
+    "t": 141.455
+   },
+   {
+    "w": "chest",
+    "t": 141.818
+   },
+   {
+    "w": "until",
+    "t": 142.182
+   },
+   {
+    "w": "it",
+    "t": 142.545
+   },
+   {
+    "w": "stops.",
+    "t": 142.909
+   },
+   {
+    "w": "It",
+    "t": 143.273
+   },
+   {
+    "w": "rings",
+    "t": 143.636
+   },
+   {
+    "w": "for",
+    "t": 144.0
+   },
+   {
+    "w": "eleven",
+    "t": 144.364
+   },
+   {
+    "w": "seconds.",
+    "t": 144.727
+   },
+   {
+    "w": "In",
+    "t": 145.091
+   },
+   {
+    "w": "the",
+    "t": 145.455
+   },
+   {
+    "w": "hallway,",
+    "t": 145.818
+   },
+   {
+    "w": "the",
+    "t": 146.182
+   },
+   {
+    "w": "one",
+    "t": 146.545
+   },
+   {
+    "w": "in",
+    "t": 146.909
+   },
+   {
+    "w": "the",
+    "t": 147.273
+   },
+   {
+    "w": "doorway",
+    "t": 147.636
+   },
+   {
+    "w": "opposite",
+    "t": 148.0
+   },
+   {
+    "w": "turns",
+    "t": 148.364
+   },
+   {
+    "w": "its",
+    "t": 148.727
+   },
+   {
+    "w": "head",
+    "t": 149.091
+   },
+   {
+    "w": "toward",
+    "t": 149.455
+   },
+   {
+    "w": "your",
+    "t": 149.818
+   },
+   {
+    "w": "door.",
+    "t": 150.182
+   },
+   {
+    "w": "You",
+    "t": 150.545
+   },
+   {
+    "w": "slide",
+    "t": 150.909
+   },
+   {
+    "w": "the",
+    "t": 151.273
+   },
+   {
+    "w": "phone",
+    "t": 151.636
+   },
+   {
+    "w": "under",
+    "t": 152.0
+   },
+   {
+    "w": "the",
+    "t": 152.364
+   },
+   {
+    "w": "mattress",
+    "t": 152.727
+   },
+   {
+    "w": "and",
+    "t": 153.091
+   },
+   {
+    "w": "sit",
+    "t": 153.455
+   },
+   {
+    "w": "on",
+    "t": 153.818
+   },
+   {
+    "w": "it.",
+    "t": 154.182
+   }
+  ]
+ },
+ {
+  "beat": 8,
+  "start": 154.545,
+  "sec": 9.819,
+  "text": "By the afternoon the building is louder than the street. Feet in the stairwell. Slow, careful, one at a time. You get to eleven and stop counting.",
+  "words_to_cover": [
+   "the",
+   "afternoon",
+   "the",
+   "building",
+   "louder",
+   "than",
+   "the",
+   "street",
+   "feet",
+   "the",
+   "stairwell",
+   "slow",
+   "careful",
+   "one",
+   "time",
+   "you",
+   "get",
+   "eleven",
+   "and",
+   "stop"
+  ],
+  "spoken": "By the afternoon the building is louder than the street. Feet in the stairwell. Slow, careful, one at a time. You get to eleven and stop counting.",
+  "words": [
+   {
+    "w": "By",
+    "t": 154.545
+   },
+   {
+    "w": "the",
+    "t": 154.909
+   },
+   {
+    "w": "afternoon",
+    "t": 155.273
+   },
+   {
+    "w": "the",
+    "t": 155.636
+   },
+   {
+    "w": "building",
+    "t": 156.0
+   },
+   {
+    "w": "is",
+    "t": 156.364
+   },
+   {
+    "w": "louder",
+    "t": 156.727
+   },
+   {
+    "w": "than",
+    "t": 157.091
+   },
+   {
+    "w": "the",
+    "t": 157.455
+   },
+   {
+    "w": "street.",
+    "t": 157.818
+   },
+   {
+    "w": "Feet",
+    "t": 158.182
+   },
+   {
+    "w": "in",
+    "t": 158.545
+   },
+   {
+    "w": "the",
+    "t": 158.909
+   },
+   {
+    "w": "stairwell.",
+    "t": 159.273
+   },
+   {
+    "w": "Slow,",
+    "t": 159.636
+   },
+   {
+    "w": "careful,",
+    "t": 160.0
+   },
+   {
+    "w": "one",
+    "t": 160.364
+   },
+   {
+    "w": "at",
+    "t": 160.727
+   },
+   {
+    "w": "a",
+    "t": 161.091
+   },
+   {
+    "w": "time.",
+    "t": 161.455
+   },
+   {
+    "w": "You",
+    "t": 161.818
+   },
+   {
+    "w": "get",
+    "t": 162.182
+   },
+   {
+    "w": "to",
+    "t": 162.545
+   },
+   {
+    "w": "eleven",
+    "t": 162.909
+   },
+   {
+    "w": "and",
+    "t": 163.273
+   },
+   {
+    "w": "stop",
+    "t": 163.636
+   },
+   {
+    "w": "counting.",
+    "t": 164.0
+   }
+  ]
+ },
+ {
+  "beat": 9,
+  "start": 164.364,
+  "sec": 16.363,
+  "text": "Then the sun crosses the floor, and for twenty minutes you sit in it. You are warm, nobody is at the door, and you are a person in a room. Then the light moves off your hands, and it is just a dark room again.",
+  "words_to_cover": [
+   "then",
+   "the",
+   "sun",
+   "crosses",
+   "the",
+   "floor",
+   "and",
+   "for",
+   "twenty",
+   "minutes",
+   "you",
+   "sit",
+   "you",
+   "are",
+   "warm",
+   "nobody",
+   "the",
+   "door",
+   "and",
+   "you"
+  ],
+  "spoken": "Then the sun crosses the floor, and for twenty minutes you sit in it. You are warm, nobody is at the door, and you are a person in a room. Then the light moves off your hands, and it is just a dark room again.",
+  "words": [
+   {
+    "w": "Then",
+    "t": 164.364
+   },
+   {
+    "w": "the",
+    "t": 164.727
+   },
+   {
+    "w": "sun",
+    "t": 165.091
+   },
+   {
+    "w": "crosses",
+    "t": 165.455
+   },
+   {
+    "w": "the",
+    "t": 165.818
+   },
+   {
+    "w": "floor,",
+    "t": 166.182
+   },
+   {
+    "w": "and",
+    "t": 166.545
+   },
+   {
+    "w": "for",
+    "t": 166.909
+   },
+   {
+    "w": "twenty",
+    "t": 167.273
+   },
+   {
+    "w": "minutes",
+    "t": 167.636
+   },
+   {
+    "w": "you",
+    "t": 168.0
+   },
+   {
+    "w": "sit",
+    "t": 168.364
+   },
+   {
+    "w": "in",
+    "t": 168.727
+   },
+   {
+    "w": "it.",
+    "t": 169.091
+   },
+   {
+    "w": "You",
+    "t": 169.455
+   },
+   {
+    "w": "are",
+    "t": 169.818
+   },
+   {
+    "w": "warm,",
+    "t": 170.182
+   },
+   {
+    "w": "nobody",
+    "t": 170.545
+   },
+   {
+    "w": "is",
+    "t": 170.909
+   },
+   {
+    "w": "at",
+    "t": 171.273
+   },
+   {
+    "w": "the",
+    "t": 171.636
+   },
+   {
+    "w": "door,",
+    "t": 172.0
+   },
+   {
+    "w": "and",
+    "t": 172.364
+   },
+   {
+    "w": "you",
+    "t": 172.727
+   },
+   {
+    "w": "are",
+    "t": 173.091
+   },
+   {
+    "w": "a",
+    "t": 173.455
+   },
+   {
+    "w": "person",
+    "t": 173.818
+   },
+   {
+    "w": "in",
+    "t": 174.182
+   },
+   {
+    "w": "a",
+    "t": 174.545
+   },
+   {
+    "w": "room.",
+    "t": 174.909
+   },
+   {
+    "w": "Then",
+    "t": 175.273
+   },
+   {
+    "w": "the",
+    "t": 175.636
+   },
+   {
+    "w": "light",
+    "t": 176.0
+   },
+   {
+    "w": "moves",
+    "t": 176.364
+   },
+   {
+    "w": "off",
+    "t": 176.727
+   },
+   {
+    "w": "your",
+    "t": 177.091
+   },
+   {
+    "w": "hands,",
+    "t": 177.455
+   },
+   {
+    "w": "and",
+    "t": 177.818
+   },
+   {
+    "w": "it",
+    "t": 178.182
+   },
+   {
+    "w": "is",
+    "t": 178.545
+   },
+   {
+    "w": "just",
+    "t": 178.909
+   },
+   {
+    "w": "a",
+    "t": 179.273
+   },
+   {
+    "w": "dark",
+    "t": 179.636
+   },
+   {
+    "w": "room",
+    "t": 180.0
+   },
+   {
+    "w": "again.",
+    "t": 180.364
+   }
+  ]
+ },
+ {
+  "beat": 10,
+  "start": 180.727,
+  "sec": 22.546,
+  "text": "Just before dark, somebody knocks on your door. Three slow knocks. A pause. Three more. That is a rhythm. A thing with nothing to say does not have a rhythm. Then a voice says your name. It says it quietly, and carefully, the way you would say it to somebody asleep. It says it knows you are in there. It says please.",
+  "words_to_cover": [
+   "just",
+   "before",
+   "dark",
+   "somebody",
+   "knocks",
+   "your",
+   "door",
+   "three",
+   "slow",
+   "knocks",
+   "pause",
+   "three",
+   "more",
+   "that",
+   "rhythm",
+   "thing",
+   "with",
+   "nothing",
+   "say",
+   "does"
+  ],
+  "spoken": "Just before dark, somebody knocks on your door. Three slow knocks. A pause. Three more. That is a rhythm. A thing with nothing to say does not have a rhythm. Then a voice says your name. It says it quietly, and carefully, the way you would say it to somebody asleep. It says it knows you are in there. It says please.",
+  "words": [
+   {
+    "w": "Just",
+    "t": 180.727
+   },
+   {
+    "w": "before",
+    "t": 181.091
+   },
+   {
+    "w": "dark,",
+    "t": 181.455
+   },
+   {
+    "w": "somebody",
+    "t": 181.818
+   },
+   {
+    "w": "knocks",
+    "t": 182.182
+   },
+   {
+    "w": "on",
+    "t": 182.545
+   },
+   {
+    "w": "your",
+    "t": 182.909
+   },
+   {
+    "w": "door.",
+    "t": 183.273
+   },
+   {
+    "w": "Three",
+    "t": 183.636
+   },
+   {
+    "w": "slow",
+    "t": 184.0
+   },
+   {
+    "w": "knocks.",
+    "t": 184.364
+   },
+   {
+    "w": "A",
+    "t": 184.727
+   },
+   {
+    "w": "pause.",
+    "t": 185.091
+   },
+   {
+    "w": "Three",
+    "t": 185.455
+   },
+   {
+    "w": "more.",
+    "t": 185.818
+   },
+   {
+    "w": "That",
+    "t": 186.182
+   },
+   {
+    "w": "is",
+    "t": 186.545
+   },
+   {
+    "w": "a",
+    "t": 186.909
+   },
+   {
+    "w": "rhythm.",
+    "t": 187.273
+   },
+   {
+    "w": "A",
+    "t": 187.636
+   },
+   {
+    "w": "thing",
+    "t": 188.0
+   },
+   {
+    "w": "with",
+    "t": 188.364
+   },
+   {
+    "w": "nothing",
+    "t": 188.727
+   },
+   {
+    "w": "to",
+    "t": 189.091
+   },
+   {
+    "w": "say",
+    "t": 189.455
+   },
+   {
+    "w": "does",
+    "t": 189.818
+   },
+   {
+    "w": "not",
+    "t": 190.182
+   },
+   {
+    "w": "have",
+    "t": 190.545
+   },
+   {
+    "w": "a",
+    "t": 190.909
+   },
+   {
+    "w": "rhythm.",
+    "t": 191.273
+   },
+   {
+    "w": "Then",
+    "t": 191.636
+   },
+   {
+    "w": "a",
+    "t": 192.0
+   },
+   {
+    "w": "voice",
+    "t": 192.364
+   },
+   {
+    "w": "says",
+    "t": 192.727
+   },
+   {
+    "w": "your",
+    "t": 193.091
+   },
+   {
+    "w": "name.",
+    "t": 193.455
+   },
+   {
+    "w": "It",
+    "t": 193.818
+   },
+   {
+    "w": "says",
+    "t": 194.182
+   },
+   {
+    "w": "it",
+    "t": 194.545
+   },
+   {
+    "w": "quietly,",
+    "t": 194.909
+   },
+   {
+    "w": "and",
+    "t": 195.273
+   },
+   {
+    "w": "carefully,",
+    "t": 195.636
+   },
+   {
+    "w": "the",
+    "t": 196.0
+   },
+   {
+    "w": "way",
+    "t": 196.364
+   },
+   {
+    "w": "you",
+    "t": 196.727
+   },
+   {
+    "w": "would",
+    "t": 197.091
+   },
+   {
+    "w": "say",
+    "t": 197.455
+   },
+   {
+    "w": "it",
+    "t": 197.818
+   },
+   {
+    "w": "to",
+    "t": 198.182
+   },
+   {
+    "w": "somebody",
+    "t": 198.545
+   },
+   {
+    "w": "asleep.",
+    "t": 198.909
+   },
+   {
+    "w": "It",
+    "t": 199.273
+   },
+   {
+    "w": "says",
+    "t": 199.636
+   },
+   {
+    "w": "it",
+    "t": 200.0
+   },
+   {
+    "w": "knows",
+    "t": 200.364
+   },
+   {
+    "w": "you",
+    "t": 200.727
+   },
+   {
+    "w": "are",
+    "t": 201.091
+   },
+   {
+    "w": "in",
+    "t": 201.455
+   },
+   {
+    "w": "there.",
+    "t": 201.818
+   },
+   {
+    "w": "It",
+    "t": 202.182
+   },
+   {
+    "w": "says",
+    "t": 202.545
+   },
+   {
+    "w": "please.",
+    "t": 202.909
+   }
+  ]
+ },
+ {
+  "beat": 11,
+  "start": 203.273,
+  "sec": 34.545,
+  "text": "You are on your feet before you decide to be, with your hand on the bolt. Everything left in you that is still a person wants to open that door. And your body does the arithmetic before you do. You did not knock. You did not speak. You did not answer the phone. So how does it know your name. You take your hand off the bolt. The knocking comes again. Then it stops. Then it comes again, further down the corridor, on another door. You sit with your back against the door and listen.",
+  "words_to_cover": [
+   "you",
+   "are",
+   "your",
+   "feet",
+   "before",
+   "you",
+   "decide",
+   "with",
+   "your",
+   "hand",
+   "the",
+   "bolt",
+   "everything",
+   "left",
+   "you",
+   "that",
+   "still",
+   "person",
+   "wants",
+   "open"
+  ],
+  "spoken": "You are on your feet before you decide to be, with your hand on the bolt. Everything left in you that is still a person wants to open that door. And your body does the arithmetic before you do. You did not knock. You did not speak. You did not answer the phone. So how does it know your name. You take your hand off the bolt. The knocking comes again. Then it stops. Then it comes again, further down the corridor, on another door. You sit with your back against the door and listen.",
+  "words": [
+   {
+    "w": "You",
+    "t": 203.273
+   },
+   {
+    "w": "are",
+    "t": 203.636
+   },
+   {
+    "w": "on",
+    "t": 204.0
+   },
+   {
+    "w": "your",
+    "t": 204.364
+   },
+   {
+    "w": "feet",
+    "t": 204.727
+   },
+   {
+    "w": "before",
+    "t": 205.091
+   },
+   {
+    "w": "you",
+    "t": 205.455
+   },
+   {
+    "w": "decide",
+    "t": 205.818
+   },
+   {
+    "w": "to",
+    "t": 206.182
+   },
+   {
+    "w": "be,",
+    "t": 206.545
+   },
+   {
+    "w": "with",
+    "t": 206.909
+   },
+   {
+    "w": "your",
+    "t": 207.273
+   },
+   {
+    "w": "hand",
+    "t": 207.636
+   },
+   {
+    "w": "on",
+    "t": 208.0
+   },
+   {
+    "w": "the",
+    "t": 208.364
+   },
+   {
+    "w": "bolt.",
+    "t": 208.727
+   },
+   {
+    "w": "Everything",
+    "t": 209.091
+   },
+   {
+    "w": "left",
+    "t": 209.455
+   },
+   {
+    "w": "in",
+    "t": 209.818
+   },
+   {
+    "w": "you",
+    "t": 210.182
+   },
+   {
+    "w": "that",
+    "t": 210.545
+   },
+   {
+    "w": "is",
+    "t": 210.909
+   },
+   {
+    "w": "still",
+    "t": 211.273
+   },
+   {
+    "w": "a",
+    "t": 211.636
+   },
+   {
+    "w": "person",
+    "t": 212.0
+   },
+   {
+    "w": "wants",
+    "t": 212.364
+   },
+   {
+    "w": "to",
+    "t": 212.727
+   },
+   {
+    "w": "open",
+    "t": 213.091
+   },
+   {
+    "w": "that",
+    "t": 213.455
+   },
+   {
+    "w": "door.",
+    "t": 213.818
+   },
+   {
+    "w": "And",
+    "t": 214.182
+   },
+   {
+    "w": "your",
+    "t": 214.545
+   },
+   {
+    "w": "body",
+    "t": 214.909
+   },
+   {
+    "w": "does",
+    "t": 215.273
+   },
+   {
+    "w": "the",
+    "t": 215.636
+   },
+   {
+    "w": "arithmetic",
+    "t": 216.0
+   },
+   {
+    "w": "before",
+    "t": 216.364
+   },
+   {
+    "w": "you",
+    "t": 216.727
+   },
+   {
+    "w": "do.",
+    "t": 217.091
+   },
+   {
+    "w": "You",
+    "t": 217.455
+   },
+   {
+    "w": "did",
+    "t": 217.818
+   },
+   {
+    "w": "not",
+    "t": 218.182
+   },
+   {
+    "w": "knock.",
+    "t": 218.545
+   },
+   {
+    "w": "You",
+    "t": 218.909
+   },
+   {
+    "w": "did",
+    "t": 219.273
+   },
+   {
+    "w": "not",
+    "t": 219.636
+   },
+   {
+    "w": "speak.",
+    "t": 220.0
+   },
+   {
+    "w": "You",
+    "t": 220.364
+   },
+   {
+    "w": "did",
+    "t": 220.727
+   },
+   {
+    "w": "not",
+    "t": 221.091
+   },
+   {
+    "w": "answer",
+    "t": 221.455
+   },
+   {
+    "w": "the",
+    "t": 221.818
+   },
+   {
+    "w": "phone.",
+    "t": 222.182
+   },
+   {
+    "w": "So",
+    "t": 222.545
+   },
+   {
+    "w": "how",
+    "t": 222.909
+   },
+   {
+    "w": "does",
+    "t": 223.273
+   },
+   {
+    "w": "it",
+    "t": 223.636
+   },
+   {
+    "w": "know",
+    "t": 224.0
+   },
+   {
+    "w": "your",
+    "t": 224.364
+   },
+   {
+    "w": "name.",
+    "t": 224.727
+   },
+   {
+    "w": "You",
+    "t": 225.091
+   },
+   {
+    "w": "take",
+    "t": 225.455
+   },
+   {
+    "w": "your",
+    "t": 225.818
+   },
+   {
+    "w": "hand",
+    "t": 226.182
+   },
+   {
+    "w": "off",
+    "t": 226.545
+   },
+   {
+    "w": "the",
+    "t": 226.909
+   },
+   {
+    "w": "bolt.",
+    "t": 227.273
+   },
+   {
+    "w": "The",
+    "t": 227.636
+   },
+   {
+    "w": "knocking",
+    "t": 228.0
+   },
+   {
+    "w": "comes",
+    "t": 228.364
+   },
+   {
+    "w": "again.",
+    "t": 228.727
+   },
+   {
+    "w": "Then",
+    "t": 229.091
+   },
+   {
+    "w": "it",
+    "t": 229.455
+   },
+   {
+    "w": "stops.",
+    "t": 229.818
+   },
+   {
+    "w": "Then",
+    "t": 230.182
+   },
+   {
+    "w": "it",
+    "t": 230.545
+   },
+   {
+    "w": "comes",
+    "t": 230.909
+   },
+   {
+    "w": "again,",
+    "t": 231.273
+   },
+   {
+    "w": "further",
+    "t": 231.636
+   },
+   {
+    "w": "down",
+    "t": 232.0
+   },
+   {
+    "w": "the",
+    "t": 232.364
+   },
+   {
+    "w": "corridor,",
+    "t": 232.727
+   },
+   {
+    "w": "on",
+    "t": 233.091
+   },
+   {
+    "w": "another",
+    "t": 233.455
+   },
+   {
+    "w": "door.",
+    "t": 233.818
+   },
+   {
+    "w": "You",
+    "t": 234.182
+   },
+   {
+    "w": "sit",
+    "t": 234.545
+   },
+   {
+    "w": "with",
+    "t": 234.909
+   },
+   {
+    "w": "your",
+    "t": 235.273
+   },
+   {
+    "w": "back",
+    "t": 235.636
+   },
+   {
+    "w": "against",
+    "t": 236.0
+   },
+   {
+    "w": "the",
+    "t": 236.364
+   },
+   {
+    "w": "door",
+    "t": 236.727
+   },
+   {
+    "w": "and",
+    "t": 237.091
+   },
+   {
+    "w": "listen.",
+    "t": 237.455
+   }
+  ]
+ },
+ {
+  "beat": 12,
+  "start": 237.818,
+  "sec": 22.909,
+  "text": "The dark comes in completely. Three floors down, the street is full of people standing under the lamps with their heads up. They are not looking at anything. Across the street, one window in the block opposite is lit, the only one on the whole street. You look at it for a while, and then you stop, because you cannot afford that either.",
+  "words_to_cover": [
+   "the",
+   "dark",
+   "comes",
+   "completely",
+   "three",
+   "floors",
+   "down",
+   "the",
+   "street",
+   "full",
+   "people",
+   "standing",
+   "under",
+   "the",
+   "lamps",
+   "with",
+   "their",
+   "heads",
+   "they",
+   "are"
+  ],
+  "spoken": "The dark comes in completely. Three floors down, the street is full of people standing under the lamps with their heads up. They are not looking at anything. Across the street, one window in the block opposite is lit, the only one on the whole street. You look at it for a while, and then you stop, because you cannot afford that either.",
+  "words": [
+   {
+    "w": "The",
+    "t": 237.818
+   },
+   {
+    "w": "dark",
+    "t": 238.182
+   },
+   {
+    "w": "comes",
+    "t": 238.545
+   },
+   {
+    "w": "in",
+    "t": 238.909
+   },
+   {
+    "w": "completely.",
+    "t": 239.273
+   },
+   {
+    "w": "Three",
+    "t": 239.636
+   },
+   {
+    "w": "floors",
+    "t": 240.0
+   },
+   {
+    "w": "down,",
+    "t": 240.364
+   },
+   {
+    "w": "the",
+    "t": 240.727
+   },
+   {
+    "w": "street",
+    "t": 241.091
+   },
+   {
+    "w": "is",
+    "t": 241.455
+   },
+   {
+    "w": "full",
+    "t": 241.818
+   },
+   {
+    "w": "of",
+    "t": 242.182
+   },
+   {
+    "w": "people",
+    "t": 242.545
+   },
+   {
+    "w": "standing",
+    "t": 242.909
+   },
+   {
+    "w": "under",
+    "t": 243.273
+   },
+   {
+    "w": "the",
+    "t": 243.636
+   },
+   {
+    "w": "lamps",
+    "t": 244.0
+   },
+   {
+    "w": "with",
+    "t": 244.364
+   },
+   {
+    "w": "their",
+    "t": 244.727
+   },
+   {
+    "w": "heads",
+    "t": 245.091
+   },
+   {
+    "w": "up.",
+    "t": 245.455
+   },
+   {
+    "w": "They",
+    "t": 245.818
+   },
+   {
+    "w": "are",
+    "t": 246.182
+   },
+   {
+    "w": "not",
+    "t": 246.545
+   },
+   {
+    "w": "looking",
+    "t": 246.909
+   },
+   {
+    "w": "at",
+    "t": 247.273
+   },
+   {
+    "w": "anything.",
+    "t": 247.636
+   },
+   {
+    "w": "Across",
+    "t": 248.0
+   },
+   {
+    "w": "the",
+    "t": 248.364
+   },
+   {
+    "w": "street,",
+    "t": 248.727
+   },
+   {
+    "w": "one",
+    "t": 249.091
+   },
+   {
+    "w": "window",
+    "t": 249.455
+   },
+   {
+    "w": "in",
+    "t": 249.818
+   },
+   {
+    "w": "the",
+    "t": 250.182
+   },
+   {
+    "w": "block",
+    "t": 250.545
+   },
+   {
+    "w": "opposite",
+    "t": 250.909
+   },
+   {
+    "w": "is",
+    "t": 251.273
+   },
+   {
+    "w": "lit,",
+    "t": 251.636
+   },
+   {
+    "w": "the",
+    "t": 252.0
+   },
+   {
+    "w": "only",
+    "t": 252.364
+   },
+   {
+    "w": "one",
+    "t": 252.727
+   },
+   {
+    "w": "on",
+    "t": 253.091
+   },
+   {
+    "w": "the",
+    "t": 253.455
+   },
+   {
+    "w": "whole",
+    "t": 253.818
+   },
+   {
+    "w": "street.",
+    "t": 254.182
+   },
+   {
+    "w": "You",
+    "t": 254.545
+   },
+   {
+    "w": "look",
+    "t": 254.909
+   },
+   {
+    "w": "at",
+    "t": 255.273
+   },
+   {
+    "w": "it",
+    "t": 255.636
+   },
+   {
+    "w": "for",
+    "t": 256.0
+   },
+   {
+    "w": "a",
+    "t": 256.364
+   },
+   {
+    "w": "while,",
+    "t": 256.727
+   },
+   {
+    "w": "and",
+    "t": 257.091
+   },
+   {
+    "w": "then",
+    "t": 257.455
+   },
+   {
+    "w": "you",
+    "t": 257.818
+   },
+   {
+    "w": "stop,",
+    "t": 258.182
+   },
+   {
+    "w": "because",
+    "t": 258.545
+   },
+   {
+    "w": "you",
+    "t": 258.909
+   },
+   {
+    "w": "cannot",
+    "t": 259.273
+   },
+   {
+    "w": "afford",
+    "t": 259.636
+   },
+   {
+    "w": "that",
+    "t": 260.0
+   },
+   {
+    "w": "either.",
+    "t": 260.364
+   }
+  ]
+ },
+ {
+  "beat": 13,
+  "start": 260.727,
+  "sec": 20.728,
+  "text": "This room has exactly one exit, and the exit is the corridor. But there is a drainpipe four feet to the left of your window. Then a gutter, the roof of the shop below, and the street. The room buys you days. The pipe buys you a morning. Nobody is going to make this decision for you.",
+  "words_to_cover": [
+   "this",
+   "room",
+   "has",
+   "exactly",
+   "one",
+   "exit",
+   "and",
+   "the",
+   "exit",
+   "the",
+   "corridor",
+   "but",
+   "there",
+   "drainpipe",
+   "four",
+   "feet",
+   "the",
+   "left",
+   "your",
+   "window"
+  ],
+  "spoken": "This room has exactly one exit, and the exit is the corridor. But there is a drainpipe four feet to the left of your window. Then a gutter, the roof of the shop below, and the street. The room buys you days. The pipe buys you a morning. Nobody is going to make this decision for you.",
+  "words": [
+   {
+    "w": "This",
+    "t": 260.727
+   },
+   {
+    "w": "room",
+    "t": 261.091
+   },
+   {
+    "w": "has",
+    "t": 261.455
+   },
+   {
+    "w": "exactly",
+    "t": 261.818
+   },
+   {
+    "w": "one",
+    "t": 262.182
+   },
+   {
+    "w": "exit,",
+    "t": 262.545
+   },
+   {
+    "w": "and",
+    "t": 262.909
+   },
+   {
+    "w": "the",
+    "t": 263.273
+   },
+   {
+    "w": "exit",
+    "t": 263.636
+   },
+   {
+    "w": "is",
+    "t": 264.0
+   },
+   {
+    "w": "the",
+    "t": 264.364
+   },
+   {
+    "w": "corridor.",
+    "t": 264.727
+   },
+   {
+    "w": "But",
+    "t": 265.091
+   },
+   {
+    "w": "there",
+    "t": 265.455
+   },
+   {
+    "w": "is",
+    "t": 265.818
+   },
+   {
+    "w": "a",
+    "t": 266.182
+   },
+   {
+    "w": "drainpipe",
+    "t": 266.545
+   },
+   {
+    "w": "four",
+    "t": 266.909
+   },
+   {
+    "w": "feet",
+    "t": 267.273
+   },
+   {
+    "w": "to",
+    "t": 267.636
+   },
+   {
+    "w": "the",
+    "t": 268.0
+   },
+   {
+    "w": "left",
+    "t": 268.364
+   },
+   {
+    "w": "of",
+    "t": 268.727
+   },
+   {
+    "w": "your",
+    "t": 269.091
+   },
+   {
+    "w": "window.",
+    "t": 269.455
+   },
+   {
+    "w": "Then",
+    "t": 269.818
+   },
+   {
+    "w": "a",
+    "t": 270.182
+   },
+   {
+    "w": "gutter,",
+    "t": 270.545
+   },
+   {
+    "w": "the",
+    "t": 270.909
+   },
+   {
+    "w": "roof",
+    "t": 271.273
+   },
+   {
+    "w": "of",
+    "t": 271.636
+   },
+   {
+    "w": "the",
+    "t": 272.0
+   },
+   {
+    "w": "shop",
+    "t": 272.364
+   },
+   {
+    "w": "below,",
+    "t": 272.727
+   },
+   {
+    "w": "and",
+    "t": 273.091
+   },
+   {
+    "w": "the",
+    "t": 273.455
+   },
+   {
+    "w": "street.",
+    "t": 273.818
+   },
+   {
+    "w": "The",
+    "t": 274.182
+   },
+   {
+    "w": "room",
+    "t": 274.545
+   },
+   {
+    "w": "buys",
+    "t": 274.909
+   },
+   {
+    "w": "you",
+    "t": 275.273
+   },
+   {
+    "w": "days.",
+    "t": 275.636
+   },
+   {
+    "w": "The",
+    "t": 276.0
+   },
+   {
+    "w": "pipe",
+    "t": 276.364
+   },
+   {
+    "w": "buys",
+    "t": 276.727
+   },
+   {
+    "w": "you",
+    "t": 277.091
+   },
+   {
+    "w": "a",
+    "t": 277.455
+   },
+   {
+    "w": "morning.",
+    "t": 277.818
+   },
+   {
+    "w": "Nobody",
+    "t": 278.182
+   },
+   {
+    "w": "is",
+    "t": 278.545
+   },
+   {
+    "w": "going",
+    "t": 278.909
+   },
+   {
+    "w": "to",
+    "t": 279.273
+   },
+   {
+    "w": "make",
+    "t": 279.636
+   },
+   {
+    "w": "this",
+    "t": 280.0
+   },
+   {
+    "w": "decision",
+    "t": 280.364
+   },
+   {
+    "w": "for",
+    "t": 280.727
+   },
+   {
+    "w": "you.",
+    "t": 281.091
+   }
+  ]
+ },
+ {
+  "beat": 14,
+  "start": 281.455,
+  "sec": 29.818,
+  "text": "You spend the last of the light getting ready. Water in your pockets. A second pair of socks over your hands. You open the window an inch at a time and stop at every inch and listen. Then you sit in the dark and do nothing, because the worst thing you can do now is be early. You wait until the feet in the stairwell have thinned out. You wait until the building is quiet the way a held breath is quiet.",
+  "words_to_cover": [
+   "you",
+   "spend",
+   "the",
+   "last",
+   "the",
+   "light",
+   "getting",
+   "ready",
+   "water",
+   "your",
+   "pockets",
+   "second",
+   "pair",
+   "socks",
+   "over",
+   "your",
+   "hands",
+   "you",
+   "open",
+   "the"
+  ],
+  "spoken": "You spend the last of the light getting ready. Water in your pockets. A second pair of socks over your hands. You open the window an inch at a time and stop at every inch and listen. Then you sit in the dark and do nothing, because the worst thing you can do now is be early. You wait until the feet in the stairwell have thinned out. You wait until the building is quiet the way a held breath is quiet.",
+  "words": [
+   {
+    "w": "You",
+    "t": 281.455
+   },
+   {
+    "w": "spend",
+    "t": 281.818
+   },
+   {
+    "w": "the",
+    "t": 282.182
+   },
+   {
+    "w": "last",
+    "t": 282.545
+   },
+   {
+    "w": "of",
+    "t": 282.909
+   },
+   {
+    "w": "the",
+    "t": 283.273
+   },
+   {
+    "w": "light",
+    "t": 283.636
+   },
+   {
+    "w": "getting",
+    "t": 284.0
+   },
+   {
+    "w": "ready.",
+    "t": 284.364
+   },
+   {
+    "w": "Water",
+    "t": 284.727
+   },
+   {
+    "w": "in",
+    "t": 285.091
+   },
+   {
+    "w": "your",
+    "t": 285.455
+   },
+   {
+    "w": "pockets.",
+    "t": 285.818
+   },
+   {
+    "w": "A",
+    "t": 286.182
+   },
+   {
+    "w": "second",
+    "t": 286.545
+   },
+   {
+    "w": "pair",
+    "t": 286.909
+   },
+   {
+    "w": "of",
+    "t": 287.273
+   },
+   {
+    "w": "socks",
+    "t": 287.636
+   },
+   {
+    "w": "over",
+    "t": 288.0
+   },
+   {
+    "w": "your",
+    "t": 288.364
+   },
+   {
+    "w": "hands.",
+    "t": 288.727
+   },
+   {
+    "w": "You",
+    "t": 289.091
+   },
+   {
+    "w": "open",
+    "t": 289.455
+   },
+   {
+    "w": "the",
+    "t": 289.818
+   },
+   {
+    "w": "window",
+    "t": 290.182
+   },
+   {
+    "w": "an",
+    "t": 290.545
+   },
+   {
+    "w": "inch",
+    "t": 290.909
+   },
+   {
+    "w": "at",
+    "t": 291.273
+   },
+   {
+    "w": "a",
+    "t": 291.636
+   },
+   {
+    "w": "time",
+    "t": 292.0
+   },
+   {
+    "w": "and",
+    "t": 292.364
+   },
+   {
+    "w": "stop",
+    "t": 292.727
+   },
+   {
+    "w": "at",
+    "t": 293.091
+   },
+   {
+    "w": "every",
+    "t": 293.455
+   },
+   {
+    "w": "inch",
+    "t": 293.818
+   },
+   {
+    "w": "and",
+    "t": 294.182
+   },
+   {
+    "w": "listen.",
+    "t": 294.545
+   },
+   {
+    "w": "Then",
+    "t": 294.909
+   },
+   {
+    "w": "you",
+    "t": 295.273
+   },
+   {
+    "w": "sit",
+    "t": 295.636
+   },
+   {
+    "w": "in",
+    "t": 296.0
+   },
+   {
+    "w": "the",
+    "t": 296.364
+   },
+   {
+    "w": "dark",
+    "t": 296.727
+   },
+   {
+    "w": "and",
+    "t": 297.091
+   },
+   {
+    "w": "do",
+    "t": 297.455
+   },
+   {
+    "w": "nothing,",
+    "t": 297.818
+   },
+   {
+    "w": "because",
+    "t": 298.182
+   },
+   {
+    "w": "the",
+    "t": 298.545
+   },
+   {
+    "w": "worst",
+    "t": 298.909
+   },
+   {
+    "w": "thing",
+    "t": 299.273
+   },
+   {
+    "w": "you",
+    "t": 299.636
+   },
+   {
+    "w": "can",
+    "t": 300.0
+   },
+   {
+    "w": "do",
+    "t": 300.364
+   },
+   {
+    "w": "now",
+    "t": 300.727
+   },
+   {
+    "w": "is",
+    "t": 301.091
+   },
+   {
+    "w": "be",
+    "t": 301.455
+   },
+   {
+    "w": "early.",
+    "t": 301.818
+   },
+   {
+    "w": "You",
+    "t": 302.182
+   },
+   {
+    "w": "wait",
+    "t": 302.545
+   },
+   {
+    "w": "until",
+    "t": 302.909
+   },
+   {
+    "w": "the",
+    "t": 303.273
+   },
+   {
+    "w": "feet",
+    "t": 303.636
+   },
+   {
+    "w": "in",
+    "t": 304.0
+   },
+   {
+    "w": "the",
+    "t": 304.364
+   },
+   {
+    "w": "stairwell",
+    "t": 304.727
+   },
+   {
+    "w": "have",
+    "t": 305.091
+   },
+   {
+    "w": "thinned",
+    "t": 305.455
+   },
+   {
+    "w": "out.",
+    "t": 305.818
+   },
+   {
+    "w": "You",
+    "t": 306.182
+   },
+   {
+    "w": "wait",
+    "t": 306.545
+   },
+   {
+    "w": "until",
+    "t": 306.909
+   },
+   {
+    "w": "the",
+    "t": 307.273
+   },
+   {
+    "w": "building",
+    "t": 307.636
+   },
+   {
+    "w": "is",
+    "t": 308.0
+   },
+   {
+    "w": "quiet",
+    "t": 308.364
+   },
+   {
+    "w": "the",
+    "t": 308.727
+   },
+   {
+    "w": "way",
+    "t": 309.091
+   },
+   {
+    "w": "a",
+    "t": 309.455
+   },
+   {
+    "w": "held",
+    "t": 309.818
+   },
+   {
+    "w": "breath",
+    "t": 310.182
+   },
+   {
+    "w": "is",
+    "t": 310.545
+   },
+   {
+    "w": "quiet.",
+    "t": 310.909
+   }
+  ]
+ },
+ {
+  "beat": 15,
+  "start": 311.273,
+  "sec": 27.272,
+  "text": "Then you put one leg out of the window. The metal is so cold it comes through the sock. Behind you the room is warm, and locked, and holds everything you have ever owned. In front of you there are three floors of wet pipe, and a street full of people who do not get bored. And then you are on the wall. Three floors up, in the dark, deciding what your first move is.",
+  "words_to_cover": [
+   "then",
+   "you",
+   "put",
+   "one",
+   "leg",
+   "out",
+   "the",
+   "window",
+   "the",
+   "metal",
+   "cold",
+   "comes",
+   "through",
+   "the",
+   "sock",
+   "behind",
+   "you",
+   "the",
+   "room",
+   "warm"
+  ],
+  "spoken": "Then you put one leg out of the window. The metal is so cold it comes through the sock. Behind you the room is warm, and locked, and holds everything you have ever owned. In front of you there are three floors of wet pipe, and a street full of people who do not get bored. And then you are on the wall. Three floors up, in the dark, deciding what your first move is.",
+  "words": [
+   {
+    "w": "Then",
+    "t": 311.273
+   },
+   {
+    "w": "you",
+    "t": 311.636
+   },
+   {
+    "w": "put",
+    "t": 312.0
+   },
+   {
+    "w": "one",
+    "t": 312.364
+   },
+   {
+    "w": "leg",
+    "t": 312.727
+   },
+   {
+    "w": "out",
+    "t": 313.091
+   },
+   {
+    "w": "of",
+    "t": 313.455
+   },
+   {
+    "w": "the",
+    "t": 313.818
+   },
+   {
+    "w": "window.",
+    "t": 314.182
+   },
+   {
+    "w": "The",
+    "t": 314.545
+   },
+   {
+    "w": "metal",
+    "t": 314.909
+   },
+   {
+    "w": "is",
+    "t": 315.273
+   },
+   {
+    "w": "so",
+    "t": 315.636
+   },
+   {
+    "w": "cold",
+    "t": 316.0
+   },
+   {
+    "w": "it",
+    "t": 316.364
+   },
+   {
+    "w": "comes",
+    "t": 316.727
+   },
+   {
+    "w": "through",
+    "t": 317.091
+   },
+   {
+    "w": "the",
+    "t": 317.455
+   },
+   {
+    "w": "sock.",
+    "t": 317.818
+   },
+   {
+    "w": "Behind",
+    "t": 318.182
+   },
+   {
+    "w": "you",
+    "t": 318.545
+   },
+   {
+    "w": "the",
+    "t": 318.909
+   },
+   {
+    "w": "room",
+    "t": 319.273
+   },
+   {
+    "w": "is",
+    "t": 319.636
+   },
+   {
+    "w": "warm,",
+    "t": 320.0
+   },
+   {
+    "w": "and",
+    "t": 320.364
+   },
+   {
+    "w": "locked,",
+    "t": 320.727
+   },
+   {
+    "w": "and",
+    "t": 321.091
+   },
+   {
+    "w": "holds",
+    "t": 321.455
+   },
+   {
+    "w": "everything",
+    "t": 321.818
+   },
+   {
+    "w": "you",
+    "t": 322.182
+   },
+   {
+    "w": "have",
+    "t": 322.545
+   },
+   {
+    "w": "ever",
+    "t": 322.909
+   },
+   {
+    "w": "owned.",
+    "t": 323.273
+   },
+   {
+    "w": "In",
+    "t": 323.636
+   },
+   {
+    "w": "front",
+    "t": 324.0
+   },
+   {
+    "w": "of",
+    "t": 324.364
+   },
+   {
+    "w": "you",
+    "t": 324.727
+   },
+   {
+    "w": "there",
+    "t": 325.091
+   },
+   {
+    "w": "are",
+    "t": 325.455
+   },
+   {
+    "w": "three",
+    "t": 325.818
+   },
+   {
+    "w": "floors",
+    "t": 326.182
+   },
+   {
+    "w": "of",
+    "t": 326.545
+   },
+   {
+    "w": "wet",
+    "t": 326.909
+   },
+   {
+    "w": "pipe,",
+    "t": 327.273
+   },
+   {
+    "w": "and",
+    "t": 327.636
+   },
+   {
+    "w": "a",
+    "t": 328.0
+   },
+   {
+    "w": "street",
+    "t": 328.364
+   },
+   {
+    "w": "full",
+    "t": 328.727
+   },
+   {
+    "w": "of",
+    "t": 329.091
+   },
+   {
+    "w": "people",
+    "t": 329.455
+   },
+   {
+    "w": "who",
+    "t": 329.818
+   },
+   {
+    "w": "do",
+    "t": 330.182
+   },
+   {
+    "w": "not",
+    "t": 330.545
+   },
+   {
+    "w": "get",
+    "t": 330.909
+   },
+   {
+    "w": "bored.",
+    "t": 331.273
+   },
+   {
+    "w": "And",
+    "t": 331.636
+   },
+   {
+    "w": "then",
+    "t": 332.0
+   },
+   {
+    "w": "you",
+    "t": 332.364
+   },
+   {
+    "w": "are",
+    "t": 332.727
+   },
+   {
+    "w": "on",
+    "t": 333.091
+   },
+   {
+    "w": "the",
+    "t": 333.455
+   },
+   {
+    "w": "wall.",
+    "t": 333.818
+   },
+   {
+    "w": "Three",
+    "t": 334.182
+   },
+   {
+    "w": "floors",
+    "t": 334.545
+   },
+   {
+    "w": "up,",
+    "t": 334.909
+   },
+   {
+    "w": "in",
+    "t": 335.273
+   },
+   {
+    "w": "the",
+    "t": 335.636
+   },
+   {
+    "w": "dark,",
+    "t": 336.0
+   },
+   {
+    "w": "deciding",
+    "t": 336.364
+   },
+   {
+    "w": "what",
+    "t": 336.727
+   },
+   {
+    "w": "your",
+    "t": 337.091
+   },
+   {
+    "w": "first",
+    "t": 337.455
+   },
+   {
+    "w": "move",
+    "t": 337.818
+   },
+   {
+    "w": "is.",
+    "t": 338.182
+   }
+  ]
+ },
+ {
+  "beat": 16,
+  "start": 338.545,
+  "sec": 12.35,
+  "text": "That is day one. Behind you, under the mattress, the phone is still on. Somebody dialled your number twice today and got nothing. Tomorrow you will have to decide what that was worth.",
+  "words_to_cover": [
+   "that",
+   "day",
+   "one",
+   "behind",
+   "you",
+   "under",
+   "the",
+   "mattress",
+   "the",
+   "phone",
+   "still",
+   "somebody",
+   "dialled",
+   "your",
+   "number",
+   "twice",
+   "today",
+   "and",
+   "got",
+   "nothing"
+  ],
+  "spoken": "That is day one. Behind you, under the mattress, the phone is still on. Somebody dialled your number twice today and got nothing. Tomorrow you will have to decide what that was worth.",
+  "words": [
+   {
+    "w": "That",
+    "t": 338.545
+   },
+   {
+    "w": "is",
+    "t": 338.909
+   },
+   {
+    "w": "day",
+    "t": 339.273
+   },
+   {
+    "w": "one.",
+    "t": 339.636
+   },
+   {
+    "w": "Behind",
+    "t": 340.0
+   },
+   {
+    "w": "you,",
+    "t": 340.364
+   },
+   {
+    "w": "under",
+    "t": 340.727
+   },
+   {
+    "w": "the",
+    "t": 341.091
+   },
+   {
+    "w": "mattress,",
+    "t": 341.455
+   },
+   {
+    "w": "the",
+    "t": 341.818
+   },
+   {
+    "w": "phone",
+    "t": 342.182
+   },
+   {
+    "w": "is",
+    "t": 342.545
+   },
+   {
+    "w": "still",
+    "t": 342.909
+   },
+   {
+    "w": "on.",
+    "t": 343.273
+   },
+   {
+    "w": "Somebody",
+    "t": 343.636
+   },
+   {
+    "w": "dialled",
+    "t": 344.0
+   },
+   {
+    "w": "your",
+    "t": 344.364
+   },
+   {
+    "w": "number",
+    "t": 344.727
+   },
+   {
+    "w": "twice",
+    "t": 345.091
+   },
+   {
+    "w": "today",
+    "t": 345.455
+   },
+   {
+    "w": "and",
+    "t": 345.818
+   },
+   {
+    "w": "got",
+    "t": 346.182
+   },
+   {
+    "w": "nothing.",
+    "t": 346.545
+   },
+   {
+    "w": "Tomorrow",
+    "t": 346.909
+   },
+   {
+    "w": "you",
+    "t": 347.273
+   },
+   {
+    "w": "will",
+    "t": 347.636
+   },
+   {
+    "w": "have",
+    "t": 348.0
+   },
+   {
+    "w": "to",
+    "t": 348.364
+   },
+   {
+    "w": "decide",
+    "t": 348.727
+   },
+   {
+    "w": "what",
+    "t": 349.091
+   },
+   {
+    "w": "that",
+    "t": 349.455
+   },
+   {
+    "w": "was",
+    "t": 349.818
+   },
+   {
+    "w": "worth.",
+    "t": 350.182
+   }
+  ]
+ }
+]

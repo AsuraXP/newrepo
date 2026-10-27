@@ -205,6 +205,11 @@ def main() -> None:
     p.add_argument("--canvas", default="1376x768",
                    help="lock output size, e.g. 1376x768 (default). 'auto' = largest frame")
     p.add_argument("--fps", type=int, default=30)
+    p.add_argument("--min-hold", type=float, default=0.8,
+                   help="shortest time any one image may be on screen, in seconds. A one-word "
+                        "sentence ('Shoes.') is 0.36s of speech = 11 frames = a strobe; the "
+                        "extra time is borrowed from the NEXT shot, so total length is unchanged "
+                        "and the audio never moves. 0 disables.")
     p.add_argument("--captions", action="store_true", help="burn word-locked subtitles")
     p.add_argument("--caption-method", choices=["ass", "pil", "auto"], default="pil",
                    help="pil = Pillow (default, robust on all hosts), ass = libass, auto = pil")
@@ -255,6 +260,26 @@ def main() -> None:
                 print(f"[stitch] WARNING: no image for {m['key']} - skipped", flush=True)
         if not entries:
             raise SystemExit("no images found")
+
+        # --- minimum hold: no image may flash past -------------------------
+        if args.min_hold and args.min_hold > 0 and len(entries) > 1:
+            dur = [sec for _img, sec in entries]
+            borrowed = 0
+            for i in range(len(dur) - 1):
+                if dur[i] >= args.min_hold:
+                    continue
+                need = args.min_hold - dur[i]
+                take = min(need, max(0.0, dur[i + 1] - args.min_hold))
+                if take > 0:
+                    dur[i] += take
+                    dur[i + 1] -= take
+                    borrowed += 1
+            if dur[-1] < args.min_hold:
+                dur[-1] = args.min_hold          # last frame may extend; -shortest trims audio
+            entries = [(img, round(d, 3)) for (img, _old), d in zip(entries, dur)]
+            if borrowed:
+                print(f"[stitch] min-hold {args.min_hold}s applied to {borrowed} short moment(s)",
+                      flush=True)
 
         # Canvas: locked by --canvas (default 1376x768) so the deliverable spec is
         # guaranteed. 'auto' reproduces the old "largest frame wins" behaviour.
