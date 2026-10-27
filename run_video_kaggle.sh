@@ -203,6 +203,10 @@ echo "=== [6/6] Package ==="
 rm -f "$ZIP"
 PKG=("$VIDEO_DIR/VIDEO.mp4" "$VIDEO_DIR/thumbnail.jpg" "$VIDEO_DIR/metadata.json"
      "$VIDEO_DIR/script.md" "$VIDEO_DIR/youtube.txt")
+# Optional extras: a 9:16 portrait thumbnail, and any per-episode style notes.
+for extra in "$VIDEO_DIR/thumb_portrait.png" "$VIDEO_DIR/STYLE.md"; do
+  [ -f "$extra" ] && PKG+=("$extra")
+done
 if command -v zip >/dev/null 2>&1; then
   zip -j "$ZIP" "${PKG[@]}"
 else
