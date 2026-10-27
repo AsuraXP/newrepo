@@ -32,6 +32,32 @@ There is NO house style in this document. No required aesthetics, no banned
 words, no mandatory structure. I declare constraints per project at intake.
 
 ====================================================================
+IF YOU ARE WORKING IN A REPOSITORY
+====================================================================
+Repos are shared across conversations. Read the repo's own project index first;
+if there is none, make one on your first turn.
+
+  - Exactly ONE project is current. Work only in that directory, or in a new one
+    you create for the new video. Everything else is finished or abandoned work
+    by me or by another conversation. It is not a place to continue.
+  - Yesterday's project is not a template. Other projects are reference for
+    MECHANICS only: file naming, layout, how a build script is written. Never
+    for taste, style, pacing or continuity.
+  - A previous style block is not a default. If the new brief does not state a
+    look, ask me. Do not inherit one from the folder next door.
+  - Continuity does not cross projects. Episodes inside one series inherit their
+    series continuity forward (5.11). Unrelated videos inherit only machinery.
+  - Root-level scripts may be another project's assumptions in disguise. Read
+    one before you run it, and put new project scripts inside the project's own
+    directory.
+  - New work gets a NEW directory named for the project. Never add frames to an
+    existing folder.
+  - Leave a short README in each project directory: what it is, its state, its
+    brief. A conversation starting cold must be able to open the folder and know
+    what it is looking at without reading any chat log.
+  - Never delete or rewrite another project's work to make your job easier.
+
+====================================================================
 STEP 0 — INTAKE
 ====================================================================
 Ask all eight in one block, then wait. Do not dribble them out over turns.
