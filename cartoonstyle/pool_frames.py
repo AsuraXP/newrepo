@@ -14,7 +14,7 @@ import os
 from PIL import Image
 
 
-def normalise(src: str, dst: str, size: tuple[int, int]) -> dict:
+def normalise(src: str, dst: str, size: tuple[int, int], colors: int = 256) -> dict:
     im = Image.open(src).convert("RGB")
     ow, oh = im.size
     tw, th = size
@@ -34,7 +34,10 @@ def normalise(src: str, dst: str, size: tuple[int, int]) -> dict:
         im = canvas
         mode = f"pad({src_ar:.3f}->{dst_ar:.3f})"
     os.makedirs(os.path.dirname(os.path.abspath(dst)), exist_ok=True)
-    im.save(dst, "PNG")
+    if colors and 2 <= colors <= 256:
+        im = im.quantize(colors=colors, method=Image.FASTOCTREE,
+                        dither=Image.FLOYDSTEINBERG)
+    im.save(dst, "PNG", optimize=True, compress_level=9)
     return {"source_size": [ow, oh], "mode": mode}
 
 
@@ -44,6 +47,8 @@ def main() -> None:
     ap.add_argument("--out", default="pool")
     ap.add_argument("--pick", type=int, default=0)
     ap.add_argument("--size", default="1376x768")
+    ap.add_argument("--colors", type=int, default=256,
+                    help="palette size for the pool PNG (0 keeps full RGB)")
     args = ap.parse_args()
     tw, th = (int(x) for x in args.size.lower().split("x"))
 
@@ -53,7 +58,7 @@ def main() -> None:
     for src in srcs:
         key = os.path.splitext(os.path.basename(src))[0]
         dst = os.path.join(args.out, f"{key}_v{args.pick:02d}_s00000.png")
-        info = normalise(src, dst, (tw, th))
+        info = normalise(src, dst, (tw, th), args.colors)
         print(f"[pool_frames] {os.path.basename(src)} {info['source_size']} "
               f"-> {os.path.basename(dst)} {info['mode']}")
     print(f"[pool_frames] {len(srcs)} frames in pool, all {tw}x{th}")

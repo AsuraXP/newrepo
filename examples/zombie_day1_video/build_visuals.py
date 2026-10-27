@@ -38,7 +38,7 @@ EX6 = "Exactly six people in this frame."
 SCENES = [
  f"{S} A small dim bedroom at first light, the survivor sitting bolt upright in a rumpled bed, eyes wide open, head turned toward a window, listening. {ONE}",
  f"A small round wall clock with a blank dark face and two perfectly still hands hangs on a cracked grey wall in a dim bedroom. {NONE}",
- f"{S} Close view of the survivor holding a black-screened phone close to their face, thumb pressing the dark glass, dim bedroom behind. {ONE}",
+ f"{S} Close view of one black phone with a completely blank dark screen held in the survivor's single hand directly in front of their face, thumb resting on the glass, an empty dim bedroom behind them. {ONE}",
  f"{S} A small kitchen in cold grey light, one open refrigerator with a dark empty interior and still shelves, the survivor standing in front with one hand on the door. {ONE}",
  f"Close view of a faded grey curtain shifting inward under two fingers at its edge, a thin blade of bright daylight at the gap, no full figure visible. {ONE}",
  f"High window view over an ordinary empty city street at dawn, rows of parked cars, grey apartment blocks, an open bus shelter, an overcast sky. {NONE}",

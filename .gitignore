@@ -16,3 +16,5 @@ examples/*_video/beats.jsonl
 examples/*_video/beats_with_timing.json
 examples/*_video/moments_timing.json
 examples/*_video/sfx_cues.csv
+# raw model outputs stay local; the normalised pool is committed instead
+examples/*_video/frames/*.png
