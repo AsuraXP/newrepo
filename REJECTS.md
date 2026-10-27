@@ -7,4 +7,6 @@
 
 | b02m08 | On a fixed calorie budget, a primate can afford a large gut or a large brain, | Frame put BOTH organs on the left pan, a pointing human on the right pan, and a huge CALORIES weight in the middle — the SCENE named zero people, and the trade-off is unreadable. | Rewrote SCENE: exactly two pans, one organ each, pans level, no people or figures anywhere, CALORIES only on the centre stand. | FIXED in batch 04 (verified). |
 
+| b04m02 | Heat and water burst them open so digestive enzymes can get inside. | Model drew six spiky star/explosion shapes with no readable granules and no visible enzyme shapes. Reads as fireworks, not starch gelatinisation. | Rewrote SCENE: ROUND granules cracked like split peas, explicitly NOT stars/explosions, three round enzyme dots entering the cracks. | PENDING — first image of next turn. |
+
 Rejected v1 frames kept in `rejects/` for comparison.
