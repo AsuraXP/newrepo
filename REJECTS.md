@@ -22,3 +22,7 @@ Rejected v1 frames kept in `rejects/` for comparison.
 | 08 | `b05m10` | The three trait icons sit slightly spread along the timeline rather than stacked on the one dot. "Arriving all at once" still reads, but it is the weakest fidelity frame in this batch. |
 | 08 | `b05m12` | `2009` label is on the book cover, not beneath the book as the SCENE asked. Both strings are spelled correctly. |
 | 08 | `b05m06`, `b05m07`, `b05m08`, `b05m11`, `b05m12`, `b05m13` | Electric-yellow accent missing again or rendered as ochre. Counts, actions, gaze and all text are correct — style accent drift only. |
+| 09 | `b05m14` | SCENE named TWO skeletons; model drew THREE (progressive tooth size). The moment is "skeletons change" — the third figure actually helps, but it is a count deviation from the locked SCENE. |
+| 09 | `b05m15` | SCENE named FIVE site markers; model drew FOUR pins. Moment text names no number, so "reviewed the European sites" still reads. |
+| 09 | `b06m06` | SCENE named EIGHT layers and THREE flint clusters; model drew ~11 layers and FOUR clusters. Moment says "cluster after cluster", so the extra cluster arguably improves fidelity — but it is still a SCENE count deviation. |
+| 09 | `b05m16`, `b06m01`, `b06m02`, `b06m03`, `b06m04`, `b06m05`, `b06m06`, `b06m07` | Electric-yellow accent absent in all eight. `b05m16` is fully monochrome grey — the flattest frame so far. All seven text strings, all counts of people, all actions and gaze are correct. Style accent drift only. |
