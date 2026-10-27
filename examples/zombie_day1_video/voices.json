@@ -1,0 +1,25 @@
+{
+  "default": {"voice": "en-US-AndrewNeural", "rate": "+0%"},
+  "beats": {
+    "1":  {"voice": "en-GB-RyanNeural",   "rate": "-4%", "gap_before": 0.6},
+    "2":  {"voice": "en-GB-RyanNeural",   "rate": "-2%", "gap_before": 0.3,
+           "sfx": [{"sound": "thud", "at_moment": 10}]},
+    "3":  {"voice": "en-GB-SoniaNeural",  "rate": "-6%", "gap_before": 1.2,
+           "sfx": [{"sound": "knock x3", "at_moment": 1}]},
+    "4":  {"voice": "en-GB-SoniaNeural",  "rate": "-8%", "gap_before": 0.8,
+           "sfx": [{"sound": "knock x3", "at_moment": 1},
+                   {"sound": "click",    "at_moment": 9},
+                   {"sound": "knock x3", "at_moment": 13}]},
+    "5":  {"voice": "en-US-AndrewNeural", "rate": "-4%", "gap_before": 1.0},
+    "6":  {"voice": "en-US-AndrewNeural", "rate": "+0%", "gap_before": 0.4},
+    "8":  {"voice": "en-GB-RyanNeural",   "rate": "-4%", "gap_before": 0.5,
+           "sfx": [{"sound": "thud", "at_moment": 5}]},
+    "9":  {"voice": "en-GB-RyanNeural",   "rate": "-2%", "gap_before": 0.4,
+           "sfx": [{"sound": "thud", "at_moment": 3}]},
+    "10": {"voice": "en-GB-RyanNeural",   "rate": "-2%", "gap_before": 0.6},
+    "12": {"voice": "en-GB-SoniaNeural",  "rate": "-8%", "gap_before": 1.0,
+           "sfx": [{"sound": "rumble", "at_moment": 3}]},
+    "13": {"voice": "en-US-AndrewNeural", "rate": "-6%", "gap_before": 0.8,
+           "sfx": [{"sound": "rumble", "at_moment": 2}]}
+  }
+}

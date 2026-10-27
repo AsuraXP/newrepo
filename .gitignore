@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# generated timing / audio / video intermediates (regenerated on Kaggle)
+examples/*_video/narration.wav
+examples/*_video/sfx.wav
+examples/*_video/beat*.wav
+examples/*_video/beat*.mp3
+examples/*_video/_gap*.wav
+examples/*_video/_audio_concat.txt
+examples/*_video/_voices_single.json
+examples/*_video/VIDEO.mp4
+examples/*_video/qc.jsonl
+examples/*_video/beats.jsonl
+examples/*_video/beats_with_timing.json
+examples/*_video/moments_timing.json
+examples/*_video/sfx_cues.csv
