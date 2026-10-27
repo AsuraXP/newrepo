@@ -66,6 +66,14 @@ accent used only on the object that matters. Generous empty space.
 Hand-drawn arrows and margin doodles. No gradients, no 3D gloss, no
 photorealism.
 
+## TIMING AMENDMENT (user, 2026-10-27)
+
+Frames are **moment-driven, not duration-driven**. One image per moment in
+`visuals.csv`, whatever that moment needs — a 3-word beat gets its own 1–2
+second frame, a 17-word beat gets a longer one. We do NOT pad or merge
+moments to hit a 4–6 second target. Cuts are still word-locked: image N
+changes on the exact word its `moment_text` starts on.
+
 **OBSERVER NOTE (research limitation):** the sandbox blocked direct
 retrieval of video frames, so the channel read is based on its public
 page, descriptions, transcripts, auto-described thumbnails, and the one

@@ -1,0 +1,821 @@
+[
+ {
+  "beat": 1,
+  "para": 1,
+  "moment_text": "Every animal on Earth eats its food raw. You don't. And if you tried for long,",
+  "words": 16,
+  "moment": 1
+ },
+ {
+  "beat": 1,
+  "para": 1,
+  "moment_text": "your body would begin to fail.",
+  "words": 6,
+  "moment": 2
+ },
+ {
+  "beat": 1,
+  "para": 2,
+  "moment_text": "In 1999, researchers at the University of Giessen surveyed 513 people who had eaten mostly",
+  "words": 15,
+  "moment": 3
+ },
+ {
+  "beat": 1,
+  "para": 2,
+  "moment_text": "raw food for years. The men had lost about ten kilograms on average. The women,",
+  "words": 15,
+  "moment": 4
+ },
+ {
+  "beat": 1,
+  "para": 2,
+  "moment_text": "about twelve. A quarter of the women were clinically underweight. About thirty percent of the",
+  "words": 15,
+  "moment": 5
+ },
+ {
+  "beat": 1,
+  "para": 2,
+  "moment_text": "women under forty-five had partly or completely lost their periods. They were eating.",
+  "words": 13,
+  "moment": 6
+ },
+ {
+  "beat": 1,
+  "para": 2,
+  "moment_text": "Their bodies just could not pull enough energy out of the food.",
+  "words": 12,
+  "moment": 7
+ },
+ {
+  "beat": 1,
+  "para": 3,
+  "moment_text": "Try eating a raw potato. Your teeth can break it. Your gut mostly can't use it.",
+  "words": 16,
+  "moment": 8
+ },
+ {
+  "beat": 1,
+  "para": 3,
+  "moment_text": "Give someone a lump of raw goat meat and they chew and chew,",
+  "words": 13,
+  "moment": 9
+ },
+ {
+  "beat": 1,
+  "para": 3,
+  "moment_text": "and most of it stays one rubbery clump. Chimpanzees manage fine on raw food because",
+  "words": 15,
+  "moment": 10
+ },
+ {
+  "beat": 1,
+  "para": 3,
+  "moment_text": "they spend hours at it and carry a huge fermenting gut to finish the job.",
+  "words": 15,
+  "moment": 11
+ },
+ {
+  "beat": 1,
+  "para": 3,
+  "moment_text": "You have neither. You have a bigger brain, a smaller gut, and a stove.",
+  "words": 14,
+  "moment": 12
+ },
+ {
+  "beat": 1,
+  "para": 4,
+  "moment_text": "So what happened in between?",
+  "words": 5,
+  "moment": 13
+ },
+ {
+  "beat": 2,
+  "para": 5,
+  "moment_text": "Start with the bones. Around 1.9 million years ago a new hominin appears in Africa:",
+  "words": 15,
+  "moment": 1
+ },
+ {
+  "beat": 2,
+  "para": 5,
+  "moment_text": "Homo erectus. Compared with what came before, it has a bigger body,",
+  "words": 12,
+  "moment": 2
+ },
+ {
+  "beat": 2,
+  "para": 5,
+  "moment_text": "a brain roughly fifty percent larger, and — the strange part — smaller teeth, weaker jaws,",
+  "words": 16,
+  "moment": 3
+ },
+ {
+  "beat": 2,
+  "para": 5,
+  "moment_text": "and a narrower rib cage, hinting at a smaller gut. Evolution does not build a",
+  "words": 15,
+  "moment": 4
+ },
+ {
+  "beat": 2,
+  "para": 5,
+  "moment_text": "bigger engine and a smaller fuel tank by accident. Something about the food had changed.",
+  "words": 15,
+  "moment": 5
+ },
+ {
+  "beat": 2,
+  "para": 6,
+  "moment_text": "In 1995, Leslie Aiello and Peter Wheeler published the expensive tissue hypothesis.",
+  "words": 12,
+  "moment": 6
+ },
+ {
+  "beat": 2,
+  "para": 6,
+  "moment_text": "Brains and guts are both costly organs. They burn energy while you sit perfectly still.",
+  "words": 15,
+  "moment": 7
+ },
+ {
+  "beat": 2,
+  "para": 6,
+  "moment_text": "On a fixed calorie budget, a primate can afford a large gut or a large brain,",
+  "words": 16,
+  "moment": 8
+ },
+ {
+  "beat": 2,
+  "para": 6,
+  "moment_text": "not both. To grow one, you have to shrink the other.",
+  "words": 11,
+  "moment": 9
+ },
+ {
+  "beat": 2,
+  "para": 6,
+  "moment_text": "And you can only survive a shrunken gut if your food arrives already half-digested.",
+  "words": 14,
+  "moment": 10
+ },
+ {
+  "beat": 2,
+  "para": 7,
+  "moment_text": "Which brings us to fire.",
+  "words": 5,
+  "moment": 11
+ },
+ {
+  "beat": 3,
+  "para": 8,
+  "moment_text": "Every human culture ever recorded cooks. Not one has been found that lives on raw food.",
+  "words": 16,
+  "moment": 1
+ },
+ {
+  "beat": 3,
+  "para": 8,
+  "moment_text": "Most animals flee a flame. A few birds hunt along its edge.",
+  "words": 12,
+  "moment": 2
+ },
+ {
+  "beat": 3,
+  "para": 8,
+  "moment_text": "Only one species picks it up and carries it home. Somewhere in our past,",
+  "words": 14,
+  "moment": 3
+ },
+ {
+  "beat": 3,
+  "para": 8,
+  "moment_text": "a fear turned into a habit.",
+  "words": 6,
+  "moment": 4
+ },
+ {
+  "beat": 3,
+  "para": 9,
+  "moment_text": "Nobody knows who did it first. No name, no date, no face. Picture lightning in dry grass.",
+  "words": 17,
+  "moment": 5
+ },
+ {
+  "beat": 3,
+  "para": 9,
+  "moment_text": "Picture someone walking back across the blackened ground the next morning and digging up a",
+  "words": 15,
+  "moment": 6
+ },
+ {
+  "beat": 3,
+  "para": 9,
+  "moment_text": "tuber baked in the hot earth. It is soft. It is sweet. It doesn't fight your teeth.",
+  "words": 17,
+  "moment": 7
+ },
+ {
+  "beat": 3,
+  "para": 9,
+  "moment_text": "The first cooked meal was almost certainly an accident. The second one was a decision.",
+  "words": 15,
+  "moment": 8
+ },
+ {
+  "beat": 3,
+  "para": 10,
+  "moment_text": "Roast a tuber and something else happens. The smell travels. A raw root smells like dirt.",
+  "words": 16,
+  "moment": 9
+ },
+ {
+  "beat": 3,
+  "para": 10,
+  "moment_text": "A cooked one announces itself from across the camp. Anyone nearby knows there is food.",
+  "words": 15,
+  "moment": 10
+ },
+ {
+  "beat": 3,
+  "para": 10,
+  "moment_text": "That creates a new problem too — waiting, guarding, sharing —",
+  "words": 11,
+  "moment": 11
+ },
+ {
+  "beat": 3,
+  "para": 10,
+  "moment_text": "and a new reason to stay together until it is ready.",
+  "words": 11,
+  "moment": 12
+ },
+ {
+  "beat": 3,
+  "para": 10,
+  "moment_text": "A meal becomes an event with a beginning and an end.",
+  "words": 11,
+  "moment": 13
+ },
+ {
+  "beat": 3,
+  "para": 11,
+  "moment_text": "And fire is not a tool you can put down. It has to be fed.",
+  "words": 15,
+  "moment": 14
+ },
+ {
+  "beat": 3,
+  "para": 11,
+  "moment_text": "Someone has to carry the burning branch, keep it dry, and rebuild the embers in the morning.",
+  "words": 17,
+  "moment": 15
+ },
+ {
+  "beat": 3,
+  "para": 11,
+  "moment_text": "That is a completely new kind of problem: not hunting, not hiding, but keeping a small,",
+  "words": 16,
+  "moment": 16
+ },
+ {
+  "beat": 3,
+  "para": 11,
+  "moment_text": "dangerous thing alive.",
+  "words": 3,
+  "moment": 17
+ },
+ {
+  "beat": 4,
+  "para": 12,
+  "moment_text": "Here is what heat actually does. Raw starch is packed into tight granules, like closed fists.",
+  "words": 16,
+  "moment": 1
+ },
+ {
+  "beat": 4,
+  "para": 12,
+  "moment_text": "Heat and water burst them open so digestive enzymes can get inside.",
+  "words": 12,
+  "moment": 2
+ },
+ {
+  "beat": 4,
+  "para": 12,
+  "moment_text": "Carmody and Wrangham calculated in 2009 that cooking raises the net energy gained from starchy",
+  "words": 15,
+  "moment": 3
+ },
+ {
+  "beat": 4,
+  "para": 12,
+  "moment_text": "foods by a median of roughly thirty percent. Heat also unwinds proteins,",
+  "words": 12,
+  "moment": 4
+ },
+ {
+  "beat": 4,
+  "para": 12,
+  "moment_text": "melts the collagen holding meat fibres together, and kills the microbes your immune system would",
+  "words": 15,
+  "moment": 5
+ },
+ {
+  "beat": 4,
+  "para": 12,
+  "moment_text": "otherwise spend energy fighting. Cooking is digestion performed outside the body.",
+  "words": 11,
+  "moment": 6
+ },
+ {
+  "beat": 4,
+  "para": 13,
+  "moment_text": "In 2011, Rachel Carmody, Gil Weintraub and Richard Wrangham fed mice either cooked or raw meat.",
+  "words": 16,
+  "moment": 7
+ },
+ {
+  "beat": 4,
+  "para": 13,
+  "moment_text": "The mice on cooked meat held their weight while eating less.",
+  "words": 11,
+  "moment": 8
+ },
+ {
+  "beat": 4,
+  "para": 13,
+  "moment_text": "The mice on raw meat lost weight. Same food. Different fire.",
+  "words": 11,
+  "moment": 9
+ },
+ {
+  "beat": 4,
+  "para": 14,
+  "moment_text": "That surplus pays for neurons. In 2012, Karina Fonseca-Azevedo and Suzana Herculano-Houzel calculated the calorie",
+  "words": 15,
+  "moment": 10
+ },
+ {
+  "beat": 4,
+  "para": 14,
+  "moment_text": "cost of brain cells across primates. On a raw diet, an early human with a",
+  "words": 15,
+  "moment": 11
+ },
+ {
+  "beat": 4,
+  "para": 14,
+  "moment_text": "human-sized number of neurons would have needed more than nine hours of feeding every day.",
+  "words": 15,
+  "moment": 12
+ },
+ {
+  "beat": 4,
+  "para": 14,
+  "moment_text": "There aren't nine spare hours in a day. A cooked diet is what makes that",
+  "words": 15,
+  "moment": 13
+ },
+ {
+  "beat": 4,
+  "para": 14,
+  "moment_text": "many neurons affordable.",
+  "words": 3,
+  "moment": 14
+ },
+ {
+  "beat": 4,
+  "para": 15,
+  "moment_text": "And the clock gives time back. In 2011, Chris Organ and his team compared feeding",
+  "words": 15,
+  "moment": 15
+ },
+ {
+  "beat": 4,
+  "para": 15,
+  "moment_text": "time across primates. By body size, humans should spend nearly half the day eating.",
+  "words": 14,
+  "moment": 16
+ },
+ {
+  "beat": 4,
+  "para": 15,
+  "moment_text": "We actually spend about five percent — barely half an hour of chewing. Chimps chew for hours.",
+  "words": 17,
+  "moment": 17
+ },
+ {
+  "beat": 4,
+  "para": 15,
+  "moment_text": "That gap isn't laziness. It's technology.",
+  "words": 6,
+  "moment": 18
+ },
+ {
+  "beat": 5,
+  "para": 16,
+  "moment_text": "Now the honest part. Fire didn't do this alone. In 2016,",
+  "words": 11,
+  "moment": 1
+ },
+ {
+  "beat": 5,
+  "para": 16,
+  "moment_text": "Katherine Zink and Daniel Lieberman had volunteers chew raw goat meat, raw yams,",
+  "words": 13,
+  "moment": 2
+ },
+ {
+  "beat": 5,
+  "para": 16,
+  "moment_text": "and versions that had simply been sliced with a stone flake or pounded with a rock.",
+  "words": 16,
+  "moment": 3
+ },
+ {
+  "beat": 5,
+  "para": 16,
+  "moment_text": "Slicing meat and pounding tubers cut the number of chews by seventeen percent and the",
+  "words": 15,
+  "moment": 4
+ },
+ {
+  "beat": 5,
+  "para": 16,
+  "moment_text": "bite force by twenty-six — around two and a half million fewer chews a year.",
+  "words": 15,
+  "moment": 5
+ },
+ {
+  "beat": 5,
+  "para": 16,
+  "moment_text": "Stone tools started the job before anyone roasted anything.",
+  "words": 9,
+  "moment": 6
+ },
+ {
+  "beat": 5,
+  "para": 17,
+  "moment_text": "Meat matters here too. A richer diet of animal fat and protein would have lifted",
+  "words": 15,
+  "moment": 7
+ },
+ {
+  "beat": 5,
+  "para": 17,
+  "moment_text": "the calorie ceiling on its own, and for decades that was the standard explanation.",
+  "words": 14,
+  "moment": 8
+ },
+ {
+  "beat": 5,
+  "para": 17,
+  "moment_text": "Wrangham's claim is not that meat was irrelevant. It is that meat alone cannot explain",
+  "words": 15,
+  "moment": 9
+ },
+ {
+  "beat": 5,
+  "para": 17,
+  "moment_text": "a small gut, small teeth and a large brain arriving all at once —",
+  "words": 14,
+  "moment": 10
+ },
+ {
+  "beat": 5,
+  "para": 17,
+  "moment_text": "and that a diet of raw wild food cannot keep a human body running.",
+  "words": 14,
+  "moment": 11
+ },
+ {
+  "beat": 5,
+  "para": 18,
+  "moment_text": "The date is still disputed too. In his 2009 book Catching Fire,",
+  "words": 12,
+  "moment": 12
+ },
+ {
+  "beat": 5,
+  "para": 18,
+  "moment_text": "Richard Wrangham put cooking at around 1.8 million years ago, with Homo erectus,",
+  "words": 13,
+  "moment": 13
+ },
+ {
+  "beat": 5,
+  "para": 18,
+  "moment_text": "because that is when the skeletons change. Critics asked a fair question: where are the hearths?",
+  "words": 16,
+  "moment": 14
+ },
+ {
+  "beat": 5,
+  "para": 18,
+  "moment_text": "In 2011, Wil Roebroeks and Paola Villa reviewed the European sites and found no convincing",
+  "words": 15,
+  "moment": 15
+ },
+ {
+  "beat": 5,
+  "para": 18,
+  "moment_text": "habitual fire before about 400,000 years ago.",
+  "words": 7,
+  "moment": 16
+ },
+ {
+  "beat": 6,
+  "para": 19,
+  "moment_text": "Then the ground answered. In 2012, Francesco Berna and his team took intact blocks of",
+  "words": 15,
+  "moment": 1
+ },
+ {
+  "beat": 6,
+  "para": 19,
+  "moment_text": "sediment from Wonderwerk Cave in South Africa — thirty metres inside the entrance,",
+  "words": 13,
+  "moment": 2
+ },
+ {
+  "beat": 6,
+  "para": 19,
+  "moment_text": "far beyond where a wildfire could reach. Under the microscope they found wood ash,",
+  "words": 14,
+  "moment": 3
+ },
+ {
+  "beat": 6,
+  "para": 19,
+  "moment_text": "charred grass and burned bone. Some of that bone had reached about 500 degrees Celsius.",
+  "words": 15,
+  "moment": 4
+ },
+ {
+  "beat": 6,
+  "para": 19,
+  "moment_text": "A small campfire. The layer is roughly a million years old.",
+  "words": 11,
+  "moment": 5
+ },
+ {
+  "beat": 6,
+  "para": 20,
+  "moment_text": "At Gesher Benot Ya'aqov in Israel, 790,000-year-old layers hold cluster after cluster of burned flint.",
+  "words": 15,
+  "moment": 6
+ },
+ {
+  "beat": 6,
+  "para": 20,
+  "moment_text": "Not one lucky strike. Repeated hearths.",
+  "words": 6,
+  "moment": 7
+ },
+ {
+  "beat": 6,
+  "para": 21,
+  "moment_text": "In June 2026, a team went back to Wonderwerk and dug into the layer underneath.",
+  "words": 15,
+  "moment": 8
+ },
+ {
+  "beat": 6,
+  "para": 21,
+  "moment_text": "They shone narrow-band blue light on tiny fossil bones from owl pellets and watched the",
+  "words": 15,
+  "moment": 9
+ },
+ {
+  "beat": 6,
+  "para": 21,
+  "moment_text": "burned ones glow red through a filter. Those bones are between 1.07 and 1.79 million years old.",
+  "words": 17,
+  "moment": 10
+ },
+ {
+  "beat": 6,
+  "para": 21,
+  "moment_text": "The researchers say fire was repeatedly carried deep into the cave.",
+  "words": 11,
+  "moment": 11
+ },
+ {
+  "beat": 6,
+  "para": 21,
+  "moment_text": "They do not claim anyone cooked dinner there. That distinction matters.",
+  "words": 11,
+  "moment": 12
+ },
+ {
+  "beat": 6,
+  "para": 21,
+  "moment_text": "But the date Wrangham needed is no longer imaginary.",
+  "words": 9,
+  "moment": 13
+ },
+ {
+  "beat": 6,
+  "para": 22,
+  "moment_text": "So the bones say soft food. The caves say old fire. The chemistry says more calories.",
+  "words": 16,
+  "moment": 14
+ },
+ {
+  "beat": 6,
+  "para": 22,
+  "moment_text": "None of them alone proves the first roasted tuber. Together they make a strong case",
+  "words": 15,
+  "moment": 15
+ },
+ {
+  "beat": 6,
+  "para": 22,
+  "moment_text": "that our species was rebuilt around heat.",
+  "words": 7,
+  "moment": 16
+ },
+ {
+  "beat": 7,
+  "para": 23,
+  "moment_text": "Fire gave us calories, smaller jaws, and bigger brains. But it handed us one more thing,",
+  "words": 16,
+  "moment": 1
+ },
+ {
+  "beat": 7,
+  "para": 23,
+  "moment_text": "and it might be the biggest.",
+  "words": 6,
+  "moment": 2
+ },
+ {
+  "beat": 7,
+  "para": 24,
+  "moment_text": "Firelight extends the day.",
+  "words": 4,
+  "moment": 3
+ },
+ {
+  "beat": 7,
+  "para": 25,
+  "moment_text": "Polly Wiessner spent decades with the Ju/'hoansi Bushmen of the Kalahari.",
+  "words": 11,
+  "moment": 4
+ },
+ {
+  "beat": 7,
+  "para": 25,
+  "moment_text": "In 2014 she published an analysis of 174 conversations, recorded in daylight and around the fire.",
+  "words": 16,
+  "moment": 5
+ },
+ {
+  "beat": 7,
+  "para": 25,
+  "moment_text": "Day talk was business: roughly a third economic plans — where the food is,",
+  "words": 14,
+  "moment": 6
+ },
+ {
+  "beat": 7,
+  "para": 25,
+  "moment_text": "who goes where — and another third complaints and criticism. Only six percent were stories.",
+  "words": 15,
+  "moment": 7
+ },
+ {
+  "beat": 7,
+  "para": 25,
+  "moment_text": "After dark the numbers flipped. Eighty-one percent of long fireside conversations were stories.",
+  "words": 13,
+  "moment": 8
+ },
+ {
+  "beat": 7,
+  "para": 25,
+  "moment_text": "Economic talk fell to four percent. Criticism to seven.",
+  "words": 9,
+  "moment": 9
+ },
+ {
+  "beat": 7,
+  "para": 26,
+  "moment_text": "The flames didn't just light the evening. They changed what the evening was for.",
+  "words": 14,
+  "moment": 10
+ },
+ {
+  "beat": 7,
+  "para": 26,
+  "moment_text": "Daylight is for getting food. Firelight is for people who aren't there, for things that never happened,",
+  "words": 17,
+  "moment": 11
+ },
+ {
+  "beat": 7,
+  "para": 26,
+  "moment_text": "for what a grandfather did, for what the stars might be.",
+  "words": 11,
+  "moment": 12
+ },
+ {
+  "beat": 7,
+  "para": 26,
+  "moment_text": "You can only tell those stories when the eating is finished, the dark is held back,",
+  "words": 16,
+  "moment": 13
+ },
+ {
+  "beat": 7,
+  "para": 26,
+  "moment_text": "and nobody has to chew for six more hours.",
+  "words": 9,
+  "moment": 14
+ },
+ {
+  "beat": 7,
+  "para": 27,
+  "moment_text": "Wiessner argues that this is where culture gets built. Not in the hunt,",
+  "words": 13,
+  "moment": 15
+ },
+ {
+  "beat": 7,
+  "para": 27,
+  "moment_text": "but in the hours after it — in a circle of faces lit from below.",
+  "words": 15,
+  "moment": 16
+ },
+ {
+  "beat": 7,
+  "para": 27,
+  "moment_text": "Stories carried the rules, the reputations, the maps, the fears. A brain that big needs",
+  "words": 15,
+  "moment": 17
+ },
+ {
+  "beat": 7,
+  "para": 27,
+  "moment_text": "a reason to remember so much. The fire gave it one.",
+  "words": 11,
+  "moment": 18
+ },
+ {
+  "beat": 7,
+  "para": 28,
+  "moment_text": "So the accident did two things at once. It moved digestion outside the body.",
+  "words": 14,
+  "moment": 19
+ },
+ {
+  "beat": 7,
+  "para": 28,
+  "moment_text": "And it moved the group inside a circle of light. One paid for the brain.",
+  "words": 15,
+  "moment": 20
+ },
+ {
+  "beat": 7,
+  "para": 28,
+  "moment_text": "The other gave the brain something to do.",
+  "words": 8,
+  "moment": 21
+ },
+ {
+  "beat": 8,
+  "para": 29,
+  "moment_text": "Tonight you will eat food that was changed by heat. You'll chew for barely half an hour.",
+  "words": 17,
+  "moment": 1
+ },
+ {
+  "beat": 8,
+  "para": 29,
+  "moment_text": "And then, if you're lucky, you'll stay at the table and talk —",
+  "words": 13,
+  "moment": 2
+ },
+ {
+  "beat": 8,
+  "para": 29,
+  "moment_text": "about people who aren't there, about things that haven't happened yet, about nothing at all.",
+  "words": 15,
+  "moment": 3
+ },
+ {
+  "beat": 8,
+  "para": 30,
+  "moment_text": "Every animal on Earth eats dinner. Only one of them cooks it.",
+  "words": 12,
+  "moment": 4
+ },
+ {
+  "beat": 8,
+  "para": 30,
+  "moment_text": "Only one of them stays to talk.",
+  "words": 7,
+  "moment": 5
+ }
+]
