@@ -226,11 +226,17 @@ and nothing else.
 
 ---
 
-## What changed from the previous version
+## Notes on the design
 
-- **Constraints moved out of the prompt and into the brief.** Text, numbers, labels and logos are now a question I answer per project, not a rule you inherit.
-- **Defaults are explicitly demoted** below "what I said" and "what the sentence asks for", with an instruction not to carry taste over from a previous project.
-- **Scripting craft is separated from content rules.** The writing advice is generic; the "no statistics / no names / one decision" material is gone unless the brief asks for it.
-- **Fidelity now covers on-image text as a requirement, not a ban** — if a moment calls for a number or a label, the agent must render it and verify the spelling in the actual frame.
-- **Tool behaviour is demoted to "test once, write down what happened"** instead of asserted universal laws.
-- **Thumbnail rule is conditional.** Baked-in lettering is preferred only when the model renders it correctly; otherwise typeset and say so.
+- **Constraints live in the brief, not the prompt.** Text, numbers, labels,
+  logos and names are questions I answer per video, not rules you inherit.
+- **Defaults are ranked last** behind my brief and behind what the sentence
+  asks for, with an explicit instruction not to carry taste across projects.
+- **Craft is separated from content policy.** Writing advice is generic; the
+  content rules are whatever the brief says.
+- **Fidelity covers on-image text as a requirement, not a ban.** If a moment
+  calls for a number or a label, render it and verify it in the frame.
+- **Correction happens inside the batch loop**, not at delivery: every frame is
+  checked against its moment_text and re-rolled before the batch counts.
+- **The thumbnail is judged on one thing** — whether it earns the click for
+  this particular video.
