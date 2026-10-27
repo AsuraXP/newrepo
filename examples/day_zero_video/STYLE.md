@@ -25,6 +25,13 @@ image `refs/style_reference.jpg` — the *style*, not the character.
 The MC keeps one red element (jacket, cap or strap) so he is findable in any frame.
 Red is the only saturated colour and it appears **only** on him.
 
+## The MC (canon, every frame)
+Young man. **COMPLETELY BALD round white head — no hair at all, no spikes, no
+fringe, no stubble.** Two large oval black eyes, simple brows and mouth, thin arms
+and legs, plain black short-sleeved t-shirt, blue denim shorts, white trainers,
+warm red hooded jacket when he is dressed for the cold.
+Red is the only saturated colour in any frame and it appears only on him.
+
 ## Prompt block (prepend to every frame, verbatim)
 > Clean cartoon illustration, thick uniform black outlines, flat solid colours,
 > no gradients, no texture, one simple flat shadow tone. Muted palette of deep

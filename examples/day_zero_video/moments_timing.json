@@ -1,0 +1,730 @@
+[
+ {
+  "key": "beat01m01",
+  "beat": 1,
+  "start": 0.0,
+  "sec": 4.18,
+  "text": "You know this room better than you know your own face."
+ },
+ {
+  "key": "beat01m02",
+  "beat": 1,
+  "start": 4.18,
+  "sec": 1.818,
+  "text": "You know which floorboard complains."
+ },
+ {
+  "key": "beat01m03",
+  "beat": 1,
+  "start": 5.998,
+  "sec": 5.091,
+  "text": "You know the spot on the ceiling where the damp comes back every winter."
+ },
+ {
+  "key": "beat01m04",
+  "beat": 1,
+  "start": 11.089,
+  "sec": 4.0,
+  "text": "You know the blind only comes down three-quarters of the way."
+ },
+ {
+  "key": "beat01m05",
+  "beat": 1,
+  "start": 15.089,
+  "sec": 4.0,
+  "text": "And that you have meant to fix it for a year."
+ },
+ {
+  "key": "beat01m06",
+  "beat": 1,
+  "start": 19.089,
+  "sec": 2.909,
+  "text": "Bed. Desk. Chair with the jacket on it."
+ },
+ {
+  "key": "beat01m07",
+  "beat": 1,
+  "start": 21.998,
+  "sec": 5.122,
+  "text": "Two mugs that should have gone down this morning."
+ },
+ {
+  "key": "beat02m01",
+  "beat": 2,
+  "start": 27.12,
+  "sec": 0.727,
+  "text": "Eleven fifty-two."
+ },
+ {
+  "key": "beat02m02",
+  "beat": 2,
+  "start": 27.847,
+  "sec": 1.091,
+  "text": "The wifi drops."
+ },
+ {
+  "key": "beat02m03",
+  "beat": 2,
+  "start": 28.938,
+  "sec": 2.182,
+  "text": "You do the thing everybody does."
+ },
+ {
+  "key": "beat02m04",
+  "beat": 2,
+  "start": 31.12,
+  "sec": 4.727,
+  "text": "You pick the router up, look at the lights, set it back down."
+ },
+ {
+  "key": "beat02m05",
+  "beat": 2,
+  "start": 35.847,
+  "sec": 3.333,
+  "text": "You wait, and you pick it up again."
+ },
+ {
+  "key": "beat03m01",
+  "beat": 3,
+  "start": 39.18,
+  "sec": 1.091,
+  "text": "You unplug it."
+ },
+ {
+  "key": "beat03m02",
+  "beat": 3,
+  "start": 40.271,
+  "sec": 1.454,
+  "text": "You count to ten."
+ },
+ {
+  "key": "beat03m03",
+  "beat": 3,
+  "start": 41.725,
+  "sec": 1.819,
+  "text": "You plug it back in."
+ },
+ {
+  "key": "beat03m04",
+  "beat": 3,
+  "start": 43.544,
+  "sec": 0.363,
+  "text": "Nothing."
+ },
+ {
+  "key": "beat03m05",
+  "beat": 3,
+  "start": 43.907,
+  "sec": 2.243,
+  "text": "Your phone still has signal."
+ },
+ {
+  "key": "beat04m01",
+  "beat": 4,
+  "start": 46.15,
+  "sec": 1.818,
+  "text": "That is the strange part."
+ },
+ {
+  "key": "beat04m02",
+  "beat": 4,
+  "start": 47.968,
+  "sec": 5.455,
+  "text": "And you do not notice that it is the strange part for another eleven minutes."
+ },
+ {
+  "key": "beat04m03",
+  "beat": 4,
+  "start": 53.423,
+  "sec": 0.727,
+  "text": "Three bars."
+ },
+ {
+  "key": "beat04m04",
+  "beat": 4,
+  "start": 54.15,
+  "sec": 2.545,
+  "text": "A message drops into the group chat."
+ },
+ {
+  "key": "beat04m05",
+  "beat": 4,
+  "start": 56.695,
+  "sec": 2.91,
+  "text": "Somebody asks if anyone else's internet is down."
+ },
+ {
+  "key": "beat04m06",
+  "beat": 4,
+  "start": 59.605,
+  "sec": 1.454,
+  "text": "Somebody says yeah, same."
+ },
+ {
+  "key": "beat04m07",
+  "beat": 4,
+  "start": 61.059,
+  "sec": 4.421,
+  "text": "Somebody says theirs is fine and asks what provider you're on."
+ },
+ {
+  "key": "beat05m01",
+  "beat": 5,
+  "start": 65.48,
+  "sec": 4.727,
+  "text": "That is the last normal conversation you will have for a long time."
+ },
+ {
+  "key": "beat05m02",
+  "beat": 5,
+  "start": 70.207,
+  "sec": 1.818,
+  "text": "And it is about broadband."
+ },
+ {
+  "key": "beat05m03",
+  "beat": 5,
+  "start": 72.025,
+  "sec": 0.728,
+  "text": "Eleven fifty-nine."
+ },
+ {
+  "key": "beat05m04",
+  "beat": 5,
+  "start": 72.753,
+  "sec": 1.091,
+  "text": "A video arrives."
+ },
+ {
+  "key": "beat05m05",
+  "beat": 5,
+  "start": 73.844,
+  "sec": 4.727,
+  "text": "A street at night, filmed from a window, badly, with the phone tilted."
+ },
+ {
+  "key": "beat05m06",
+  "beat": 5,
+  "start": 78.571,
+  "sec": 8.319,
+  "text": "A car with its hazards on and its door wide open. Somebody running, out of shot, too fast to see."
+ },
+ {
+  "key": "beat06m01",
+  "beat": 6,
+  "start": 86.89,
+  "sec": 2.545,
+  "text": "Twelve seconds. You watch it four times."
+ },
+ {
+  "key": "beat06m02",
+  "beat": 6,
+  "start": 89.435,
+  "sec": 2.182,
+  "text": "You decide it is a prank."
+ },
+ {
+  "key": "beat06m03",
+  "beat": 6,
+  "start": 91.617,
+  "sec": 4.0,
+  "text": "Because it is twelve seconds long and filmed from a window."
+ },
+ {
+  "key": "beat06m04",
+  "beat": 6,
+  "start": 95.617,
+  "sec": 3.273,
+  "text": "And because you have seen a hundred of those."
+ },
+ {
+  "key": "beat06m05",
+  "beat": 6,
+  "start": 98.89,
+  "sec": 1.091,
+  "text": "Twelve oh four."
+ },
+ {
+  "key": "beat06m06",
+  "beat": 6,
+  "start": 99.981,
+  "sec": 4.0,
+  "text": "The sound comes from outside and it is the wrong sound."
+ },
+ {
+  "key": "beat06m07",
+  "beat": 6,
+  "start": 103.981,
+  "sec": 8.429,
+  "text": "Not a bang. Not a scream. A car door, and then a car door again, and then a sound you cannot place."
+ },
+ {
+  "key": "beat07m01",
+  "beat": 7,
+  "start": 112.41,
+  "sec": 1.091,
+  "text": "Then the sirens."
+ },
+ {
+  "key": "beat07m02",
+  "beat": 7,
+  "start": 113.501,
+  "sec": 1.454,
+  "text": "Then the sirens stopping."
+ },
+ {
+  "key": "beat07m03",
+  "beat": 7,
+  "start": 114.955,
+  "sec": 1.819,
+  "text": "You go to the window."
+ },
+ {
+  "key": "beat07m04",
+  "beat": 7,
+  "start": 116.774,
+  "sec": 5.818,
+  "text": "The street is dark and there are four cars in it that should not be stopped."
+ },
+ {
+  "key": "beat07m05",
+  "beat": 7,
+  "start": 122.592,
+  "sec": 1.818,
+  "text": "One has its hazards on."
+ },
+ {
+  "key": "beat07m06",
+  "beat": 7,
+  "start": 124.41,
+  "sec": 2.182,
+  "text": "One has its driver's door open."
+ },
+ {
+  "key": "beat07m07",
+  "beat": 7,
+  "start": 126.592,
+  "sec": 6.968,
+  "text": "And in the middle of the road, in the wet, facing your building, a man is standing still."
+ },
+ {
+  "key": "beat08m01",
+  "beat": 8,
+  "start": 133.56,
+  "sec": 2.182,
+  "text": "Not waiting. Not looking at anything."
+ },
+ {
+  "key": "beat08m02",
+  "beat": 8,
+  "start": 135.742,
+  "sec": 3.636,
+  "text": "Standing like he has been stood there a long time."
+ },
+ {
+  "key": "beat08m03",
+  "beat": 8,
+  "start": 139.378,
+  "sec": 2.546,
+  "text": "And has forgotten what standing is for."
+ },
+ {
+  "key": "beat08m04",
+  "beat": 8,
+  "start": 141.924,
+  "sec": 1.818,
+  "text": "You knock on the glass."
+ },
+ {
+  "key": "beat08m05",
+  "beat": 8,
+  "start": 143.742,
+  "sec": 1.818,
+  "text": "You do not know why."
+ },
+ {
+  "key": "beat08m06",
+  "beat": 8,
+  "start": 145.56,
+  "sec": 5.88,
+  "text": "You just want him to be a person for a second. He does not move."
+ },
+ {
+  "key": "beat09m01",
+  "beat": 9,
+  "start": 151.44,
+  "sec": 0.727,
+  "text": "Twelve twenty."
+ },
+ {
+  "key": "beat09m02",
+  "beat": 9,
+  "start": 152.167,
+  "sec": 3.637,
+  "text": "You have done every ordinary thing there is to do."
+ },
+ {
+  "key": "beat09m03",
+  "beat": 9,
+  "start": 155.804,
+  "sec": 2.181,
+  "text": "You have locked the front door."
+ },
+ {
+  "key": "beat09m04",
+  "beat": 9,
+  "start": 157.985,
+  "sec": 2.182,
+  "text": "You have put the chain on."
+ },
+ {
+  "key": "beat09m05",
+  "beat": 9,
+  "start": 160.167,
+  "sec": 4.364,
+  "text": "You have found the old torch at the back of the wardrobe."
+ },
+ {
+  "key": "beat09m06",
+  "beat": 9,
+  "start": 164.531,
+  "sec": 1.454,
+  "text": "And it still works."
+ },
+ {
+  "key": "beat09m07",
+  "beat": 9,
+  "start": 165.985,
+  "sec": 4.364,
+  "text": "You have turned the big light off and left the lamp on."
+ },
+ {
+  "key": "beat09m08",
+  "beat": 9,
+  "start": 170.349,
+  "sec": 4.791,
+  "text": "Because the big light is a lie and the lamp is honest."
+ },
+ {
+  "key": "beat10m01",
+  "beat": 10,
+  "start": 175.14,
+  "sec": 4.364,
+  "text": "You have stood with one finger holding a gap in the blind."
+ },
+ {
+  "key": "beat10m02",
+  "beat": 10,
+  "start": 179.504,
+  "sec": 3.272,
+  "text": "And watched that man not move for twenty minutes."
+ },
+ {
+  "key": "beat10m03",
+  "beat": 10,
+  "start": 182.776,
+  "sec": 3.273,
+  "text": "Then you sit on the edge of the bed."
+ },
+ {
+  "key": "beat10m04",
+  "beat": 10,
+  "start": 186.049,
+  "sec": 2.546,
+  "text": "And look at your phone. Nine percent."
+ },
+ {
+  "key": "beat10m05",
+  "beat": 10,
+  "start": 188.595,
+  "sec": 1.818,
+  "text": "When you look back up,"
+ },
+ {
+  "key": "beat10m06",
+  "beat": 10,
+  "start": 190.413,
+  "sec": 2.497,
+  "text": "the road is empty."
+ },
+ {
+  "key": "beat11m01",
+  "beat": 11,
+  "start": 192.91,
+  "sec": 1.818,
+  "text": "He did not walk away."
+ },
+ {
+  "key": "beat11m02",
+  "beat": 11,
+  "start": 194.728,
+  "sec": 2.546,
+  "text": "You would have seen him walk away."
+ },
+ {
+  "key": "beat11m03",
+  "beat": 11,
+  "start": 197.274,
+  "sec": 3.272,
+  "text": "You were looking at that spot for twenty minutes."
+ },
+ {
+  "key": "beat11m04",
+  "beat": 11,
+  "start": 200.546,
+  "sec": 2.546,
+  "text": "You are still deciding what that means"
+ },
+ {
+  "key": "beat11m05",
+  "beat": 11,
+  "start": 203.092,
+  "sec": 1.454,
+  "text": "when the entryphone goes."
+ },
+ {
+  "key": "beat11m06",
+  "beat": 11,
+  "start": 204.546,
+  "sec": 1.819,
+  "text": "You do not answer it."
+ },
+ {
+  "key": "beat11m07",
+  "beat": 11,
+  "start": 206.365,
+  "sec": 4.115,
+  "text": "You stand in the hall and watch it ring."
+ },
+ {
+  "key": "beat12m01",
+  "beat": 12,
+  "start": 210.48,
+  "sec": 3.636,
+  "text": "It rings again, and this time it does not stop."
+ },
+ {
+  "key": "beat12m02",
+  "beat": 12,
+  "start": 214.116,
+  "sec": 4.728,
+  "text": "And it goes on until it sounds less like somebody pressing a button"
+ },
+ {
+  "key": "beat12m03",
+  "beat": 12,
+  "start": 218.844,
+  "sec": 2.545,
+  "text": "and more like somebody holding it down."
+ },
+ {
+  "key": "beat12m04",
+  "beat": 12,
+  "start": 221.389,
+  "sec": 1.091,
+  "text": "Then it stops."
+ },
+ {
+  "key": "beat12m05",
+  "beat": 12,
+  "start": 222.48,
+  "sec": 4.0,
+  "text": "And the building is so quiet you can hear the fridge."
+ },
+ {
+  "key": "beat12m06",
+  "beat": 12,
+  "start": 226.48,
+  "sec": 2.61,
+  "text": "The door across the hall opens."
+ },
+ {
+  "key": "beat13m01",
+  "beat": 13,
+  "start": 229.09,
+  "sec": 2.909,
+  "text": "You have heard that door a thousand times."
+ },
+ {
+  "key": "beat13m02",
+  "beat": 13,
+  "start": 231.999,
+  "sec": 2.182,
+  "text": "It opens, it closes, it clicks."
+ },
+ {
+  "key": "beat13m03",
+  "beat": 13,
+  "start": 234.181,
+  "sec": 2.182,
+  "text": "It opens. It closes. It clicks."
+ },
+ {
+  "key": "beat13m04",
+  "beat": 13,
+  "start": 236.363,
+  "sec": 4.727,
+  "text": "Then, in the corridor, on your floor, eleven feet from your front door,"
+ },
+ {
+  "key": "beat13m05",
+  "beat": 13,
+  "start": 241.09,
+  "sec": 1.091,
+  "text": "somebody starts walking."
+ },
+ {
+  "key": "beat13m06",
+  "beat": 13,
+  "start": 242.181,
+  "sec": 1.091,
+  "text": "Slowly. Not sneaking."
+ },
+ {
+  "key": "beat13m07",
+  "beat": 13,
+  "start": 243.272,
+  "sec": 6.238,
+  "text": "Walking like somebody who has nowhere to be and all night to get there."
+ },
+ {
+  "key": "beat14m01",
+  "beat": 14,
+  "start": 249.51,
+  "sec": 2.182,
+  "text": "The footsteps stop outside your door."
+ },
+ {
+  "key": "beat14m02",
+  "beat": 14,
+  "start": 251.692,
+  "sec": 3.273,
+  "text": "Your charger is across the room by the door."
+ },
+ {
+  "key": "beat14m03",
+  "beat": 14,
+  "start": 254.965,
+  "sec": 2.181,
+  "text": "Your phone is on eight percent."
+ },
+ {
+  "key": "beat14m04",
+  "beat": 14,
+  "start": 257.146,
+  "sec": 4.364,
+  "text": "You are sitting on the floor with your back against the bed."
+ },
+ {
+  "key": "beat14m05",
+  "beat": 14,
+  "start": 261.51,
+  "sec": 1.455,
+  "text": "Then the knocking starts."
+ },
+ {
+  "key": "beat14m06",
+  "beat": 14,
+  "start": 262.965,
+  "sec": 3.272,
+  "text": "Three times. Evenly spaced. The way a neighbour knocks."
+ },
+ {
+  "key": "beat14m07",
+  "beat": 14,
+  "start": 266.237,
+  "sec": 2.182,
+  "text": "Then three more. Then three more."
+ },
+ {
+  "key": "beat14m08",
+  "beat": 14,
+  "start": 268.419,
+  "sec": 2.301,
+  "text": "Nobody knocks like that."
+ },
+ {
+  "key": "beat15m01",
+  "beat": 15,
+  "start": 270.72,
+  "sec": 4.727,
+  "text": "People knock once and wait, or they bang, or they use the bell."
+ },
+ {
+  "key": "beat15m02",
+  "beat": 15,
+  "start": 275.447,
+  "sec": 5.091,
+  "text": "Nobody in the world knocks in sets of three with a pause in between,"
+ },
+ {
+  "key": "beat15m03",
+  "beat": 15,
+  "start": 280.538,
+  "sec": 1.818,
+  "text": "and then does it again."
+ },
+ {
+  "key": "beat15m04",
+  "beat": 15,
+  "start": 282.356,
+  "sec": 1.455,
+  "text": "You do not answer."
+ },
+ {
+  "key": "beat15m05",
+  "beat": 15,
+  "start": 283.811,
+  "sec": 2.909,
+  "text": "You do not answer for a long time."
+ },
+ {
+  "key": "beat15m06",
+  "beat": 15,
+  "start": 286.72,
+  "sec": 2.545,
+  "text": "The knocking keeps going. Patient. Even. Unhurried."
+ },
+ {
+  "key": "beat15m07",
+  "beat": 15,
+  "start": 289.265,
+  "sec": 3.335,
+  "text": "Like whoever is out there has all night."
+ },
+ {
+  "key": "beat16m01",
+  "beat": 16,
+  "start": 292.6,
+  "sec": 5.455,
+  "text": "You are in your own room, in the dark, with the chair against the handle."
+ },
+ {
+  "key": "beat16m02",
+  "beat": 16,
+  "start": 298.055,
+  "sec": 1.818,
+  "text": "And the blind three-quarters down."
+ },
+ {
+  "key": "beat16m03",
+  "beat": 16,
+  "start": 299.873,
+  "sec": 3.272,
+  "text": "And you are not going to answer the door."
+ },
+ {
+  "key": "beat16m04",
+  "beat": 16,
+  "start": 303.145,
+  "sec": 1.819,
+  "text": "Your phone says eight percent."
+ },
+ {
+  "key": "beat16m05",
+  "beat": 16,
+  "start": 304.964,
+  "sec": 2.136,
+  "text": "The knocking has not stopped."
+ }
+]
