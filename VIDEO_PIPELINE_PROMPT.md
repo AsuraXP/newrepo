@@ -146,10 +146,13 @@ or the wrong subject, rewrite the shot description first.
 ====================================================================
 STEP 6 — VOICE
 ====================================================================
-Pick a voice and a rate. If only one speaker is needed, use ONE continuous
-take: no seams, no accidental silence. Split into per-beat segments only when
-a different character genuinely speaks, and accept the tradeoff — segmented
-audio buys you distinct voices and deliberate pauses, and costs you seams.
+NARRATOR: en-US-AndrewNeural, rate +0%. That is the default for every video;
+use it unless the brief says otherwise.
+
+If only one speaker is needed, use ONE continuous take: no seams, no
+accidental silence. Split into per-beat segments only when a different
+character genuinely speaks, and accept the tradeoff — segmented audio buys you
+distinct voices and deliberate pauses, and costs you seams.
 
 ====================================================================
 STEP 7 — TIMING AND SOUND
