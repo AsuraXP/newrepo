@@ -1,0 +1,27 @@
+{
+ "default": {
+  "voice": "en-US-AndrewNeural",
+  "rate": "+0%"
+ },
+ "beats": {
+  "1": {
+   "voice": "en-US-AndrewNeural",
+   "gap_before": 2.2
+  },
+  "2": {
+   "voice": "en-US-AndrewNeural",
+   "gap_before": 1.8
+  },
+  "8": {
+   "voice": "en-GB-SoniaNeural",
+   "rate": "-6%",
+   "gap_before": 1.2
+  },
+  "16": {
+   "voice": "en-GB-RyanNeural",
+   "rate": "-4%",
+   "gap_before": 1.0,
+   "sfx": "knock x3"
+  }
+ }
+}
