@@ -7,6 +7,10 @@ and is generated with the text-free style reference attached:
 
 ## Test frames (all 1376x768 RGB PNG, in `tests/`)
 
+Note: T1-T4 ran on the pre-fix subject block. T2 drifted to dot eyes, so the
+subject block was tightened afterwards (curved closed eyes by default). Batch 01
+(6 frames in `frames/`) is the first proof of the FINAL locked block below.
+
 | ID | Variation | What actually happened |
 |----|-----------|------------------------|
 | T1_ref | full prompt + text-free reference crop | Cream paper ground, spiky hair, curved closed eyes, grey tunic, chunky ink outline. Closest to the supplied thumbnail. **WINNER.** |
