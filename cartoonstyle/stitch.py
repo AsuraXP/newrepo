@@ -25,6 +25,30 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 
+def _ffmpeg_ok() -> bool:
+    if shutil.which("ffmpeg"):
+        return True
+    try:
+        import imageio_ffmpeg  # noqa: F401
+        return True
+    except Exception:
+        return False
+
+
+def _resolve_ffmpeg() -> str:
+    exe = shutil.which("ffmpeg")
+    if exe:
+        return exe
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return "ffmpeg"
+
+
+_FF = _resolve_ffmpeg()
+
+
 def find_image(images_dir: str, key: str, pick: int, fallback_dir: str | None) -> str | None:
     pat = f"{key}_v{pick:02d}_s*.png"
     hits = sorted(glob.glob(str(Path(images_dir) / pat)))
@@ -184,9 +208,11 @@ def main() -> None:
     p.add_argument("--font", default="", help="path to a bold sans .ttf (e.g. Inter-Bold.ttf)")
     p.add_argument("--no-loudnorm", action="store_true", help="skip -14 LUFS normalization")
     p.add_argument("--qc", default="", help="qc.jsonl from cartoonstyle.qc")
+    p.add_argument("--sfx", default="",
+                   help="sfx.wav (from cartoonstyle.sfx) mixed under the narration")
     args = p.parse_args()
 
-    if not shutil.which("ffmpeg"):
+    if not _ffmpeg_ok():
         raise SystemExit("ffmpeg not found - install ffmpeg (Kaggle/Colab images include it)")
 
     beats = json.loads(Path(args.timing).read_text(encoding="utf-8"))
@@ -197,7 +223,7 @@ def main() -> None:
         by_beat.setdefault(int(m["beat"]), []).append(m)
 
     work = Path(tempfile.mkdtemp(prefix="stitch_"))
-    cmd_base = ["ffmpeg", "-y", "-loglevel", "error"]
+    cmd_base = [_FF, "-y", "-loglevel", "error"]
 
     narr = Path(args.timing).parent / "narration.mp3"
     if narr.exists() and moments:
@@ -253,6 +279,12 @@ def main() -> None:
                 new_ent.append((str(out_p), sec))
             return new_ent
 
+        sfx_path = Path(args.sfx) if args.sfx else None
+        if sfx_path and not sfx_path.exists():
+            print(f"[stitch] WARNING: --sfx {sfx_path} missing - continuing without sfx", flush=True)
+            sfx_path = None
+        sfx_gain = 0.85
+
         def run_encode(ent: list[tuple[str, float]], vf: list[str]):
             lst2 = work / "all_active.txt"
             lines2 = []
@@ -261,11 +293,27 @@ def main() -> None:
             lines2.append(f"file '{ent[-1][0]}'\n")
             lst2.write_text("".join(lines2), encoding="utf-8")
             # No -vf needed if inputs are already at uniform WxH (PIL did it).
+            mixin: list[str] = []
+            maps: list[str] = []
+            if sfx_path:
+                # inputs: 0 = image concat, 1 = narration, 2 = sfx
+                pre = (aopts[1] if aopts else "anull")
+                fc = (f"[1:a]{pre},aresample=48000[nar];"
+                      f"[2:a]aresample=48000,volume={sfx_gain}[fx];"
+                      f"[nar][fx]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[aout]")
+                mixin = ["-i", str(sfx_path), "-filter_complex", fc,
+                         "-map", "0:v", "-map", "[aout]"]
+                aopts2: list[str] = []
+                print(f"[stitch] mixing {sfx_path.name} at gain {sfx_gain}", flush=True)
+            else:
+                mixin = []
+                aopts2 = list(aopts)
             subprocess.run(cmd_base + ["-f", "concat", "-safe", "0", "-i", str(lst2),
                                        "-i", str(narr),
+                                       *mixin,
                                        *vf,
                                        "-c:v", "libx264", "-tune", "stillimage", "-r", str(args.fps),
-                                       *aopts,
+                                       *aopts2,
                                        "-c:a", "aac", "-b:a", "192k",
                                        "-pix_fmt", "yuv420p", "-shortest", args.out],
                            check=True, capture_output=True)

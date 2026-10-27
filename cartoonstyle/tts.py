@@ -26,6 +26,18 @@ import subprocess
 from pathlib import Path
 
 
+def ffmpeg_bin() -> str:
+    """ffmpeg binary: PATH first, then imageio-ffmpeg's bundled build."""
+    exe = shutil.which("ffmpeg")
+    if exe:
+        return exe
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return "ffmpeg"
+
+
 def audio_duration(path: str) -> float:
     ffprobe = shutil.which("ffprobe")
     if ffprobe:
@@ -36,7 +48,7 @@ def audio_duration(path: str) -> float:
         ).stdout.strip()
         return float(out)
     # fallback: parse ffmpeg's own stderr (no ffprobe on this box)
-    ff = shutil.which("ffmpeg")
+    ff = ffmpeg_bin()
     if ff:
         err = subprocess.run([ff, "-i", path, "-f", "null", "-"],
                              capture_output=True, text=True).stderr
@@ -192,6 +204,19 @@ def main() -> None:
     total = audio_duration(str(narr))
 
     # ---- map every beat onto the spoken word stream ------------------------
+    finalize(items, spoken, words, total, out_dir, args.visuals, args.force, narr)
+
+
+def finalize(items, spoken, words, total, out_dir, visuals_path, force, narr):
+    """Turn raw word timings into beats_with_timing.json + moments_timing.json.
+
+    Shared by tts.py (one continuous take) and tts_multi.py (one segment per
+    voice, concatenated). `words` is the global word stream in order, `total`
+    the narration length in seconds, `narr` the audio those words describe.
+    """
+    out_dir = Path(out_dir)
+
+    # ---- map every beat onto the spoken word stream ------------------------
     sp_tokens, sp_times = stream_tokens(words)
     sp_times.append(total)
 
@@ -201,14 +226,14 @@ def main() -> None:
         hit = match_first(norm_variants(spoken[beat]), sp_tokens)
         if hit is not None:
             idx, nlen = hit
-            start = sp_times[idx]
-            end = sp_times[min(idx + nlen, len(sp_times) - 1)]
+            st = sp_times[idx]
+            en = sp_times[min(idx + nlen, len(sp_times) - 1)]
         else:
             frac = i / max(1, len(items))
-            start, end = total * frac, total * (i + 1) / max(1, len(items))
+            st, en = total * frac, total * (i + 1) / max(1, len(items))
             print(f"[tts] WARNING: beat {beat} text not found in word stream (numerals?) - proportional span", flush=True)
-        timed.append({**b, "spoken": spoken[beat], "start": start, "sec": end - start,
-                      "words": [w for w in words if start <= w["t"] < end]})
+        timed.append({**b, "spoken": spoken[beat], "start": st, "sec": en - st,
+                      "words": [w for w in words if st <= w["t"] < en]})
 
     # force a gapless cover of [0, total]: images stream then matches audio 1:1
     for i in range(len(timed)):
@@ -232,64 +257,64 @@ def main() -> None:
     (out_dir / "audio").mkdir(parents=True, exist_ok=True)
     for b in timed:
         dest = out_dir / "audio" / f"beat{int(b['beat']):02d}.mp3"
-        if not dest.exists() or args.force:
-            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(narr),
+        if not dest.exists() or force:
+            subprocess.run([ffmpeg_bin(), "-y", "-loglevel", "error", "-i", str(narr),
                             "-ss", f"{b['start']:.2f}", "-t", f"{b['sec']:.2f}",
                             "-c:a", "libmp3lame", "-q:a", "4", str(dest)], check=True)
 
     # ---- moments -> gapless tiling, SEQUENTIAL word-locked -----------------
-    if args.visuals:
-        import csv as _csv
+    if not visuals_path:
+        return timed
+    import csv as _csv
 
-        rows = list(_csv.DictReader(open(args.visuals, encoding="utf-8")))
-        groups: dict[int, list[dict]] = {}
-        for r in rows:
-            groups.setdefault(int(r["slide_id"]), []).append(r)
+    rows = list(_csv.DictReader(open(visuals_path, encoding="utf-8")))
+    groups: dict[int, list[dict]] = {}
+    for r in rows:
+        groups.setdefault(int(r["slide_id"]), []).append(r)
 
-        moments = []
-        missed = 0
-        for b in timed:
-            beat = int(b["beat"])
-            ms = groups.get(beat, [])
-            if not ms:
-                continue
-            toks, ts = stream_tokens(b["words"])
-            toks_raw = [re.findall(r"[a-z0-9]+", w["w"].lower()) for w in b["words"]]
-            ts_raw = [w["t"] for w in b["words"]]
-            desired: list[float] = []
-            pos = 0
-            lead = 0.0
-            for m in ms:
-                hit = match_first(norm_variants(m["moment_text"]), toks, pos)
-                if hit is not None:
-                    idx, nlen = hit
-                    desired.append(ts[idx])
-                    pos = idx + nlen
-                else:
-                    missed += 1
-                    print(f"[tts] WARNING: moment beat{int(m['slide_id']):02d}m{int(m.get('moment') or 0):02d} "
-                          f"words not in speech: {m['moment_text']!r} - lead-in slot", flush=True)
-                    desired.append(b["start"] + lead)
-                    lead += 1.2
-            order = sorted(range(len(ms)), key=lambda j: (desired[j], j))
-            tiled = []
-            run = b["start"]
-            for pos2, j in enumerate(order):
-                nxt = desired[order[pos2 + 1]] if pos2 + 1 < len(order) else b["start"] + b["sec"]
-                if nxt <= run:
-                    nxt = run + 0.4
-                tiled.append((j, run, nxt - run))
-                run = nxt
-            for j, st, sec in tiled:
-                sid = str(ms[j]["slide_id"]).zfill(2)
-                mom = str(ms[j].get("moment") or j + 1).zfill(2)
-                moments.append({"key": f"beat{sid}m{mom}", "beat": beat,
-                                "start": round(st, 3), "sec": round(sec, 3),
-                                "text": ms[j]["moment_text"]})
-        (out_dir / "moments_timing.json").write_text(json.dumps(moments, indent=1), encoding="utf-8")
-        status = "OK" if missed == 0 else f"{missed} MISSED - CHECK WARNINGS ABOVE"
-        print(f"[tts] {len(moments)} image moments locked to spoken words -> moments_timing.json [{status}]",
-              flush=True)
+    moments = []
+    missed = 0
+    for b in timed:
+        beat = int(b["beat"])
+        ms = groups.get(beat, [])
+        if not ms:
+            continue
+        toks, ts = stream_tokens(b["words"])
+        desired: list[float] = []
+        pos = 0
+        lead = 0.0
+        for m in ms:
+            hit = match_first(norm_variants(m["moment_text"]), toks, pos)
+            if hit is not None:
+                idx, nlen = hit
+                desired.append(ts[idx])
+                pos = idx + nlen
+            else:
+                missed += 1
+                print(f"[tts] WARNING: moment beat{int(m['slide_id']):02d}m{int(m.get('moment') or 0):02d} "
+                      f"words not in speech: {m['moment_text']!r} - lead-in slot", flush=True)
+                desired.append(b["start"] + lead)
+                lead += 1.2
+        order = sorted(range(len(ms)), key=lambda j: (desired[j], j))
+        tiled = []
+        run = b["start"]
+        for pos2, j in enumerate(order):
+            nxt = desired[order[pos2 + 1]] if pos2 + 1 < len(order) else b["start"] + b["sec"]
+            if nxt <= run:
+                nxt = run + 0.4
+            tiled.append((j, run, nxt - run))
+            run = nxt
+        for j, st, sec in tiled:
+            sid = str(ms[j]["slide_id"]).zfill(2)
+            mom = str(ms[j].get("moment") or j + 1).zfill(2)
+            moments.append({"key": f"beat{sid}m{mom}", "beat": beat,
+                            "start": round(st, 3), "sec": round(sec, 3),
+                            "text": ms[j]["moment_text"]})
+    (out_dir / "moments_timing.json").write_text(json.dumps(moments, indent=1), encoding="utf-8")
+    status = "OK" if missed == 0 else f"{missed} MISSED - CHECK WARNINGS ABOVE"
+    print(f"[tts] {len(moments)} image moments locked to spoken words -> moments_timing.json [{status}]",
+          flush=True)
+    return timed
 
 
 if __name__ == "__main__":

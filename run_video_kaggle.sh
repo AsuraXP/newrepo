@@ -15,6 +15,11 @@
 #   VIDEO_DIR=examples/apoc_day1_video   OUT_DIR=/kaggle/working
 #   VOICE=en-US-AndrewNeural             RATE=+0%
 #   SKIP_TTS=1 (reuse cached narration.mp3 + beats_with_timing.json; no pip)
+#
+# Multi-voice: drop a voices.json in the episode dir and the runner switches to
+# cartoonstyle.tts_multi automatically (one segment per beat, per-beat voices,
+# real silence gaps). Any beat with an "sfx" field emits sfx_cues.csv; the
+# runner synthesizes sfx.wav (cartoonstyle.sfx) and mixes it at stitch time.
 #   ZIP_NAME=custom_name
 #
 # Output: $OUT_DIR/<slug>_DELIVERABLE.zip
@@ -65,6 +70,11 @@ if [ ! -f "$VIDEO_DIR/thumbnail.jpg" ]; then
   missing=1
 fi
 [ -d "$FRAMES" ] || { echo "   MISSING: $FRAMES/"; missing=1; }
+if [ -f "$VIDEO_DIR/voices.json" ]; then
+  python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$VIDEO_DIR/voices.json" \
+    || { echo "   BROKEN: $VIDEO_DIR/voices.json is not valid JSON"; missing=1; }
+  echo "   cast       : $VIDEO_DIR/voices.json (multi-voice)"
+fi
 [ "$missing" -eq 0 ] || { echo "!!! preflight failed - fix the above and re-run"; exit 1; }
 
 # Fail loudly if any visuals.csv row has no frame on disk (the old runner let
@@ -123,6 +133,15 @@ LOG=/tmp/tts_log_$SLUG.txt
 TTS_ARGS=(--beats "$VIDEO_DIR/beats.jsonl" --out-dir "$VIDEO_DIR"
           --visuals "$VIDEO_DIR/visuals.csv")
 
+# Multi-voice if the episode ships a cast file, single take otherwise.
+if [ -f "$VIDEO_DIR/voices.json" ]; then
+  echo "   cast file found -> multi-voice (one segment per beat)"
+  TTS_MODULE=cartoonstyle.tts_multi
+  TTS_ARGS+=(--voices "$VIDEO_DIR/voices.json")
+else
+  TTS_MODULE=cartoonstyle.tts
+fi
+
 if [ "${NARRATION_MODE:-edgetts}" = "prebuilt" ] && [ -f "$VIDEO_DIR/narration.mp3" ]; then
   echo "   prebuilt narration.mp3 found -> forced alignment (no edge-tts)"
   pip install -q faster-whisper 2>/dev/null || \
@@ -164,11 +183,20 @@ for f in "$FRAMES"/*.png; do
 done
 echo "   $aliased frame aliases ready"
 
+# Sound effects: tts_multi writes sfx_cues.csv when a beat carries "sfx".
+STITCH_ARGS=()
+if [ -f "$VIDEO_DIR/sfx_cues.csv" ]; then
+  echo "   sfx cues found -> synthesizing sfx.wav"
+  python3 -m cartoonstyle.sfx --cues "$VIDEO_DIR/sfx_cues.csv" \
+      --out "$VIDEO_DIR/sfx.wav" --gain 0.9
+  STITCH_ARGS+=(--sfx "$VIDEO_DIR/sfx.wav")
+fi
+
 python3 -m cartoonstyle.stitch \
     --timing "$VIDEO_DIR/beats_with_timing.json" \
     --images-dir "$IMG_POOL" \
     --out "$VIDEO_DIR/VIDEO.mp4" \
-    --pick 0
+    --pick 0 "${STITCH_ARGS[@]}"
 
 STAGE="package"
 echo "=== [6/6] Package ==="
