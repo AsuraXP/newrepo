@@ -32,6 +32,10 @@ and legs, plain black short-sleeved t-shirt, blue denim shorts, white trainers,
 warm red hooded jacket when he is dressed for the cold.
 Red is the only saturated colour in any frame and it appears only on him.
 
+**His hands and arms are the same white as his face — never natural skin tone.**
+Insert "white cartoon hands, same white as his face" into any close-up of his
+hands, or the model drifts to a fleshy tan. (Batch 6, frames 9.3–9.6.)
+
 ## Prompt block (prepend to every frame, verbatim)
 > Clean cartoon illustration, thick uniform black outlines, flat solid colours,
 > no gradients, no texture, one simple flat shadow tone. Muted palette of deep
