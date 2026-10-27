@@ -313,8 +313,8 @@ Consistency comes from four things being byte-identical, not similar.
   LOCK 3 — THE ANCHOR.  The first accepted frame of a recurring subject becomes
                         its anchor. Archive that exact prompt in the continuity
                         file. Every later prompt for that subject is made by
-                        COPYING THE ANCHOR PROMPT and editing only the SCENE
-                        line. You are never writing a new prompt from a
+                        COPYING THE ANCHOR PROMPT and editing only slots 3, 5
+                        and 6. You are never writing a new prompt from a
                         description; you are editing a known-good one.
 
   LOCK 4 — ONE VARIABLE. Between frames of the same subject only slots 3, 5 and
@@ -591,7 +591,7 @@ a two-turn job or a fortnight, and I should know it before you start spending.
 Per batch:
   1. Read the continuity file first. Not optional.
   2. Assemble prompts by the template in 5.3, copying the anchor prompt and
-     editing only the SCENE line.
+     editing only slots 3, 5 and 6.
   3. Generate in order, within the budget.
   4. Normalise every frame to the target size immediately. Resize to fit; never
      stretch. Keyed, zero-padded filenames (beatNNmNN.png). Stitchers glob a
