@@ -1,0 +1,77 @@
+{
+  "slug": "why-humans-started-cooking",
+  "deliverable_zip": "why-humans-started-cooking_DELIVERABLE.zip",
+  "series": "Episode 1",
+  "type": "explainer",
+  "title": "Why Did Humans Start Cooking? The Accident That Rewired Us",
+  "short_title": "WHY WE COOK",
+  "language": "en",
+  "audience": "General audience, all ages",
+  "aspect_ratio": "16:9",
+  "resolution": [1920, 1080],
+  "fps": 30,
+  "frame_count": 117,
+  "narration_words": 1522,
+  "voice": {
+    "engine": "edge-tts",
+    "requested": "en-US-AndrewNeural",
+    "fallbacks": ["en-US-AndrewMultilingualNeural", "en-US-GuyNeural", "en-US-AriaNeural"],
+    "rate": "+0%",
+    "pitch": "+0Hz",
+    "volume": "+0%",
+    "continuous_take": true,
+    "speaker_count": 1
+  },
+  "timing": {
+    "method": "word_locked",
+    "source": "edge-tts WordBoundary events measured from the generated audio",
+    "fallback": "proportional-by-word-count over measured audio duration if boundaries are unavailable",
+    "amendment": "moment-driven frames, not duration-driven; no padding or merging"
+  },
+  "ken_burns": {
+    "enabled": true,
+    "target_zoom_long": 1.06,
+    "target_zoom_short": 1.045,
+    "strong_from_words": 15
+  },
+  "sound_cues": {
+    "enabled": true,
+    "placed_at": "beat events (first word-locked frame of each beat/chapter)",
+    "type": "soft synthesised whoosh, low volume, mixed under narration"
+  },
+  "loudness": {
+    "filter": "loudnorm",
+    "I": -16,
+    "TP": -1.5,
+    "LRA": 11
+  },
+  "chapters": [
+    {"n": 1, "beat": 1, "frame": 1,   "title": "Why you can't survive on raw food"},
+    {"n": 2, "beat": 2, "frame": 14,  "title": "The bones that don't add up"},
+    {"n": 3, "beat": 3, "frame": 25,  "title": "The accident: how fire became a habit"},
+    {"n": 4, "beat": 4, "frame": 42,  "title": "What heat actually does to food"},
+    {"n": 5, "beat": 5, "frame": 60,  "title": "Fire didn't do it alone"},
+    {"n": 6, "beat": 6, "frame": 76,  "title": "The hearths in the ground"},
+    {"n": 7, "beat": 7, "frame": 92,  "title": "Firelight is where culture gets built"},
+    {"n": 8, "beat": 8, "frame": 113, "title": "This is still you"}
+  ],
+  "tags": [
+    "why did humans start cooking", "cooking hypothesis", "human evolution",
+    "Richard Wrangham", "Catching Fire", "expensive tissue hypothesis",
+    "Homo erectus", "control of fire", "Wonderwerk Cave", "cooked food",
+    "raw food diet", "anthropology", "prehistory", "evolution of the brain",
+    "firelight", "Ju/'hoansi", "science explained", "animated explainer",
+    "origins of cooking", "how cooking made us human"
+  ],
+  "hashtags": ["#HumanEvolution", "#Cooking", "#Fire", "#Anthropology", "#Science"],
+  "sources_file": "SOURCES.md",
+  "script_file": "script.md",
+  "spine_file": "visuals.csv",
+  "frames_dir": "frames",
+  "thumbnail": "thumbs/thumbnail.jpg",
+  "thumbnail_portrait": "thumbs/thumb_portrait.png",
+  "zip_contents": [
+    "VIDEO.mp4", "thumbnail.jpg", "thumb_portrait.png",
+    "metadata.json", "youtube.txt", "script.md", "SOURCES.md"
+  ]
+}

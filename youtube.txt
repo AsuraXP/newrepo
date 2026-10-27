@@ -1,0 +1,89 @@
+TITLE
+Why Did Humans Start Cooking? The Accident That Rewired Us
+
+SHORT TITLE (thumbnail / Shorts)
+WHY WE COOK
+
+DESCRIPTION
+Every animal on Earth eats its food raw. You don't. And if you tried for long,
+your body would begin to fail. So what changed?
+
+This is the story of the accident that rewired us. How a burned tuber in the
+ground became a habit, how cooking moved digestion outside the body, and how the
+calories and the extra hours it gave us built smaller guts, bigger brains, and
+the fireside conversations that became culture. From a 1999 raw-food diet study
+to million-year-old hearths deep inside Wonderwerk Cave, we follow the evidence —
+and we keep the honest parts: fire didn't do it alone, the date is still argued
+over, and none of it proves the very first roasted tuber. Together, it makes a
+strong case that our species was rebuilt around heat.
+
+Every animal on Earth eats dinner. Only one of them cooks it. Only one of them
+stays to talk.
+
+CHAPTERS
+Timestamps are generated from the final narration audio (word-locked to the
+actual TTS), not estimated. The Kaggle build writes the finished timestamps
+into the packaged youtube.txt. Chapter titles, in order:
+  1. Why you can't survive on raw food
+  2. The bones that don't add up
+  3. The accident: how fire became a habit
+  4. What heat actually does to food
+  5. Fire didn't do it alone
+  6. The hearths in the ground
+  7. Firelight is where culture gets built
+  8. This is still you
+
+SOURCES & FURTHER READING
+1.  Koebnick C, et al. (1999). Consequences of a long-term raw food diet on body
+    weight and menstruation. Annals of Nutrition and Metabolism 43(2):69-79.
+    https://pubmed.ncbi.nlm.nih.gov/10436305/
+2.  Aiello LC, Wheeler P (1995). The Expensive-Tissue Hypothesis. Current
+    Anthropology 36(2):199-221.
+3.  Wrangham R (2009). Catching Fire: How Cooking Made Us Human. Basic Books.
+    https://news.harvard.edu/gazette/story/2009/06/invention-of-cooking-drove-evolution-of-the-human-species-new-book-argues/
+4.  Carmody RN, Wrangham RW (2009). The energetic significance of cooking.
+    Journal of Human Evolution 57(4):379-391.
+    https://pubmed.ncbi.nlm.nih.gov/19732938/
+5.  Carmody RN, Weintraub GS, Wrangham RW (2011). Energetic consequences of
+    thermal and nonthermal food processing. PNAS 108(48).
+    https://www.pnas.org/doi/10.1073/pnas.1112128108
+6.  Fonseca-Azevedo K, Herculano-Houzel S (2012). Metabolic constraint imposes
+    tradeoff between body size and number of brain neurons. PNAS 109(45).
+    https://www.pnas.org/doi/10.1073/pnas.1206390109
+7.  Organ C, Nunn CL, Machanda Z, Wrangham RW (2011). Phylogenetic rate shifts in
+    feeding time during the evolution of Homo. PNAS 108(35).
+    https://www.pnas.org/doi/10.1073/pnas.1107806108
+8.  Zink KD, Lieberman DE (2016). Impact of meat and Lower Palaeolithic food
+    processing techniques on chewing in humans. Nature 531:500-503.
+    https://www.nature.com/articles/nature16990
+9.  Roebroeks W, Villa P (2011). On the earliest evidence for habitual use of
+    fire in Europe. PNAS 108(13).
+    https://www.pnas.org/doi/10.1073/pnas.1018116108
+10. Berna F, et al. (2012). Microstratigraphic evidence of in situ fire in the
+    Acheulean strata of Wonderwerk Cave, South Africa. PNAS 109(20).
+    https://www.pnas.org/doi/10.1073/pnas.1117620109
+11. Alperson-Afil N, Goren-Inbar N. Gesher Benot Ya'aqov, Israel ~790,000 years:
+    clusters of burned flint as repeated hearths.
+    https://www.journals.uchicago.edu/doi/full/10.1086/692721
+12. Marin-Monfort MD, et al. (2026). New evidence for Early Pleistocene use of
+    fire at Wonderwerk Cave (South Africa). PLOS One 21(6):e0347480.
+    https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0347480
+13. Wiessner PW (2014). Embers of society: Firelight talk among the Ju/'hoansi
+    Bushmen. PNAS 111(39).
+    https://www.pnas.org/doi/10.1073/pnas.1404212111
+
+HASHTAGS
+#HumanEvolution #Cooking #Fire #Anthropology #Science
+
+TAGS
+why did humans start cooking, cooking hypothesis, human evolution, Richard
+Wrangham, Catching Fire, expensive tissue hypothesis, Homo erectus, control of
+fire, Wonderwerk Cave, cooked food, raw food diet, anthropology, prehistory,
+evolution of the brain, firelight, Ju/'hoansi, science explained, animated
+explainer, origins of cooking, how cooking made us human
+
+CREDITS
+Written, narrated (single synthetic voice, edge-tts en-US-AndrewNeural) and
+illustrated as original 2D ink-and-gouache frames for this explainer. All
+statistics are attributed to the peer-reviewed sources listed above. Reference
+style is an interpretation, not an endorsement, of any other channel.

@@ -1,0 +1,17 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Kaggle build outputs (produced on Kaggle, never committed here)
+build_*/
+*.zip
+VIDEO.mp4
+narration.mp3
+narration.wav
+mixed.wav
+video_silent.mp4
+
+# OS / editor
+.DS_Store
+Thumbs.db
