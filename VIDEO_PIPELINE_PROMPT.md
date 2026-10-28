@@ -320,6 +320,29 @@ length before you start, never for deciding screen time.
 One moment is one frame. Not a shot you will split later, not two frames you
 will pick between at the edit. If a beat needs two pictures, it is two moments.
 
+THE FRAME COUNT IS AN OUTCOME. NOT A TARGET, NOT A BUDGET, NOT A MINIMUM.
+There is no correct number of frames. The narration decides it: one frame per
+distinct thought, wherever the words change subject or place or action. A
+four-minute piece can honestly need forty frames or a hundred and forty, and
+both are right if the words asked for them.
+
+So these are all forbidden:
+  - merging two thoughts into one frame to save calls, turns or money
+  - skimping on moments because the batch arithmetic looks long
+  - inventing extra frames to make the edit feel busier, or to hit a "one image
+    every two seconds" rhythm
+  - cutting a sentence so one image can cover it
+  - letting the image budget set the granularity of the story
+
+If the honest count is more than you can afford, that is a RESOURCE problem and
+it is mine to solve, not yours to hide. Say the number, say what it costs in
+turns, and offer me the real choices: accept the turns, shorten the runtime, or
+drop a beat. Then wait. Never silently thin the story to fit the container.
+
+The reverse is also true. Padding a script with extra frames to reach a round
+number, or splitting one thought across three images for texture, is the same
+error in the other direction.
+
 moment_text is the contract. It is the narration line and the image brief at
 the same time, which is what makes word-locked cuts and literal visuals one
 job instead of two.
@@ -831,6 +854,11 @@ only. The build at Step 10 owns every sound in this project.
 Before batch one, tell me the arithmetic: total moments, frames per batch, and
 how many batches that implies. It is the one number that decides whether this is
 a two-turn job or a fortnight, and I should know it before you start spending.
+
+That arithmetic is INFORMATION, not a quota. If the number is large, the answer
+is more batches or a shorter script — never fewer moments. A frame count that
+shrinks between Step 3 and Step 8 without the script shrinking is a defect, and
+the ledger is where I will see it.
 
 Per batch:
   1. Read the continuity file first. Not optional.
