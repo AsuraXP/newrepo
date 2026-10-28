@@ -655,10 +655,12 @@ breakage is loud at thumbnail size even when detail hides it at full size.
 ====================================================================
 STEP 6 — AUDIO
 ====================================================================
-VOICE (default, overwritable): en-US-AndrewNeural at +5%, unless the brief
-names a voice or a pace. +5% was chosen by ear against +0%, +8%, +10% and
-+12% — it reads as unhurried without dragging, and it puts a 800-word script
-near 4:45 rather than 5:05.
+VOICE (default, overwritable): en-US-AndrewNeural at +10%, unless the brief
+names a voice or a pace. +10% was chosen by ear after auditioning +0%, +5%,
++8%, +10%, +12% and +15%; +5% still felt like it dragged on long narration.
+Expect roughly 3.0-3.1 words per second, which puts an 800-word script near
+4:25 instead of 5:05. Confirm on the real script rather than trusting the
+percentage — rate is not linear in seconds.
 
 Do not treat that as a module default quietly inherited. If you can hear or
 measure the result, measure it: speak a 140-word sample at three or four rates,

@@ -36,7 +36,8 @@ import zipfile
 from pathlib import Path
 
 VOICE = "en-US-AndrewNeural"
-DEFAULT_RATES = ["-5", "0", "+5", "+8", "+10", "+12", "+15"]
+PICKED = "+10"   # the pace chosen by ear; still audition either side of it
+DEFAULT_RATES = ["+5", "+8", "+10", "+12", "+15"]
 SAMPLE_WORDS = 140
 SR = 24000
 GAP = 0.8
@@ -191,8 +192,9 @@ def main() -> None:
     for r in rows:
         d = r["full_script_s"] - base["full_script_s"]
         r["vs_0pct_s"] = round(d, 1)
+        mark = "  <- picked" if r["rate"] == f"{PICKED}%" else ""
         print(f"  {r['rate']:>5}  full {r['full_script_hms']:>7}"
-              f"   {d:+6.1f}s vs +0%")
+              f"   {d:+6.1f}s vs baseline{mark}")
 
     (out / "results.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     with (out / "results.csv").open("w", newline="", encoding="utf-8") as fh:
