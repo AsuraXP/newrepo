@@ -748,52 +748,64 @@ If any of those is unknown when the frames finish, the build will guess, and a
 build that guesses produces a video that is wrong in exactly one place.
 
 ====================================================================
-STEP 7 — TIMING SPECIFICATION (derived at the build, from the real audio)
+STEP 7 — SIMULATE (provisional timing, no voice)
 ====================================================================
-Cuts are word-locked: image N changes on the exact word its moment_text starts
-on. The timings come from the audio that actually shipped — the TTS engine's
-word boundaries, or forced alignment if it gives you none.
+This step DOES run in the pipeline, and it never speaks. You generate silence of
+the right length plus evenly spaced word times at the pace specified in Step 6.
+That gives you a full provisional timing set — per beat, per moment, sfx cue
+positions, chapter marks, total runtime — without spending a voice call and
+without needing the network.
 
-That means this step has nothing to output at frame time, and it must not be
-faked. There is no timing to derive until the narration exists. What you record
-now is the RULE — word-locked, cut on the first word of each moment_text — and
-Step 10 applies it to real audio.
+Why it exists: frames are ordered, but the VIDEO is timed. You cannot check
+whether the script fits its runtime, where the cues fall, or whether two moments
+are close enough to become a flicker, until something has a clock on it.
+Simulation is how the pipeline gets a clock without generating audio.
 
-Do not estimate, interpolate or hand-place any timing, and never ship the
-arithmetic from Step 3's words-per-second figure. An estimated timing file looks
-identical to a real one and is wrong everywhere.
+WHAT SIMULATION PRODUCES — every one of these is PROVISIONAL:
+  beats_with_timing.json     beat spans from simulated word times
+  moments_timing.json        one span per moment, gapless
+  sfx_cues.csv               cue positions derived from those spans
+  chapters                   draft timestamps
+  runtime                    the projected total
 
-WHY NOTHING BEFORE THE BUILD NEEDS TIMING. The only consumer of a timing file is
-the stitcher, and the stitcher runs in the build. Frames are ORDERED, not
-scheduled: frame N+1 follows frame N because of slide_id and moment, and nothing
-in generation, review or the contact sheet needs to know how long anything
-lasts. So there is no dependency to satisfy early. If a step outside the build
-asks you for a timestamp, the step is wrong, not the order.
+RULES FOR PROVISIONAL FILES
+  - Name them so nobody can mistake them: prefix or suffix `provisional`, e.g.
+    sfx_cues.provisional.csv. Visual audit trail beats good intentions.
+  - Record the assumptions IN the file or beside it: pace used, wps assumed,
+    and one line saying this predates the audio.
+  - Simulate at the pace you actually specified. If the brief is +10%, simulate
+    at +10%'s words-per-second, not a generic 2.75, or the projection is wrong
+    before it starts.
+  - Never zip them. Never ship them as final. They are scaffolding.
+  - Feed them to your judgement, not to the delivery: read the runtime, check
+    the beat lengths, sanity-check where cues land, spot moments that are too
+    short to read.
 
-THE SIMULATION TRAP. Some TTS wrappers can run in a simulate mode that writes a
-timing file computed from words-per-second instead of from audio. The output is
-byte-identical in shape to a real one and nobody downstream can tell. That file
-must never enter the project, must never feed chapters, cues, sfx or stitch, and
-must never be zipped. If you need a simulation to test plumbing, run it in a
-scratch directory outside the project and name its outputs SIMULATED in the
-filename.
+WHAT SIMULATION IS NOT
+  - It is not narration. No voice, no mix, no file that anyone will hear.
+  - It is not final. Every provisional number is replaced in the build.
+  - It is not a licence to hand-place times. If a moment moves, it moves because
+    the words moved, not because you wanted it longer.
 
-Step 2's runtime figure is not a timing. It is word count divided by a
-words-per-second estimate, it exists to catch a script that is the wrong length,
-and it is never written to a file, never interpolated across moments, and never
-treated as a cut list.
+AT THE BUILD, this changes without exception. Step 10 regenerates beat spans,
+moment timings, cut points, sfx cues and chapters from the REAL narration, and
+those real numbers overwrite every provisional one. Chapter timestamps and cue
+positions in the delivered package come only from real audio — they are the two
+artifacts where a simulated value would be invisible and wrong.
 
-If a cut lands more than about 300 ms from its word, the audio and the file are
-out of sync and everything downstream inherits it. Fix it there, not in the
-editor.
+EXPECT THEM TO DIFFER. Simulated cues will land a second or so from real ones,
+because pauses, breaths and pacing are not uniform. That difference is normal
+and is exactly why the build re-derives rather than trusting the plan.
 
-Mismatch cases, and what to do:
-  - frames run out before the audio ends — hold the last frame, and tell me. It
+RECONCILING SIMULATION AGAINST THE REAL TAKE, once the build has run:
+  - cuts more than about 300 ms from their word -> audio and file are drifting,
+    and everything downstream inherits it. Fix in timings, not in an editor.
+  - frames run out before the audio ends -> hold the last frame and tell me. It
     means the narration grew and the spine did not.
-  - audio ends before the frames do — the tail frames are unreachable and are
+  - audio ends before the frames do -> the tail frames are unreachable and are
     wasted work. Cut them from visuals.csv and say which.
-  - a moment is shorter than about 0.6 s — the image is a flicker. Split the
-    frame's neighbours instead of adding a frame nothing can read.
+  - a moment under about 0.6 s -> the image is a flicker. Split its neighbours
+    rather than adding a frame nothing can read.
 
 ====================================================================
 STEP 8 — FRAME LOOP
@@ -944,10 +956,9 @@ encoder actually work — a cloud notebook, a CI runner, a build machine.
   THERE:   narration, music mix, sound effects, word-locked cuts, timing file,
            chapters, encode, package, download link.
 
-Narration exists ONLY in THERE. It is not generated during the working process,
-not once, not "just to check the length" — a length check is arithmetic on word
-count (Step 2), not an audio file. The first time this project makes sound is
-inside the handoff script.
+Narration exists ONLY in THERE. Simulated silence (Step 7) is timing scaffolding,
+not narration, and it never ships. The first time this project makes a sound
+anyone can hear is inside the handoff script.
 
 If you genuinely can work locally, say so and work locally. Do not quietly
 stitch something broken because the remote route was awkward.
@@ -1031,7 +1042,8 @@ DONE is a checklist, not a feeling. Every line true before you say finished:
   [ ] chapters were derived from that audio, not estimated
   [ ] the archive was opened and its contents listed with sizes
   [ ] the download line was printed, and the link works
-  [ ] no audio was generated anywhere before the handoff script ran
+  [ ] no narration was spoken before the handoff script ran (simulation is
+      silent scaffolding and is labelled as such)
   [ ] every step appears in the ledger with an artifact beside it
 
 If a line cannot be ticked, say which one and why. A finished video with one
