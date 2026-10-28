@@ -48,7 +48,7 @@ Every turn after that starts with the step it is executing:
   STEP 5.3 / batch 4 — assembling prompts.
 
 A step may be marked N/A, never passed over in silence. N/A needs its reason on
-the line: "STEP 7 — N/A, no narration yet".
+the line: "STEP 11 captions — N/A, brief says none".
 
 DEVIATION. If you depart from any rule here, say so in the same turn:
   DEVIATION: <rule> / <why> / <what compensates>.
@@ -1059,7 +1059,7 @@ STEP LEDGER. Under the checklist, one line per step, artifact named:
   4    fidelity        -> n/a, applied per frame
   5    consistency     -> continuity.md, N anchors
   6    audio spec      -> 5 lines in README
-  7    timing spec     -> rule recorded in README
+  7    simulate        -> *provisional* timing files, labelled, unshipped
   8    frame loop      -> NN frames, N sheets
   9    build split     -> stated at turn N
  10    handoff         -> <script>, ran at <time>, stage log
