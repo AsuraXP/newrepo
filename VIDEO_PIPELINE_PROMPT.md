@@ -32,7 +32,44 @@ There is NO house style in this document. No required aesthetics, no banned
 words, no mandatory structure. I declare constraints per project at intake.
 
 ====================================================================
-THE CORE — twelve rules that survive every project
+COMPLIANCE — how to run this document
+====================================================================
+This is not a menu or a library. It is a sequence, and every step in it is
+mandatory, in the order written.
+
+Read the whole document before your first action. Do not skim it, do not
+summarise it back to me as a substitute for doing it, and do not start at a
+later step because you believe you know where this is going.
+
+Before your first action, print one line:
+  ACK — steps 0-12 loaded; run mode [mode]; starting at step [N].
+
+Every turn after that starts with the step it is executing:
+  STEP 5.3 / batch 4 — assembling prompts.
+
+A step may be marked N/A, never passed over in silence. N/A needs its reason on
+the line: "STEP 7 — N/A, no narration yet".
+
+DEVIATION. If you depart from any rule here, say so in the same turn:
+  DEVIATION: <rule> / <why> / <what compensates>.
+A stated deviation is a judgement I can review and reverse. A silent one is a
+defect, and it is the failure this section exists to prevent.
+
+Explicitly prohibited:
+  - replacing a step with a description of the step
+  - merging steps to save a turn
+  - reordering to suit what is convenient
+  - citing an earlier project as precedent for skipping anything
+  - reading the run mode as permission to drop steps (it governs STOPS only)
+  - deciding a step was unnecessary because the output looked fine anyway
+
+END-OF-RUN PROOF. The final message carries a step ledger: one line per step,
+naming the artifact that proves it ran — a file, a sheet, a count, a command
+that was executed. A step with no artifact did not happen, whatever the prose
+says.
+
+====================================================================
+THE CORE — thirteen rules that survive every project
 ====================================================================
 If this document is long enough to dilute, these are the lines to keep.
 
@@ -49,6 +86,7 @@ If this document is long enough to dilute, these are the lines to keep.
  10. In the same turn, faults get fixed, or declared unresolvable. Never banked.
  11. Finished means checked: a checklist ticked line by line, not a feeling.
  12. State the trade when you make one. Never silently choose a horn.
+ 13. Every step names its artifact. A step with nothing to show did not run.
 
 ====================================================================
 IF YOU ARE WORKING IN A REPOSITORY
@@ -653,8 +691,17 @@ flat composition is allowed; a floating chair is not. When in doubt, shrink it:
 breakage is loud at thumbnail size even when detail hides it at full size.
 
 ====================================================================
-STEP 6 — AUDIO
+STEP 6 — AUDIO SPECIFICATION (decided here, generated at the build)
 ====================================================================
+Nothing in this step is executed now. No narration is synthesized, no music is
+mixed, no sound effect is placed during the working process. This step produces
+a SPECIFICATION, written into the brief and the project README, which Step 10
+then executes in one pass at build time.
+
+Decide here, execute there. If you find yourself calling a text-to-speech or
+audio tool during Step 8, stop: you are doing the build's job early, and the
+frames are not finished yet.
+
 VOICE (default, overwritable): en-US-AndrewNeural at +10%, unless the brief
 names a voice or a pace. +10% was chosen by ear after auditioning +0%, +5%,
 +8%, +10%, +12% and +15%; +5% still felt like it dragged on long narration.
@@ -662,17 +709,16 @@ Expect roughly 3.0-3.1 words per second, which puts an 800-word script near
 4:25 instead of 5:05. Confirm on the real script rather than trusting the
 percentage — rate is not linear in seconds.
 
-Do not treat that as a module default quietly inherited. If you can hear or
-measure the result, measure it: speak a 140-word sample at three or four rates,
-take the real words-per-second of each, and project the actual word count.
-Rate percentages are not linear in seconds, so a projection from a measured
-sample beats arithmetic on the number. Ask me before changing a pace that was
-already chosen.
+Do not treat that as a module default quietly inherited. If I want a pace
+verified, that is a separate one-off audition outside the project run — never
+part of the frame loop, never a reason to generate audio early. Ask before
+changing a pace that was already chosen.
 
-One speaker means ONE continuous take. A single call gives no seams and no
-accidental silence. Split into per-beat segments only when a different character
-genuinely speaks, and accept the cost honestly: segments buy distinct voices and
-deliberate pauses, and pay for them with seams and inserted silence.
+TAKE STRATEGY. One speaker means ONE continuous take: a single call gives no
+seams and no accidental silence. Split into per-beat segments only when a
+different character genuinely speaks, and accept the cost honestly — segments
+buy distinct voices and deliberate pauses, and pay for them with seams and
+inserted silence.
 
 Know the trade before choosing, and say which you chose:
   single take   seamless, one voice, no deliberate pauses, sfx cues must be
@@ -690,12 +736,32 @@ verify each one against the audio.
 
 LOUDNESS: normalise at the end, to the platform's target. Never ship raw.
 
+WRITE IT DOWN. The audio specification goes into the brief and the project
+README as five lines, because Step 10 cannot read your mind:
+  VOICE / VOICE ID     engine voice name
+  PACE                 rate, and who chose it
+  TAKE                 single or per-beat segments, and the reason
+  BED                  music: none, or the track and its ducking level
+  CUES                 where sound effects belong, and how they are derived
+
+If any of those is unknown when the frames finish, the build will guess, and a
+build that guesses produces a video that is wrong in exactly one place.
+
 ====================================================================
-STEP 7 — TIMING
+STEP 7 — TIMING SPECIFICATION (derived at the build, from the real audio)
 ====================================================================
 Cuts are word-locked: image N changes on the exact word its moment_text starts
-on. Derive the timings from the synthesized audio, never eyeball them. Word
-timings from the TTS engine, or forced alignment if it gives you none.
+on. The timings come from the audio that actually shipped — the TTS engine's
+word boundaries, or forced alignment if it gives you none.
+
+That means this step has nothing to output at frame time, and it must not be
+faked. There is no timing to derive until the narration exists. What you record
+now is the RULE — word-locked, cut on the first word of each moment_text — and
+Step 10 applies it to real audio.
+
+Do not estimate, interpolate or hand-place any timing, and never ship the
+arithmetic from Step 3's words-per-second figure. An estimated timing file looks
+identical to a real one and is wrong everywhere.
 
 If a cut lands more than about 300 ms from its word, the audio and the file are
 out of sync and everything downstream inherits it. Fix it there, not in the
@@ -726,6 +792,9 @@ repair budget, and every batch needs some repair. Spending everything and then
 discovering three failures leaves the batch broken for a whole turn, and
 broken-for-a-turn is how drift and forgotten frames happen. If a batch comes
 back perfect, the held calls roll into the next batch — reserved, never wasted.
+
+No audio tools, no TTS, no music, no ffmpeg mixing during this step. Frames
+only. The build at Step 10 owns every sound in this project.
 
 Before batch one, tell me the arithmetic: total moments, frames per batch, and
 how many batches that implies. It is the one number that decides whether this is
@@ -851,9 +920,14 @@ the FRAMES and the FILES. Assembly belongs wherever the audio service and the
 encoder actually work — a cloud notebook, a CI runner, a build machine.
 
   HERE:    script, visuals.csv, continuity file, all frames, thumbnail, title,
-           description, tags, chapters.
-  THERE:   narration, music mix, sound effects, word-locked cuts, encode,
-           package, download link.
+           description, tags.
+  THERE:   narration, music mix, sound effects, word-locked cuts, timing file,
+           chapters, encode, package, download link.
+
+Narration exists ONLY in THERE. It is not generated during the working process,
+not once, not "just to check the length" — a length check is arithmetic on word
+count (Step 2), not an audio file. The first time this project makes sound is
+inside the handoff script.
 
 If you genuinely can work locally, say so and work locally. Do not quietly
 stitch something broken because the remote route was awkward.
@@ -874,8 +948,14 @@ first. Requirements:
     no repo), so we both know what ran.
   - Preflight that fails in seconds: every moment in visuals.csv has a frame,
     every required metadata file exists.
-  - Then: narration, word-locked timings, sound and music, stitch, loudness
-    normalise, package.
+  - Then, in this order, each stage printing its own name:
+      1. narration        read the audio spec, synthesize one take
+      2. timings          word-locked, from the audio just made
+      3. sfx + music      place cues on those timings, duck the bed
+      4. stitch           frames against timings, no drift
+      5. loudness         normalise to the platform target
+      6. chapters         derived from the audio that shipped
+      7. package          archive, verify, list contents
   - Verifies the archive afterwards and prints its contents with sizes.
   - Ends by printing the exact download line for me to run next.
   - Names every stage, and names the stage it died in, so I can paste four lines
@@ -931,8 +1011,30 @@ DONE is a checklist, not a feeling. Every line true before you say finished:
   [ ] chapters were derived from that audio, not estimated
   [ ] the archive was opened and its contents listed with sizes
   [ ] the download line was printed, and the link works
+  [ ] no audio was generated anywhere before the handoff script ran
+  [ ] every step appears in the ledger with an artifact beside it
 
 If a line cannot be ticked, say which one and why. A finished video with one
 honest caveat is worth more than a flawless report nobody can verify.
+
+STEP LEDGER. Under the checklist, one line per step, artifact named:
+
+  0    intake          -> brief.md
+  0.5  setup           -> projects/<slug>/ + index row
+  1    brief           -> brief.md, confirmed
+  2    script          -> script.md, NNN words
+  3    spine           -> visuals.csv, NN rows
+  4    fidelity        -> n/a, applied per frame
+  5    consistency     -> continuity.md, N anchors
+  6    audio spec      -> 5 lines in README
+  7    timing spec     -> rule recorded in README
+  8    frame loop      -> NN frames, N sheets
+  9    build split     -> stated at turn N
+ 10    handoff         -> <script>, ran at <time>, stage log
+ 11    package         -> archive, N files
+ 12    delivery        -> this message
+
+Anything marked n/a needs its reason. This ledger is the difference between a
+video that was made and a video that was described.
 
 START AT STEP 0.
