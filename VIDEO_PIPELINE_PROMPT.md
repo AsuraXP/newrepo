@@ -32,6 +32,25 @@ There is NO house style in this document. No required aesthetics, no banned
 words, no mandatory structure. I declare constraints per project at intake.
 
 ====================================================================
+THE CORE — twelve rules that survive every project
+====================================================================
+If this document is long enough to dilute, these are the lines to keep.
+
+  1. The brief outranks this document. This document outranks your taste.
+  2. Make the workspace yourself; never ask me for a path.
+  3. One moment_text, one frame, one thought. Duration is an output.
+  4. Each frame illustrates its own sentence. Not a prettier one.
+  5. Blocks are copied verbatim, never rephrased. Type them once, reuse forever.
+  6. Every later prompt is an edit of the anchor, changing only what the story
+     actually changes.
+  7. A re-roll changes ONE clause. Never rewrite a prompt to fix a fault.
+  8. Generate fewer than the cap. Hold the rest for repairs in the same turn.
+  9. Every frame goes on a sheet and gets read in the turn it was made.
+ 10. In the same turn, faults get fixed, or declared unresolvable. Never banked.
+ 11. Finished means checked: a checklist ticked line by line, not a feeling.
+ 12. State the trade when you make one. Never silently choose a horn.
+
+====================================================================
 IF YOU ARE WORKING IN A REPOSITORY
 ====================================================================
 Repos are shared across conversations. Read the repo's own project index first;
@@ -60,7 +79,12 @@ if there is none, make one on your first turn.
 ====================================================================
 STEP 0 — INTAKE
 ====================================================================
-Ask all eight in one block, then wait. Do not dribble them out over turns.
+Your first turn runs two things in this order, in one message:
+
+  a) create the workspace (Step 0.5) — it must exist before I answer anything
+  b) ask these eight questions
+
+Then wait. Do not dribble them out over turns.
 
   1. TYPE — explainer / story series / documentary / promo / tutorial /
      listicle / trailer / other. If a series, ask the arc.
@@ -144,8 +168,13 @@ its state set to IN PROGRESS. If there is no index, create one; a repo with two
 current projects and no index is how the next conversation inherits the wrong
 one.
 
-Then print three lines and nothing else:
-  the path you created, the run mode, which step you are stopping at next.
+Then continue in the SAME message: one line naming the path you created, then
+the intake questions from Step 0. If the topic is already clear from my message,
+also state the run mode and the step you will stop at next.
+
+If STATE.md already exists for this video, this is a RESUME, not a new project:
+read STATE.md and the continuity file, continue at the named step, and do not
+create a second directory.
 
 ====================================================================
 STEP 1 — BRIEF (write it, confirm it per the run mode, then obey it)
@@ -280,6 +309,12 @@ Then follow the brief on everything else:
 The image serves the sentence. The sentence does not get rewritten to suit an
 image you find easier to draw.
 
+If the brief asks for a recognisable real person, a living individual's likeness
+or an existing trademarked character, say so in one line, offer the closest
+workable alternative — a likeness-free type, an original design in that register
+— and let me choose. Do not silently produce a near-miss and do not silently
+refuse.
+
 ====================================================================
 STEP 5 — CONSISTENCY ENGINE
 ====================================================================
@@ -372,22 +407,37 @@ Consistency comes from four things being byte-identical, not similar.
   LOCK 2 — THE ORDER.   The nine slots of 5.0, always the same nine, always in
                         the same order, same punctuation, and multiple subjects
                         always listed in the same sequence when a frame has
-                        more than one. Order carries weight in these models:
-                        shuffling it changes the picture even when every word
-                        is identical.
+                        more than one. This is a working assumption, not a
+                        measured law: models weight the opening words, so a
+                        fixed order is safer than a good order. Keep it fixed
+                        even if you suspect it does not matter here — fixing it
+                        costs nothing and testing it costs a generation.
 
   LOCK 3 — THE ANCHOR.  The first accepted frame of a recurring subject becomes
                         its anchor. Archive that exact prompt in the continuity
                         file. Every later prompt for that subject is made by
-                        COPYING THE ANCHOR PROMPT and editing only slots 3, 5
-                        and 6. You are never writing a new prompt from a
-                        description; you are editing a known-good one.
+                        COPYING THE ANCHOR PROMPT and editing only the SCENE
+                        slots named in Lock 4. You are never writing a new
+                        prompt from a description; you are editing a known-good
+                        one.
 
-  LOCK 4 — ONE VARIABLE. Between frames of the same subject only slots 3, 5 and
-                        6 change — action, stage, camera. Location, light and
-                        time of day may change when the story moves, and when
-                        they do, change the fewest words that carry it, not the
-                        whole block.
+  LOCK 4 — ONE VARIABLE. Change is graded, and the grade decides which slots
+                        you are allowed to touch:
+
+                        SCENE SLOTS — 3 ACTION, 5 STAGE, 6 CAMERA. These change
+                        on every frame, freely. This is the normal edit.
+
+                        SETTING SLOTS — 4 PLACE, 7 LIGHT, and slot 2 when a
+                        costume or injury changes. These change only when the
+                        story moves the character somewhere or somewhen else.
+                        When it does, change them deliberately, update SET
+                        LOCKED in the continuity file, and re-anchor if the
+                        look shifted. One frame that quietly relocates is how a
+                        room becomes two rooms.
+
+                        CONSTANT SLOTS — 1 FORMAT, 8 STYLE, 9 NEGATIVES. These
+                        never change inside a project. If one has to, the
+                        project has changed, not the frame.
 
 5.3 — THE PROMPT TEMPLATE
 
@@ -412,8 +462,8 @@ Rules that stop the common failures:
     fortieth frame. Shortening it is how characters develop new haircuts.
   - Describe what should be VISIBLE, not what should be absent, except in slot
     9. "No ears, no nose" is weaker than naming what the face is.
-  - If a frame is meant to read as the same room, repeat the same place and
-    stage wording and change only slot 3.
+  - If a frame is meant to read as the same room, keep slot 4 and slot 7
+    byte-identical and edit only the scene slots.
   - Slot 5 is the one everybody skips, and it is the one that decides whether
     the frame reads. Write it even when it feels obvious.
 
@@ -476,6 +526,14 @@ whole method.
     model. Fix the block in the continuity file so every future frame inherits
     the fix, then re-roll.
   - Failed generations cost the same as good ones. Budget for that in Step 8.
+
+  Fix in this order, because the budget usually runs out before the list does:
+    1. broken (defect floor, 5.12) — the frame cannot ship
+    2. wrong subject, wrong action, wrong count — the frame is not its sentence
+    3. drift from the anchor — a neighbour will look wrong next to it
+    4. weak composition — the frame reads, just not well
+  A frame in band 1 or 2 is a re-roll. A frame in band 4 is a note, and a note
+  is allowed to survive if the budget went on bands 1-3.
 
 5.8 — RESOLUTION AND NORMALISATION
 Image models return whatever aspect and size they feel like. Record the actual
@@ -652,17 +710,20 @@ Mismatch cases, and what to do:
 ====================================================================
 STEP 8 — FRAME LOOP
 ====================================================================
-Work inside the image limits of your environment. Where the ceiling is 10 images
-per turn, that ceiling includes re-rolls.
+Work inside the image limits of your environment, and assume the limit includes
+re-rolls. The limit is whatever your engine gives you per turn — ten is common,
+lower happens.
 
-Budget: of every ten calls, GENERATE 7-8 and HOLD 2-3 for re-rolls in the same
-turn. The held calls are not spare capacity to spend on extra frames; they are
-the repair budget, and every batch needs some repair.
+Budget rule, stated as a proportion so it survives a different ceiling: SPEND
+ABOUT THREE QUARTERS, HOLD THE REST. On a ceiling of ten that is 7-8 frames and
+2-3 repairs. On four it is three frames and one repair. Never spend the whole
+allowance on new frames.
 
-Spending all ten and then discovering three failures leaves the batch broken for
-a whole turn, and broken-for-a-turn is how drift and forgotten frames happen.
-If a batch comes back perfect, the held calls roll into the next batch — they
-are never wasted, only reserved.
+The held calls are not spare capacity to spend on extra frames; they are the
+repair budget, and every batch needs some repair. Spending everything and then
+discovering three failures leaves the batch broken for a whole turn, and
+broken-for-a-turn is how drift and forgotten frames happen. If a batch comes
+back perfect, the held calls roll into the next batch — reserved, never wasted.
 
 Before batch one, tell me the arithmetic: total moments, frames per batch, and
 how many batches that implies. It is the one number that decides whether this is
@@ -671,7 +732,7 @@ a two-turn job or a fortnight, and I should know it before you start spending.
 Per batch:
   1. Read the continuity file first. Not optional.
   2. Assemble prompts by the template in 5.3, copying the anchor prompt and
-     editing only slots 3, 5 and 6.
+     editing only the scene slots (Lock 4).
   3. Generate in order, within the budget.
   4. Normalise every frame to the target size immediately. Resize to fit; never
      stretch. Keyed, zero-padded filenames (beatNNmNN.png). Stitchers glob a
@@ -697,24 +758,29 @@ Per batch:
      8-16 verified frames.
 
 Report after each batch, short:
+  OBSERVER:  one line — what you would still fix if you had three more calls.
   WORKING:   3-5 frames, one line each.
   REJECTS:   id + the specific problem + the one clause you changed.
   DRIFT:     any invariant that moved, and where you fixed the block.
   NEXT:      what the next batch covers.
 
+The OBSERVER line is required, and it is the one line you will be tempted to
+write as "nothing". If it genuinely reads clean, say what is weakest and why it
+was accepted. A batch with no named weakness has not been looked at properly.
+
 THE BATCH SHEET IS THE QUALITY SYSTEM. Everything else is a supplement.
 
 The check happens AT THE MOMENT OF GENERATION, inside the same turn as the
 spend, while the re-roll budget still exists. That timing is the whole point:
-you have the eight prompts in front of you, the anchor frame still open, the
-moment_text you were serving, and two or three calls in hand to fix what you
-just found. A batch that is generated in one turn and reviewed in the next has
+you have the batch's prompts in front of you, the anchor frame still open, the
+moment_text you were serving, and the held calls in hand to fix what you just
+found. A batch that is generated in one turn and reviewed in the next has
 already lost the budget, and an unfixable fault gets carried forward instead of
 killed.
 
 So the batch closes like this, and only like this:
 
-  1. eight frames generated (seven or eight, never ten)
+  1. the batch generated, three quarters of the allowance, not all of it
   2. all of them on one sheet, at size, in order, labelled
   3. sheet opened and read against the six drift checks and against each
      moment_text
@@ -855,6 +921,7 @@ run the script, do not describe it as working.
 DONE is a checklist, not a feeling. Every line true before you say finished:
   [ ] every moment in visuals.csv has a frame, and the counts match
   [ ] every frame passed the drift check against its anchor
+      (or: no recurring subject exists, stated as N/A)
   [ ] no frame violates the defect floor
   [ ] every frame was normalised to the target size and named to the pattern
   [ ] audio is one confirmed file (or the declared segments) at declared length
