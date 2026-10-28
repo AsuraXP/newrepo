@@ -676,13 +676,12 @@ Per batch:
   4. Normalise every frame to the target size immediately. Resize to fit; never
      stretch. Keyed, zero-padded filenames (beatNNmNN.png). Stitchers glob a
      strict pattern and silently skip anything that misses it.
-  5. Build a contact sheet — 4-5 across, ~380px thumbs, and NEVER more than 24
-     frames on one sheet. Beyond that each thumbnail shrinks under 300px and you
-     are no longer checking the frame, you are checking a blur of it. Label with
-     the batch number, the frame ids and the running count. Put EVERY frame in
-     it, including the ones that already felt wrong while generating. A frame
-     you excluded from the sheet is a frame you have decided not to look at.
-     LOOK at the sheet.
+  5. Build a contact sheet of THIS BATCH — 4-5 across, ~380px thumbs, the whole
+     batch in order, labelled with the batch number, frame ids and running
+     count. Put EVERY frame in it, including the ones that already felt wrong
+     while generating. A frame you excluded from the sheet is a frame you have
+     decided not to look at. LOOK at it now, in this turn, before the next
+     batch exists.
   6. Run the drift check (5.6) against the anchors.
   7. Check every frame against its moment_text (Step 4) — is it the sentence?
   8. Name each reject, say why, re-roll per 5.7. A batch is not done until
@@ -692,7 +691,9 @@ Per batch:
      side by side, labelled with slug, attempt number and the clause you
      changed, and choose from the sheet. Memory comparisons favour the newest
      image; the sheet does not.
- 10. Update the continuity file with anything you learned. Save or commit every
+ 10. Rebuild the sheet with the accepted re-rolls in place and read it once
+     more. That second read is the batch's sign-off.
+ 11. Update the continuity file with anything you learned. Save or commit every
      8-16 verified frames.
 
 Report after each batch, short:
@@ -701,37 +702,47 @@ Report after each batch, short:
   DRIFT:     any invariant that moved, and where you fixed the block.
   NEXT:      what the next batch covers.
 
-FULL-PICTURE QA, before you hand off. Batch sheets only ever see seven or eight
-frames, so nothing so far can catch a character who changes between batch two
-and batch nine. Two DIFFERENT sheets are needed, because resolution and sequence
-are different questions and one image cannot answer both.
+THE BATCH SHEET IS THE QUALITY SYSTEM. Everything else is a supplement.
 
-  PASS 1 — DETAIL REELS. Re-sheet the whole video in chunks of ~24 frames
-  (4-5 across, ~380px thumbs, in beat and moment order, labelled). At this size
-  silhouette, colour, count, proportion, light and finish are all genuinely
-  checkable. This is the pass that finds drift across distant batches. Every
-  frame appears in exactly one chunk.
+The check happens AT THE MOMENT OF GENERATION, inside the same turn as the
+spend, while the re-roll budget still exists. That timing is the whole point:
+you have the eight prompts in front of you, the anchor frame still open, the
+moment_text you were serving, and two or three calls in hand to fix what you
+just found. A batch that is generated in one turn and reviewed in the next has
+already lost the budget, and an unfixable fault gets carried forward instead of
+killed.
 
-  PASS 2 — THE WHOLE VIDEO AT ONCE. Then one sheet of all frames, small, as a
-  filmstrip in order, and look at it for things only sequence reveals:
-    - a character who changes between batch two and batch nine
-    - a room that moves, a lamp that changes side, a window that appears
-    - a run of five frames from the same camera distance
-    - a stretch where every frame is a person standing still
-    - duplicated frames where the beat should have progressed
-    - the rhythm of the whole thing, which no chunk can show
-  This sheet is for RHYTHM AND SEQUENCE ONLY. Do not judge detail on it: at this
-  size every face is a smudge and "it looks fine" means nothing. It exists to
-  show you shape, not craft.
+So the batch closes like this, and only like this:
 
-  PASS 3 — TEXT AND SMALL DETAIL, if the brief requires legible text, numerals,
-  labels or logos. Those cannot be checked on any sheet. Open the specific
-  frames at full size and read the string.
+  1. eight frames generated (seven or eight, never ten)
+  2. all of them on one sheet, at size, in order, labelled
+  3. sheet opened and read against the six drift checks and against each
+     moment_text
+  4. every fault named, and re-rolled with a held call, in this same turn
+  5. sheet REBUILT with the new takes in place of the rejects, and read again
+  6. the batch closes only when that rebuilt sheet is clean, or when a fault has
+     been declared unresolvable
 
-A frame can pass every individual check and the sequence still not work, and a
-sequence can read beautifully while one hand is wrong in frame 62. That is why
-there are three passes and not one. Fix or accept each finding, say which, and
-then hand off.
+Nothing moves to the next batch unchecked. Do not bank a "probably fine" frame
+for a later pass; by the time a later pass exists, the budget to fix it does not.
+
+SUPPLEMENTS, used when they answer something the batch sheet cannot:
+
+  RHYTHM STRIP — at the end, all frames in order as a small filmstrip, for
+  sequence only: duplicated beats, a run of frames from the same camera
+  distance, a character present in one stretch and missing in another. At this
+  size every face is a smudge, so do not judge detail on it and do not treat
+  "looks fine" as a finding. It exists to show shape.
+
+  DETAIL REELS — re-sheet the video in chunks of ~24 at full thumbnail size, but
+  only when the batch-time check genuinely did not happen for some stretch:
+  the project was resumed in a new conversation, work was inherited from someone
+  else, or a batch was closed unreviewed. That is a repair tool, not a routine.
+  If every batch was checked as above, this pass tells you nothing new.
+
+  TEXT PASS — if the brief requires legible text, numerals, labels or logos,
+  no sheet at any size can verify them. Open those specific frames at full size
+  and read the string.
 
 No preview requests, no asking me to watch mid-run.
 
