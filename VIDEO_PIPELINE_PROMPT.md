@@ -676,10 +676,13 @@ Per batch:
   4. Normalise every frame to the target size immediately. Resize to fit; never
      stretch. Keyed, zero-padded filenames (beatNNmNN.png). Stitchers glob a
      strict pattern and silently skip anything that misses it.
-  5. Build a contact sheet — 5 across, ~380px thumbs, labelled with the batch
-     number and running count. Put EVERY frame in it, including the ones that
-     already felt wrong while generating. A frame you excluded from the sheet is
-     a frame you have decided not to look at. LOOK at the sheet.
+  5. Build a contact sheet — 4-5 across, ~380px thumbs, and NEVER more than 24
+     frames on one sheet. Beyond that each thumbnail shrinks under 300px and you
+     are no longer checking the frame, you are checking a blur of it. Label with
+     the batch number, the frame ids and the running count. Put EVERY frame in
+     it, including the ones that already felt wrong while generating. A frame
+     you excluded from the sheet is a frame you have decided not to look at.
+     LOOK at the sheet.
   6. Run the drift check (5.6) against the anchors.
   7. Check every frame against its moment_text (Step 4) — is it the sentence?
   8. Name each reject, say why, re-roll per 5.7. A batch is not done until
@@ -698,21 +701,37 @@ Report after each batch, short:
   DRIFT:     any invariant that moved, and where you fixed the block.
   NEXT:      what the next batch covers.
 
-MASTER SHEET, before you hand off. Once every batch is verified, build one
-sheet of the whole video — every frame, in beat and moment order, small enough
-to scan in a few seconds, labelled with slug and index. Look at it for the
-things a batch sheet cannot show you:
+FULL-PICTURE QA, before you hand off. Batch sheets only ever see seven or eight
+frames, so nothing so far can catch a character who changes between batch two
+and batch nine. Two DIFFERENT sheets are needed, because resolution and sequence
+are different questions and one image cannot answer both.
 
-  - a character who changes between batch two and batch nine
-  - a room that moves, a lamp that changes side, a window that appears
-  - a run of five frames from the same camera distance
-  - a stretch where every frame is a person standing still
-  - any frame that is duplicated when the beat should have progressed
-  - the whole video read as a sequence, which is the only way to see rhythm
+  PASS 1 — DETAIL REELS. Re-sheet the whole video in chunks of ~24 frames
+  (4-5 across, ~380px thumbs, in beat and moment order, labelled). At this size
+  silhouette, colour, count, proportion, light and finish are all genuinely
+  checkable. This is the pass that finds drift across distant batches. Every
+  frame appears in exactly one chunk.
 
-This sheet is the video's actual quality control. A frame can pass every
-individual check and the sequence still not work. Fix or accept each finding
-and say which, then hand off.
+  PASS 2 — THE WHOLE VIDEO AT ONCE. Then one sheet of all frames, small, as a
+  filmstrip in order, and look at it for things only sequence reveals:
+    - a character who changes between batch two and batch nine
+    - a room that moves, a lamp that changes side, a window that appears
+    - a run of five frames from the same camera distance
+    - a stretch where every frame is a person standing still
+    - duplicated frames where the beat should have progressed
+    - the rhythm of the whole thing, which no chunk can show
+  This sheet is for RHYTHM AND SEQUENCE ONLY. Do not judge detail on it: at this
+  size every face is a smudge and "it looks fine" means nothing. It exists to
+  show you shape, not craft.
+
+  PASS 3 — TEXT AND SMALL DETAIL, if the brief requires legible text, numerals,
+  labels or logos. Those cannot be checked on any sheet. Open the specific
+  frames at full size and read the string.
+
+A frame can pass every individual check and the sequence still not work, and a
+sequence can read beautifully while one hand is wrong in frame 62. That is why
+there are three passes and not one. Fix or accept each finding, say which, and
+then hand off.
 
 No preview requests, no asking me to watch mid-run.
 
