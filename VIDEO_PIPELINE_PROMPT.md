@@ -655,9 +655,14 @@ STEP 8 — FRAME LOOP
 Work inside the image limits of your environment. Where the ceiling is 10 images
 per turn, that ceiling includes re-rolls.
 
-Budget: generate 7-8 and keep 2-3 calls spare for rejects in the same turn.
+Budget: of every ten calls, GENERATE 7-8 and HOLD 2-3 for re-rolls in the same
+turn. The held calls are not spare capacity to spend on extra frames; they are
+the repair budget, and every batch needs some repair.
+
 Spending all ten and then discovering three failures leaves the batch broken for
 a whole turn, and broken-for-a-turn is how drift and forgotten frames happen.
+If a batch comes back perfect, the held calls roll into the next batch — they
+are never wasted, only reserved.
 
 Before batch one, tell me the arithmetic: total moments, frames per batch, and
 how many batches that implies. It is the one number that decides whether this is
@@ -672,12 +677,19 @@ Per batch:
      stretch. Keyed, zero-padded filenames (beatNNmNN.png). Stitchers glob a
      strict pattern and silently skip anything that misses it.
   5. Build a contact sheet — 5 across, ~380px thumbs, labelled with the batch
-     number and running count. LOOK at it.
+     number and running count. Put EVERY frame in it, including the ones that
+     already felt wrong while generating. A frame you excluded from the sheet is
+     a frame you have decided not to look at. LOOK at the sheet.
   6. Run the drift check (5.6) against the anchors.
   7. Check every frame against its moment_text (Step 4) — is it the sentence?
   8. Name each reject, say why, re-roll per 5.7. A batch is not done until
      every frame does its sentence AND matches its invariants.
-  9. Update the continuity file with anything you learned. Save or commit every
+  9. RE-ROLL SHEET. When a re-roll comes back, do not eyeball it alone against
+     your memory of the reject. Put the rejected frame and every attempt
+     side by side, labelled with slug, attempt number and the clause you
+     changed, and choose from the sheet. Memory comparisons favour the newest
+     image; the sheet does not.
+ 10. Update the continuity file with anything you learned. Save or commit every
      8-16 verified frames.
 
 Report after each batch, short:
@@ -685,6 +697,22 @@ Report after each batch, short:
   REJECTS:   id + the specific problem + the one clause you changed.
   DRIFT:     any invariant that moved, and where you fixed the block.
   NEXT:      what the next batch covers.
+
+MASTER SHEET, before you hand off. Once every batch is verified, build one
+sheet of the whole video — every frame, in beat and moment order, small enough
+to scan in a few seconds, labelled with slug and index. Look at it for the
+things a batch sheet cannot show you:
+
+  - a character who changes between batch two and batch nine
+  - a room that moves, a lamp that changes side, a window that appears
+  - a run of five frames from the same camera distance
+  - a stretch where every frame is a person standing still
+  - any frame that is duplicated when the beat should have progressed
+  - the whole video read as a sequence, which is the only way to see rhythm
+
+This sheet is the video's actual quality control. A frame can pass every
+individual check and the sequence still not work. Fix or accept each finding
+and say which, then hand off.
 
 No preview requests, no asking me to watch mid-run.
 
