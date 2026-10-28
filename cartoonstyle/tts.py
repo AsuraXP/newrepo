@@ -169,7 +169,8 @@ def main() -> None:
     p.add_argument("--beats", required=True, help="beats.jsonl from scriptwriter package")
     p.add_argument("--out-dir", required=True)
     p.add_argument("--voice", default="en-US-AndrewNeural")  # user-picked narrator
-    p.add_argument("--rate", default="+0%", help='speaking pace, e.g. "+5%"')
+    p.add_argument("--rate", default="+5%", help='speaking pace, e.g. "+5%" '
+                   "(+0% is the engine's own default; +5% is the picked pace)")
     p.add_argument("--visuals", default="", help="visuals.csv (moment rows) -> moments_timing.json")
     p.add_argument("--force", action="store_true", help="re-synthesize")
     p.add_argument("--words-json", default="",

@@ -12,7 +12,7 @@ Everything downstream is identical: the same `beats_with_timing.json`
 Cast file (`voices.json`, lives in the episode dir):
 
     {
-      "default": {"voice": "en-US-AndrewNeural", "rate": "+0%"},
+      "default": {"voice": "en-US-AndrewNeural", "rate": "+5%"},
       "beats": {
         "1": {"voice": "en-GB-RyanNeural", "gap_before": 1.5, "sfx": "knock x3"},
         "2": {"voice": "en-GB-RyanNeural", "gap_before": 1.5, "sfx": "knock x3"},
@@ -140,7 +140,7 @@ def main() -> None:
     ap.add_argument("--visuals", default="")
     ap.add_argument("--voices", default="", help="voices.json cast file")
     ap.add_argument("--voice", default="en-US-AndrewNeural", help="default narrator")
-    ap.add_argument("--rate", default="+0%")
+    ap.add_argument("--rate", default="+5%")  # picked pace, per voice json
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--simulate", action="store_true",
                     help="no network: silence + evenly spaced word times")

@@ -13,7 +13,7 @@
 #
 # Optional env overrides:
 #   VIDEO_DIR=examples/apoc_day1_video   OUT_DIR=/kaggle/working
-#   VOICE=en-US-AndrewNeural             RATE=+0%
+#   VOICE=en-US-AndrewNeural             RATE=+5%
 #   SKIP_TTS=1 (reuse cached narration.mp3 + beats_with_timing.json; no pip)
 #
 # Multi-voice: drop a voices.json in the episode dir and the runner switches to
@@ -47,7 +47,7 @@ VIDEO_DIR="${VIDEO_DIR:-$REPO/examples/${SLUG}_video}"
 FRAMES="$VIDEO_DIR/frames"
 IMG_POOL="$WORK/img_pool_$SLUG"
 VOICE="${VOICE:-en-US-AndrewNeural}"
-RATE="${RATE:-+0%}"
+RATE="${RATE:-+5%}"
 ZIP="$WORK/${ZIP_NAME:-${SLUG}}_DELIVERABLE.zip"
 
 echo "=== [0/6] Config ==="

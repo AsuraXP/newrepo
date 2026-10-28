@@ -597,9 +597,17 @@ breakage is loud at thumbnail size even when detail hides it at full size.
 ====================================================================
 STEP 6 — AUDIO
 ====================================================================
-VOICE (default, overwritable): a clear natural narrator at normal pace, unless
-the brief names a voice. If you are on edge-tts, that default is
-en-US-AndrewNeural at +0%.
+VOICE (default, overwritable): en-US-AndrewNeural at +5%, unless the brief
+names a voice or a pace. +5% was chosen by ear against +0%, +8%, +10% and
++12% — it reads as unhurried without dragging, and it puts a 800-word script
+near 4:45 rather than 5:05.
+
+Do not treat that as a module default quietly inherited. If you can hear or
+measure the result, measure it: speak a 140-word sample at three or four rates,
+take the real words-per-second of each, and project the actual word count.
+Rate percentages are not linear in seconds, so a projection from a measured
+sample beats arithmetic on the number. Ask me before changing a pace that was
+already chosen.
 
 One speaker means ONE continuous take. A single call gives no seams and no
 accidental silence. Split into per-beat segments only when a different character
