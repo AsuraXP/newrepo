@@ -763,6 +763,26 @@ Do not estimate, interpolate or hand-place any timing, and never ship the
 arithmetic from Step 3's words-per-second figure. An estimated timing file looks
 identical to a real one and is wrong everywhere.
 
+WHY NOTHING BEFORE THE BUILD NEEDS TIMING. The only consumer of a timing file is
+the stitcher, and the stitcher runs in the build. Frames are ORDERED, not
+scheduled: frame N+1 follows frame N because of slide_id and moment, and nothing
+in generation, review or the contact sheet needs to know how long anything
+lasts. So there is no dependency to satisfy early. If a step outside the build
+asks you for a timestamp, the step is wrong, not the order.
+
+THE SIMULATION TRAP. Some TTS wrappers can run in a simulate mode that writes a
+timing file computed from words-per-second instead of from audio. The output is
+byte-identical in shape to a real one and nobody downstream can tell. That file
+must never enter the project, must never feed chapters, cues, sfx or stitch, and
+must never be zipped. If you need a simulation to test plumbing, run it in a
+scratch directory outside the project and name its outputs SIMULATED in the
+filename.
+
+Step 2's runtime figure is not a timing. It is word count divided by a
+words-per-second estimate, it exists to catch a script that is the wrong length,
+and it is never written to a file, never interpolated across moments, and never
+treated as a cut list.
+
 If a cut lands more than about 300 ms from its word, the audio and the file are
 out of sync and everything downstream inherits it. Fix it there, not in the
 editor.
